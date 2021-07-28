@@ -34,16 +34,15 @@ setMethod("getInfGamma", signature(L2deriv = "RealRandVariable",
         dotsI <- .filterEargsWEargList(list(...))
         if(is.null(dotsI$useApply)) dotsI$useApply <- FALSE
 
-        integrandG <- function(x, L2, stand, cent, clip){
-            X <- evalRandVar(L2, as.matrix(x))[,,1] - cent
+        integrandG <- function(x){
+            X <- evalRandVar(L2deriv, as.matrix(x))[,,1] - cent
             Y <- stand %*% X
             res <- norm(risk)(Y) - clip
 
             return((res > 0)*res^power)
         }
 
-        res <- do.call(E, c(list(object = Distr, fun = integrandG, L2 = L2deriv,
-                  stand = stand, cent = cent, clip = clip),dotsI))
+        res <- do.call(E, c(list(object = Distr, fun = integrandG),dotsI))
         return(-res)
     })
 
@@ -57,16 +56,15 @@ setMethod("getInfGamma", signature(L2deriv = "RealRandVariable",
         dotsI <- .filterEargsWEargList(list(...))
         if(is.null(dotsI$useApply)) dotsI$useApply <- FALSE
 
-        integrandG <- function(x, L2, stand, cent, clip){
-            X <- evalRandVar(L2, as.matrix(x))[,,1] - cent
+        integrandG <- function(x){
+            X <- evalRandVar(L2deriv, as.matrix(x))[,,1] - cent
             Y <- stand %*% X
             res <- Y - clip
 
             return((res > 0)*res^power)
         }
 
-        res <- do.call(E, c(list(object = Distr, fun = integrandG, L2 = L2deriv,
-                  stand = stand, cent = cent, clip = clip),dotsI))
+        res <- do.call(E, c(list(object = Distr, fun = integrandG),dotsI))
         return(-res)
     })
 ###############################################################################

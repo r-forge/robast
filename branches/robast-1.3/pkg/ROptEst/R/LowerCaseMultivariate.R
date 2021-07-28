@@ -62,8 +62,9 @@
                w <<- w0
                }
 
-            E1 <- do.call(E,c(list(object = Distr, fun = abs.fct, L2 = L2deriv, stand = A,
-                     cent = z, normtype.0 = normtype), dotsI))
+            abs.fct.0 <- function(x) abs.fct(x, L2deriv, A, z, normtype)
+
+            E1 <- do.call(E,c(list(object = Distr, fun = abs.fct.0), dotsI))
             stA <- if (is(normtype,"QFNorm"))
                        QuadForm(normtype)%*%A else A
 #            erg <- E1/sum(diag(stA %*% t(trafo)))
@@ -130,8 +131,10 @@
             p <- 1
             A <- matrix(param, ncol = k, nrow = 1)
          #   print(A)
-            E1 <- do.call(E, c(list( object = Distr, fun = pos.fct,
-                       L2 = L2deriv, stand = A), dotsI))
+
+            pos.fct.0 <- function(x) pos.fct(x, L2deriv, A)
+
+            E1 <- do.call(E, c(list( object = Distr, fun = pos.fct.0), dotsI))
             erg <- E1/sum(diag(A %*% t(trafo)))
             return(erg)
         }
@@ -145,14 +148,14 @@
         b <- 1/erg$value
         stand(w) <- A
 
-        pr.fct <- function(x, L2, pr.sign=1){
-                  X <- evalRandVar(L2, as.matrix(x)) [,,1]
+        pr.fct <- function(x, pr.sign=1){
+                  X <- evalRandVar(L2deriv, as.matrix(x)) [,,1]
                   Y <- as.numeric(A %*% X)
                   return(as.numeric(pr.sign*Y>0))
                   }
-        p.p   <- do.call(E, c(list( object = Distr, fun = pr.fct, L2 = L2deriv,
+        p.p   <- do.call(E, c(list( object = Distr, fun = pr.fct,
                    pr.sign =  1), dotsI))
-        m.p   <- do.call(E, c(list( object = Distr, fun = pr.fct, L2 = L2deriv,
+        m.p   <- do.call(E, c(list( object = Distr, fun = pr.fct,
                    pr.sign = -1), dotsI))
 
 

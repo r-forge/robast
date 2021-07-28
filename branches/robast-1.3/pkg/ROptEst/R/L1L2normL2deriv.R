@@ -12,14 +12,13 @@ setMethod("getL1normL2deriv", signature(L2deriv = "RealRandVariable"),
         dotsI <- .filterEargsWEargList(list(...))
         if(is.null(dotsI$useApply)) dotsI$useApply <- FALSE
 
-        integrandG <- function(x, L2, stand, cent){
-            X <- evalRandVar(L2, as.matrix(x))[,,1] - cent
+        integrandG <- function(x){
+            X <- evalRandVar(L2deriv, as.matrix(x))[,,1] - cent
             Y <- apply(X, 2, "%*%", t(stand))
             res <- fct(normtype)(Y)
             return((res > 0)*res)
         }
 
-
-        return(do.call(E, c(list(object = Distr, fun = integrandG, L2 = L2deriv,
-                  stand = stand, cent = cent),dotsI)))
+        retval <- do.call(E, c(list(object = Distr, fun = integrandG),dotsI))
+        return(retval)
     })

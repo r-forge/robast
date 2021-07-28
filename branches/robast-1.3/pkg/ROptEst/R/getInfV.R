@@ -56,9 +56,10 @@ setMethod("getInfV", signature(L2deriv = "RealRandVariable",
         for(i in 1:nrvalues)
             for(j in i:nrvalues)
                 if(V.comp[i,j]){
-                    eArgs <- c(list(object = Distr, fun = integrandV,
+                    integrandVij <- function(x) integrandV(x,
                                    L2.i = L2deriv@Map[[i]],
-                                   L2.j = L2deriv@Map[[j]], i = i, j = j), dotsI)
+                                   L2.j = L2deriv@Map[[j]], i = i, j = j)
+                    eArgs <- c(list(object = Distr, fun = integrandVij), dotsI)
                     erg[i, j] <- do.call(E,eArgs)
                 }
         erg[col(erg) < row(erg)] <- t(erg)[col(erg) < row(erg)]
