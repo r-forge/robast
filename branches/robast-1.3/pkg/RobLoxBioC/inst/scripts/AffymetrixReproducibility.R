@@ -18,7 +18,7 @@ system.time(minKD.C <- KolmogorovMinDist(refC, Norm()))
 system.time(minKD.D <- KolmogorovMinDist(refD, Norm()))
 
 ## load the results for random normal samples from R-forge
-con <- url("http://robast.r-forge.r-project.org/data/minKD_norm.RData")
+con <- url("https://robast.r-forge.r-project.org/data/minKD_norm.RData")
 load(file = con)
 close(con)
 

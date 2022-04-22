@@ -14,7 +14,7 @@ setMethod("var", signature(x = "Pareto"),
         if(!propagate.names){names(ret.v) <- NULL}
         return(ret.v)
     }})
-### source http://mathworld.wolfram.com/ParetoDistribution.html
+### source https://mathworld.wolfram.com/ParetoDistribution.html
 
 setMethod("var", signature(x = "Gumbel"),
     function(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...){
@@ -30,7 +30,7 @@ setMethod("var", signature(x = "Gumbel"),
            if(!propagate.names){names(ret.v) <- NULL}
            return(ret.v)
     }})
-## http://mathworld.wolfram.com/GumbelDistribution.html
+## https://mathworld.wolfram.com/GumbelDistribution.html
 
 setMethod("var", signature(x = "GPareto"),
     function(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...){
@@ -47,7 +47,7 @@ setMethod("var", signature(x = "GPareto"),
         if(!propagate.names){names(ret.v) <- NULL}
         return(ret.v)
     }})
-### source http://en.wikipedia.org/wiki/Pareto_distribution
+### source https://en.wikipedia.org/wiki/Pareto_distribution
 
 
 setMethod("var", signature(x = "GEV"),
@@ -66,7 +66,7 @@ setMethod("var", signature(x = "GEV"),
         if(!propagate.names){names(ret.v) <- NULL}
         return(ret.v)
     }})
-### http://en.wikipedia.org/wiki/Generalized_extreme_value_distribution
+### https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution
 
 #################################################################
 # some exact medians

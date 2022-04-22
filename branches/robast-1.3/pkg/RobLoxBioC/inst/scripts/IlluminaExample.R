@@ -17,6 +17,7 @@
 ## Data:
 ## Can be obtained via
 ## http://www.compbio.group.cam.ac.uk/Resources/spike/index.html
+## [20220422: URL seems to be broken]
 ###############################################################################
 
 ## Load the required packages
@@ -55,10 +56,10 @@ system.time(minKD.Illumina.log <- KolmogorovMinDist(spikeInData, Norm(), log = T
 save(minKD.Illumina.log, compress = TRUE, file = "minKD_Illumina_log.RData")
 
 ## load the results from R-forge ...
-con <- url("http://robast.r-forge.r-project.org/data/minKD_Illumina.RData")
+con <- url("https://robast.r-forge.r-project.org/data/minKD_Illumina.RData")
 load(file = con)
 close(con)
-con <- url("http://robast.r-forge.r-project.org/data/minKD_Illumina_log.RData")
+con <- url("https://robast.r-forge.r-project.org/data/minKD_Illumina_log.RData")
 load(file = con)
 close(con)
 
@@ -78,7 +79,7 @@ for(i in 27:61){
 }
 
 ## load the results from R-forge
-con <- url("http://robast.r-forge.r-project.org/data/minKD_Illumina_norm.RData")
+con <- url("https://robast.r-forge.r-project.org/data/minKD_Illumina_norm.RData")
 load(file = con)
 close(con)
 
@@ -246,6 +247,7 @@ assessMA2(BSdata = res.rmx2, genenames = genenames)
 ## The following example is based on the R code of Mark Dunning and Matt Ritchie
 ## available under
 ## http://www.compbio.group.cam.ac.uk/Resources/spike/scripts/Analysis.R
+## [20220422: URL seems to be broken]
 ##
 ## This file was slightly adapted and code for the computation of 
 ## rmx-estimators was added.

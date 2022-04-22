@@ -25,7 +25,7 @@ setMethod("E", signature(object = "Pareto",
                     diagnostic = diagnostic))
     })
 
-### source http://mathworld.wolfram.com/ParetoDistribution.html
+### source https://mathworld.wolfram.com/ParetoDistribution.html
 
 
 setMethod("E", signature(object = "Gumbel",
@@ -43,7 +43,7 @@ setMethod("E", signature(object = "Gumbel",
         return(E(object=object,fun=function(x)x, low=low, upp=upp, ...,
                     diagnostic = diagnostic))
     })
-## http://mathworld.wolfram.com/GumbelDistribution.html
+## https://mathworld.wolfram.com/GumbelDistribution.html
 
 setMethod("E", signature(object = "GPareto",
                          fun = "missing",
@@ -65,7 +65,7 @@ setMethod("E", signature(object = "GPareto",
                     diagnostic = diagnostic))
     })
 
-### source http://en.wikipedia.org/wiki/Pareto_distribution
+### source https://en.wikipedia.org/wiki/Pareto_distribution
 
 setMethod("E", signature(object = "DistributionsIntegratingByQuantiles",
                          fun = "function",

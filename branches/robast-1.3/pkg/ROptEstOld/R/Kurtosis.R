@@ -15,10 +15,10 @@ setMethod("kurtosis", signature(x = "Gumbel"),
         return(kurtosis(as(x,"AbscontDistribution"),...))
     else{
          return(12/5)
-# http://mathworld.wolfram.com/GumbelDistribution.html         
+# https://mathworld.wolfram.com/GumbelDistribution.html         
     }
 })
 
-### source http://en.wikipedia.org/wiki/Generalized_extreme_value_distribution
-###        http://en.wikipedia.org/wiki/Gumbel_distribution
-###        http://en.wikipedia.org/wiki/Riemann_zeta_function 
+### source https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution
+###        https://en.wikipedia.org/wiki/Gumbel_distribution
+###        https://en.wikipedia.org/wiki/Riemann_zeta_function 

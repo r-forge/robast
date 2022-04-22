@@ -21,7 +21,7 @@ Suggests:\tab affydata, hgu95av2cdf, beadarrayExampleData,
     illuminaHumanv3.db \cr
 ByteCompile: \tab yes \cr
 License: \tab LGPL-3 \cr
-URL: \tab http://robast.r-forge.r-project.org/\cr
+URL: \tab https://robast.r-forge.r-project.org/\cr
 VCS/SVNRevision: \tab 1205 \cr
 Encoding: \tab latin1 \cr
 }
@@ -44,7 +44,7 @@ Maintainer: Matthias Kohl  \email{matthias.kohl@stamats.de}}
 
   Rieder, H., Kohl, M. and Ruckdeschel, P. (2008) The Costs of not Knowing
   the Radius. \emph{Statistical Methods and Applications} \bold{17}(1) 13-40.
-  Extended version: \url{http://r-kurs.de/RRlong.pdf}
+  Extended version: \url{https://uol.de/f/5/inst/mathe/personen/peter.ruckdeschel/Rr.pdf}
 }
 \seealso{
 \code{\link[RobLox]{roblox}}, \code{\link[RobLox]{rowRoblox}}

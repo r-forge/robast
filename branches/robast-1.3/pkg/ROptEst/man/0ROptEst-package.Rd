@@ -21,7 +21,7 @@ Imports: \tab startupmsg, MASS, stats, graphics, utils, grDevices \cr
 ByteCompile: \tab yes \cr
 Encoding: \tab latin1 \cr
 License: \tab LGPL-3 \cr
-URL: \tab http://robast.r-forge.r-project.org/\cr
+URL: \tab https://robast.r-forge.r-project.org/\cr
 VCS/SVNRevision: \tab 1213 \cr
 }
 }

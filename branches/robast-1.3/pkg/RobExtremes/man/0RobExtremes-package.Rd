@@ -130,7 +130,7 @@ Contact: \tab peter.ruckdeschel@uni-oldenburg.de\cr
 ByteCompile: \tab yes \cr
 LazyLoad: \tab yes \cr
 License: \tab LGPL-3 \cr
-URL: \tab http://robast.r-forge.r-project.org/\cr
+URL: \tab https://robast.r-forge.r-project.org/\cr
 Encoding: \tab latin1 \cr
 VCS/SVNRevision: \tab 1205 \cr
 }
@@ -267,7 +267,7 @@ Nataliya Horbenko \email{nhorbenko@gmail.com},\cr
 \references{
 M. Kohl (2005): \emph{Numerical Contributions to the Asymptotic
 Theory of Robustness.} PhD Thesis. Bayreuth. Available as
-\url{http://r-kurs.de/RRlong.pdf}
+\url{https://www.stamats.de/wp-content/uploads/2018/04/ThesisMKohl.pdf}
 
 P. Ruckdeschel, M. Kohl, T. Stabla, F. Camphausen (2006):
 S4 Classes for Distributions, \emph{R News}, \emph{6}(2), 2-6. 
@@ -290,7 +290,7 @@ A vignette for packages \pkg{distr}, \pkg{distrSim}, \pkg{distrTEst},
 and \pkg{RobExtremes} is included into the mere documentation package \pkg{distrDoc}
 and may be called by \code{require("distrDoc");vignette("distr")}.
 
-A homepage to this package is available under \url{http://robast.r-forge.r-project.org/}.
+A homepage to this package is available under \url{https://robast.r-forge.r-project.org/}.
 
 }
 

@@ -37,7 +37,7 @@ Depends: \tab R(>= 3.4) \cr
 LazyData: \tab yes \cr
 ByteCompile: \tab yes \cr
 License: \tab LGPL-3 \cr
-URL: \tab http://robast.r-forge.r-project.org/\cr
+URL: \tab https://robast.r-forge.r-project.org/\cr
 VCS/SVNRevision: \tab 1205 \cr
 }
 }

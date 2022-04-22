@@ -10,7 +10,7 @@ setMethod("skewness", signature(x = "Gumbel"),
         return(skewness(as(x,"AbscontDistribution"),...))
     else{
          return( -12 * sqrt(6) * APERYCONSTANT / pi^3 ) 
-# http://mathworld.wolfram.com/GumbelDistribution.html         
+# https://mathworld.wolfram.com/GumbelDistribution.html         
     }
 })
 

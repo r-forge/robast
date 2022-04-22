@@ -11,5 +11,5 @@ setMethod("var", signature(x = "Gumbel"),
     else{  b <- scale(x)
             return(b^2 * pi^2/6)
     }})
-## http://mathworld.wolfram.com/GumbelDistribution.html
+## https://mathworld.wolfram.com/GumbelDistribution.html
 

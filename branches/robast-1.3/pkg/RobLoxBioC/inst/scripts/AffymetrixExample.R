@@ -16,10 +16,10 @@
 ###############################################################################
 ## Data
 ## Spike-in hgu95a data:
-## http://www.biostat.jhsph.edu/~ririzarr/affycomp/spikein.tgz
+## https://www.biostat.jhsph.edu/~ririzarr/affycomp/spikein.tgz
 ##
 ## Spike-in hgu133a data:
-## http://www.biostat.jhsph.edu/~ririzarr/affycomp/hgu133spikein.tgz
+## https://www.biostat.jhsph.edu/~ririzarr/affycomp/hgu133spikein.tgz
 ##
 ## Dilution data: 
 ## The links:
@@ -76,10 +76,10 @@ system.time(minKD.hgu95a <- KolmogorovMinDist(spikein.hgu95a, Norm()))
 system.time(minKD.hgu133a <- KolmogorovMinDist(spikein.hgu133a, Norm()))
 
 ## load the results from R-forge ...
-con <- url("http://robast.r-forge.r-project.org/data/minKD_hgu95a.RData")
+con <- url("https://robast.r-forge.r-project.org/data/minKD_hgu95a.RData")
 load(file = con)
 close(con)
-con <- url("http://robast.r-forge.r-project.org/data/minKD_hgu133a.RData")
+con <- url("https://robast.r-forge.r-project.org/data/minKD_hgu133a.RData")
 load(file = con)
 close(con)
 
@@ -106,7 +106,7 @@ for(i in seq_len(M)){
 colnames(minKD.norm) <- ns
 
 ## load the results from R-forge
-con <- url("http://robast.r-forge.r-project.org/data/minKD_norm.RData")
+con <- url("https://robast.r-forge.r-project.org/data/minKD_norm.RData")
 load(file = con)
 close(con)
 

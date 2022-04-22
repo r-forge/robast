@@ -27,7 +27,7 @@
 \usepackage{ifpdf}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.75}
 \usepackage[%
-baseurl={http://www.stamats.de},%
+baseurl={https://www.stamats.de},%
 pdftitle={RandVar: Implementation of random variables by means of S4 classes and methods},%
 pdfauthor={Matthias Kohl},%
 pdfsubject={RandVar},%
@@ -256,25 +256,24 @@ of {\tt evalRandVar} and {\tt E}.
 Chambers J.M. 
 \newblock {\em {Programming with data. A guide to the S language}\/}.
 \newblock {Springer}.
-\newblock http://cm.bell-labs.com/stat/Sbook/index.html
+\newblock https://cm.bell-labs.com/stat/Sbook/index.html
 
 \bibitem{Gent:03}
 Gentleman R.
 \newblock {\em Object Orientated Programming. Slides of a Short Course held in Auckland\/}.
-\newblock http://www.stat.auckland.ac.nz/S-Workshop/Gentleman/Methods.pdf
+\newblock https://www.stat.auckland.ac.nz/S-Workshop/Gentleman/Methods.pdf
 
 \bibitem{MK:05}
 Kohl M. 
 \newblock {\em Numerical Contributions to the Asymptotic Theory of Robustness\/}. 
 \newblock {Dissertation}, Universit\"at Bayreuth. 
-\newblock See also http://stamats.de/ThesisMKohl.pdf
+\newblock See also https://www.stamats.de/wp-content/uploads/2018/04/ThesisMKohl.pdf
 
 \bibitem{distr}
 Ruckdeschel P., Kohl M., Stabla T., and Camphausen F. 
 \newblock {S4 Classes for Distributions.} 
 \newblock {\em R-News\/}, {\bf 6}(2): 10--13.
 \newblock https://CRAN.R-project.org/doc/Rnews/Rnews\_2006-2.pdf
-\newblock See also {http://www.uni-bayreuth.de/departments/math/org/mathe7/RUCKDESCHEL/pubs/distr.pdf}
 
 \end{thebibliography}
 % -------------------------------------------------------------------------------

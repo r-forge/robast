@@ -17,7 +17,7 @@ Depends: \tab R(>= 3.4), methods, distr(>= 2.8.0), distrEx(>= 2.8.0) \cr
 Imports: \tab startupmsg \cr
 ByteCompile: \tab yes \cr
 License: \tab LGPL-3 \cr
-URL: \tab http://robast.r-forge.r-project.org/\cr
+URL: \tab https://robast.r-forge.r-project.org/\cr
 VCS/SVNRevision: \tab 1228 \cr
 }
 }
@@ -28,6 +28,7 @@ Maintainer: Matthias Kohl  \email{matthias.kohl@stamats.de}}
 \references{
   M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
   Dissertation. University of Bayreuth.
+  See also https://www.stamats.de/wp-content/uploads/2018/04/ThesisMKohl.pdf
 }
 \seealso{
 \code{\link[distr:0distr-package]{distr-package}}, \code{\link[distrEx:0distrEx-package]{distrEx-package}}

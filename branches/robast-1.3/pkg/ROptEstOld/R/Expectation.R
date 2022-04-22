@@ -31,4 +31,4 @@ setMethod("E", signature(object = "Gumbel",
     else
         return(E(as(object,"AbscontDistribution"), low=low, upp=upp, ...))
     })
-## http://mathworld.wolfram.com/GumbelDistribution.html
+## https://mathworld.wolfram.com/GumbelDistribution.html

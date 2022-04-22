@@ -17,6 +17,9 @@ user-visible CHANGES:
    obtained from parameter coordinates should be propagated to return values 
    of specific S4 methods for functionals for Gumbel, GEV, GPD, Pareto
 
+under the hood
++ fixed some broken URLs and changed URLs from http to https where possible
+
 #######################################
 version 1.2
 #######################################

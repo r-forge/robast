@@ -18,7 +18,7 @@ setMethod("skewness", signature(x = "Pareto"),
          return(ret.v)
     }}
 })
-### source http://mathworld.wolfram.com/ParetoDistribution.html
+### source https://mathworld.wolfram.com/ParetoDistribution.html
 
 setMethod("skewness", signature(x = "Gumbel"),
     function(x, ...){
@@ -31,7 +31,7 @@ setMethod("skewness", signature(x = "Gumbel"),
         return(skewness(as(x,"AbscontDistribution"),...))
     else{
          return( -12 * sqrt(6) * APERYCONSTANT / pi^3 )
-# http://mathworld.wolfram.com/GumbelDistribution.html         
+# https://mathworld.wolfram.com/GumbelDistribution.html         
     }
 })
 
@@ -75,6 +75,6 @@ setMethod("skewness", signature(x = "GEV"),
     }}
 })
 
-### source http://en.wikipedia.org/wiki/Generalized_extreme_value_distribution
-###        http://en.wikipedia.org/wiki/Gumbel_distribution
-###        http://en.wikipedia.org/wiki/Riemann_zeta_function 
+### source https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution
+###        https://en.wikipedia.org/wiki/Gumbel_distribution
+###        https://en.wikipedia.org/wiki/Riemann_zeta_function 
