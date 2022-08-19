@@ -53,8 +53,8 @@ makeIC(IC, L2Fam, ...)
   satisfies the defining side conditions of an IC, i.e., centeredness and
   Fisher consistency:
 
-  \deqn{\mathop{\mbox{\boldmath$E$}}[{\rm IC}]=0}{E[IC]=0}
-  \deqn{\mathop{\mbox{\boldmath$E$}}[{\rm IC}\,\Lambda^\tau]= D}{E[IC Lambda'] = D}
+  \deqn{\mathop{\bm{E}}[{\rm IC}]=0}{E[IC]=0}
+  \deqn{\mathop{\bm{E}}[{\rm IC}\,\Lambda^\tau]= D}{E[IC Lambda'] = D}
 
   where \eqn{\Lambda}{Lambda} is the L2 derivative of the model and D is
   the Jacobian of transformation \code{trafo}.

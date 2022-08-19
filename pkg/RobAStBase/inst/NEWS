@@ -8,6 +8,13 @@
  information)
 
 #######################################
+version 1.2.2
+#######################################
+
++ fixed an issue with KaTeX (which does not know \boldmath ...)
++ fixed some broken URLs and changed URLs from http to https where possible
+
+#######################################
 version 1.2.1
 #######################################
 
