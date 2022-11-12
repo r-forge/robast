@@ -8,6 +8,15 @@
  information)
 
 #######################################
+version 1.2.3
+#######################################
+
+under the hood:
++ triggered by new NOTES uncovered by R CMD check, we deleted duplicate entries for items 
+  in internal_plots.Rd
++ use  \bm instead of \boldmath in man pages
+  
+#######################################
 version 1.2.2
 #######################################
 

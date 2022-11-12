@@ -62,10 +62,10 @@ These functions are internally used helper functions for \code{\link{plot}},
   \item{fct}{for \code{.rescalefct}: (vectorized) function from reals to reals: function to produce y values.
   for \code{.SelectOrderData}: (vectorized) function from data to reals:
     function to produce the ordering.}
-  \item{xlim}{numeric vector of length 2: limits of the plotted x region (in original
-              scale).}
-  \item{ylim}{numeric vector of length 2: limits of the plotted y region (in original
-              scale).}
+  \item{xlim}{for one-panel plots: numeric vector of length 2: limits of the plotted x region (in original
+              scale), for multi-panel plots: can be matrix valued (with two columns and as many rows as panels).}
+  \item{ylim}{for one-panel plots: numeric vector of length 2: limits of the plotted y region (in original
+              scale), for multi-panel plots: can be matrix valued (with two columns and as many rows as panels).}
   \item{finiteEndpoints}{a logical of length 4: are the  unscaled \code{xlim[1]},
                          \code{xlim[2]}, \code{ylim[1]}, \code{ylim[2]} finite? }
   \item{x.ticks}{numeric: coordinates in original scale of user-given ticks on x-axis.}
@@ -95,7 +95,6 @@ These functions are internally used helper functions for \code{\link{plot}},
    \code{scaleY} are both \code{FALSE} and, simultaneously, \code{x.ticks} and
    \code{y.ticks} are both \code{NULL}, a respective box is drawn around the
    panel; otherwise no box is drawn in this case. }
-  \item{dots}{a list; intended to be the \code{\dots} argument of \code{plot}. }
   \item{y}{input at which to compute \code{cex}-values (for these \code{y} values)}
   \item{y1}{secondary input of \code{y}-values which is also used for
          computaiton but not plotted itself at this \code{cex} value.}
@@ -123,8 +122,6 @@ the number of rows of the trafo matrix.}
 \item{dots}{the internal \code{dots}-variable to be changed}
 \item{dotsP}{the internal \code{dotsP}-variable to be changed (taking up
   additional arguments for the calls to \code{plot})}
-\item{xlim}{the possibly matrix-valued argument of the user interface}
-\item{ylim}{the possibly matrix-valued argument of the user interface}
 \item{withSubst}{should substitutions be made in titles?}
 \item{presubArg2}{title part}
 \item{presubArg3}{title part}
