@@ -39,9 +39,10 @@ setMethod("getInfStand", signature(L2deriv = "RealRandVariable",
         for(i in 1:nrvalues)
             for(j in i:nrvalues)
                 if(A.comp[i,j]){
-                    erg[i, j] <- do.call(E, c(list(object = Distr, fun = integrandA,
-                                   L2.i = L2deriv@Map[[i]], 
-                                   L2.j = L2deriv@Map[[j]], i = i, j = j), dotsI))
+                    integrandAij <- function(x) integrandA(x,L2.i = L2deriv@Map[[i]],
+                                   L2.j = L2deriv@Map[[j]], i = i, j = j)
+                    erg[i, j] <- do.call(E, c(list(object = Distr, fun = integrandAij),
+                                         dotsI))
                 }
         erg[col(erg) < row(erg)] <- t(erg)[col(erg) < row(erg)]
 

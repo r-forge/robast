@@ -92,7 +92,6 @@ respective \file{sysdata.rda} file. }
   \item{tol}{ the desired accuracy (convergence tolerance).}
   \item{loRad0}{ for numerical reasons: the effective lower bound for the zero search;
    internally set to \code{max(loRad,loRad0)}. }
-  \item{\dots}{ additional parameters. }
   \item{withStartLM}{ logical of length 1: shall the LM's of the preceding grid
     value serve as starting value for the next grid value? }
   \item{withSmooth}{logical of length 1: shall a smoothing spline be used? }
@@ -113,7 +112,7 @@ respective \file{sysdata.rda} file. }
                 \code{PFam} and last arguments \code{GridFileName},
                 \code{withPrint}; produces the y-values for the
                 interpolation grid. }
-  \item{\dots}{further arguments to be passed on to \code{getFun}. }
+  \item{\dots}{further arguments to be passed on, e.g., to \code{getFun}. }
   \item{len}{integer; number of Lagrange multipliers to be calibrated. }
 }
 \details{

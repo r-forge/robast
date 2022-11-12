@@ -85,8 +85,9 @@ setMethod("getInfCent", signature(L2deriv = "RealRandVariable",
         res2 <- numeric(nrvalues)
         for(i in 1:nrvalues){
             if(z.comp[i]){
-                 res2[i] <- do.call(E, c(list(object = Distr, fun = integrand2,
-                                              L2.i = L2deriv@Map[[i]]), dotsI))
+                 integrand2i <- function(x) integrand2(x, L2.i = L2deriv@Map[[i]])
+                 res2[i] <- do.call(E, c(list(object = Distr, fun = integrand2i),
+                                    dotsI))
             }else{            
                 res2[i] <- 0
             }

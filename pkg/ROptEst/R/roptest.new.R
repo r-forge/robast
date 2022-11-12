@@ -390,7 +390,8 @@ robest <- function(x, L2Fam,  fsCor = 1,
                             withLogScale = kStepCtrl$withLogScale,
                             withEvalAsVar = withEvalAsVarkStep,
                             withMakeIC = withMakeICkStep)
-         print(argList) }
+         print(argList)
+         }
       sy.kStep <- system.time({
          kStepArgList <- list(x, IC = ICstart, start = initial.est,
               steps = steps, useLast = kStepCtrl$useLast,
@@ -406,8 +407,14 @@ robest <- function(x, L2Fam,  fsCor = 1,
              nms <- names(kStepCtrl$E.arglist)
              for(nmi in nms) kStepArgList[[nmi]] <- kStepCtrl$E.arglist[[nmi]]
          }
-         res <- do.call(kStepEstimator, kStepArgList)
-                            })
+         if(debug){
+            print(substitute({
+                  res <- do.call(kStepEstimator, kStepArgList0)
+                  }, list(kStepArgList0=kStepEstimator)))
+         }else{
+            res <- do.call(kStepEstimator, kStepArgList)
+         }
+       })
        sy.OnlykStep <- attr(res,"timings")
        kStepDiagn <- attr(res,"diagnostic")
        if (withTimings) print(sy.kStep)

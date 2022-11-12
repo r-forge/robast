@@ -208,8 +208,8 @@ setMethod("makeIC", signature(IC = "ContIC", L2Fam = "L2ParamFamily"),
         res2 <- numeric(nrvalues)
         for(i in 1:nrvalues){
             if(z.comp[i]){
-                 Eargs <- c(list(object = Distr, fun = integrand2,
-                                 L2.i = L2deriv@Map[[i]]), dotsI)
+                 integrand2i <- function(x) integrand2(x,L2deriv@Map[[i]])
+                 Eargs <- c(list(object = Distr, fun = integrand2i), dotsI)
                  res2[i] <- buf <- do.call(E,Eargs)
                  if(diagnostic){k <- k + 1; diagn[[k]] <- attr(buf,"diagnostic")}
             }else{
@@ -229,9 +229,9 @@ setMethod("makeIC", signature(IC = "ContIC", L2Fam = "L2ParamFamily"),
         for(i in 1:nrvalues){
             for(j in i:nrvalues){
                 if(A.comp[i,j]){
-                    Eargs <- c(list(object = Distr, fun = integrandA,
-                                   L2.i = L2deriv@Map[[i]],
-                                   L2.j = L2deriv@Map[[j]], i = i, j = j), dotsI)
+                    integrandAij <- function(x) integrandA(x, L2.i = L2deriv@Map[[i]],
+                                   L2.j = L2deriv@Map[[j]], i = i, j = j)
+                    Eargs <- c(list(object = Distr, fun = integrandAij), dotsI)
                     erg[i, j] <- buf <- do.call(E,Eargs)
                     if(diagnostic){k <- k + 1; diagn[[k]] <- attr(buf,"diagnostic")}
                 }
