@@ -83,7 +83,7 @@ optimal for some radius interval.
   the Radius. Appeared as discussion paper Nr. 81. 
   SFB 373 (Quantification and Simulation of Economic Processes),
   Humboldt University, Berlin; also available under
-  \url{https://dx.doi.org/10.18452/3638}
+  \doi{10.18452/3638}
 
   Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
   Bayreuth: Dissertation.
