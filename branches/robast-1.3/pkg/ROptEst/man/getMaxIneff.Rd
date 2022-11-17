@@ -40,7 +40,7 @@
   the Radius. Submitted. Appeared as discussion paper Nr. 81. 
   SFB 373 (Quantification and Simulation of Economic Processes),
   Humboldt University, Berlin; also available under
-  \url{www.uni-bayreuth.de/departments/math/org/mathe7/RIEDER/pubs/RR.pdf}
+  \doi{10.18452/3638}
 
 }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@fraunhofer.itwm.de}}
