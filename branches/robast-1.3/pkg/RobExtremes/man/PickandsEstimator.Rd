@@ -27,7 +27,7 @@ PickandsEstimator(x, ParamFamily=GParetoFamily(), alpha=2,
    and for \code{alpha = 1/log(2)} for the GEVD.
    If \code{alpha} is missing we set it to the optimal value (see note below).}
   \item{ParamFamily}{an object of class \code{"GParetoFamily"} or
-                     \code{"GEVFamily"}. }
+                     \code{"GEVFamily"} or \code{"GEVFamilyMuUnknown"}. }
   \item{name}{ optional name for estimator. }
   \item{Infos}{ character: optional informations about estimator }
   \item{nuis.idx}{ optionally the indices of the estimate belonging
@@ -71,7 +71,10 @@ gives the median (\eqn{\alpha=2}{alpha=2} in the GPD and
 \eqn{\alpha=1/\log(2)}{alpha=1/log(2)} in the GEVD) in our setting gives
 bdp's of \eqn{1/4} and \eqn{0.119} for GPD and GEVD, respectively, and
 in the original setting, at \eqn{\xi=0.7}{xi=0.7}, gives bdp's
-\eqn{0.064} and \eqn{0.023}.
+\eqn{0.064} and \eqn{0.023}. In case the estimator is applied to 
+a \code{ParamFamily} of class \code{GEVFamilyMuUnknown}, for the
+location parameter, we return the empirical \eqn{\exp(-1)}{exp(-1)} quantile,
+while scale and shape are computed as above; in this case, we return a 3x3 covariance matrix.
 }
 \value{
   \item{.PickandsEstimator}{A numeric vector of length \code{2} with components
