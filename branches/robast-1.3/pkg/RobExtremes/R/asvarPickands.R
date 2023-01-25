@@ -16,8 +16,9 @@ asvarPickands <- function(model, alpha=2){
     al2 <- exp(-1/alpha^2)
   }
 
-  M2 <- q.l(model)(al1)
-  M4 <- q.l(model)(al2)
+  c0 <- fixed(param(model))
+  M2 <- q.l(model)(al1)-c0
+  M4 <- q.l(model)(al2)-c0
 
   xi <- log((M4-M2)/M2)/log(alpha)
   qu <- 1/(alpha^xi-1)

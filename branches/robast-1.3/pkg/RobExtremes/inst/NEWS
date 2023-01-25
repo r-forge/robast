@@ -16,6 +16,7 @@ user-visible CHANGES:
    argument propagate.names in our functionals controlling whether names 
    obtained from parameter coordinates should be propagated to return values 
    of specific S4 methods for functionals for Gumbel, GEV, GPD, Pareto
++  PickandsEstimator() no longer requires the location parameter to be 0
 
 under the hood
 + fixed some broken URLs and changed URLs from http to https where possible

@@ -59,8 +59,8 @@ PickandsEstimator <- function(x, ParamFamily=GParetoFamily(), alpha = 2,
     if(is.null(fixed)) fixed <- fixed(ParamFamily)
     fixed.0 <- fixed
     na.rm.0 <- na.rm
-
-    .mPick <- function(x) .PickandsEstimator(x,alpha=alpha, GPD.l=isGP)
+    cent <- if(isGP) fixed else 0
+    .mPick <- function(x) .PickandsEstimator(x-cent,alpha=alpha, GPD.l=isGP)
     estimate <- Estimator(x, .mPick, name, Infos,
                           asvar.fct = asvar.fct.0, asvar = NULL,
                           nuis.idx = nuis.idx.0, trafo = trafo.0,
