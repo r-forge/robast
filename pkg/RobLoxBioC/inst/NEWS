@@ -8,6 +8,18 @@
  information)
 
 #######################################
+version 1.2.1
+#######################################
+
+user-visible CHANGES:
++ changed rforge link, now also uses https
+
+under the hood:
++ removed non-ASCII characters
++ use bibentry in CITATION file
++ changed package encoding to UTF-8
+
+#######################################
 version 1.1
 #######################################
 
