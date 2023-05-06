@@ -6,9 +6,9 @@ bibentry(bibtype="Article",
          year = 2010,
          Volume="11",
          Pages="583",
-         url = "https://doi.org/10.1186/1471-2105-11-583",
+         doi = "10.1186/1471-2105-11-583",
          textVersion = paste("Kohl, M. and Deigner, H.P.",
                              "Preprocessing of gene expression data by optimally robust estimators.",
                              "BMC Bioinformatics 2010, 11:583",
-                             "URL https://doi.org/10.1186/1471-2105-11-583"))
+                             "https://doi.org/10.1186/1471-2105-11-583"))
 
