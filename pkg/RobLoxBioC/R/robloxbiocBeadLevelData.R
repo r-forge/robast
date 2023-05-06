@@ -144,7 +144,7 @@ setMethod("robloxbioc", signature(x = "beadLevelData"),
                     pIDs2 <- pIDs2[-which(wts2 == 0)]
                     wts2 <- wts2[-which(wts2 == 0)]
                 }
-                ## spezieller Teil für rmx
+                ## special part for rmx
                 tmp <- split(wts2 * values2, pIDs2)
                 pMap <- match(names(tmp), probeIDs)
                 cat("Using rmx\n")

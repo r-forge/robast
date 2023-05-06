@@ -8,7 +8,7 @@
 ## beadarray: R classes and methods for Illumina bead-based data. 
 ## Bioinformatics 2007, 23(16):2183-4.
 ##
-## M.J. Dunning, N.L. Barbosa-Morais, A.G. Lynch, S. Tavaré and M.E. Ritchie:
+## M.J. Dunning, N.L. Barbosa-Morais, A.G. Lynch, S. Tavare and M.E. Ritchie:
 ## Statistical issues in the analysis of Illumina data.
 ## BMC Bioinformatics 2008, 9:85.
 ###############################################################################
