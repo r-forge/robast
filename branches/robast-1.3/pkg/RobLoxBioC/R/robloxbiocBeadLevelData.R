@@ -144,7 +144,7 @@ setMethod("robloxbioc", signature(x = "beadLevelData"),
                     pIDs2 <- pIDs2[-which(wts2 == 0)]
                     wts2 <- wts2[-which(wts2 == 0)]
                 }
-                ## spezieller Teil für rmx
+                ## special part for rmx
                 tmp <- split(wts2 * values2, pIDs2)
                 pMap <- match(names(tmp), probeIDs)
                 cat("Using rmx\n")
@@ -185,7 +185,7 @@ setMethod("robloxbioc", signature(x = "beadLevelData"),
                 message(paste("Annotating control probes using package ", annoPkg, " Version:", annoVers, "\n", sep = ""))
                 mapEnv <- as.name(paste("illumina", annoName, "REPORTERGROUPNAME", sep = ""))
                 t <- try(eval(mapEnv), silent = TRUE)
-                if (class(t) == "try-error") {
+                if (inherits(t, "try-error")) {
                     message(paste("Could not find a REPORTERGROUPNAME mapping in annotation package ", annoPkg, 
                                   ". Perhaps it needs updating?", sep = ""))
                 }

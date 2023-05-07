@@ -1,5 +1,4 @@
 \name{SimStudies}
-\Rdversion{1.1}
 \alias{AffySimStudy}
 \alias{IlluminaSimStudy}
 \title{Perform Monte-Carlo Study.}
