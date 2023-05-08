@@ -3,7 +3,6 @@ year <- sub("-.*", "", meta$Date)
 note <- sprintf("R package version %s", meta$Version)
 
 bibentry(
-  mheader = "To cite package RandVar in publications use:",
   bibtype = "Manual",
   title = "RandVar: Implementation of random variables",
   author = c(person("Matthias", "Kohl"), person("Peter", "Ruckdeschel")),
@@ -11,6 +10,7 @@ bibentry(
   year = year,
   note = note,
   type = "R package",
+  url = "https://r-forge.r-project.org/projects/robast/",
   textVersion  = paste("Kohl, M., and Ruckdeschel, P.",
                        sprintf("(%s).", year),
                        "RandVar: Implementation of random variables.",
