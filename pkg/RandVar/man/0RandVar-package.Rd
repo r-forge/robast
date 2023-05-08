@@ -28,6 +28,7 @@ Maintainer: Matthias Kohl  \email{matthias.kohl@stamats.de}}
 \references{
   M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
   Dissertation. University of Bayreuth.
+  See also https://www.stamats.de/wp-content/uploads/2018/04/ThesisMKohl.pdf
 }
 \seealso{
 \code{\link[distr:0distr-package]{distr-package}}, \code{\link[distrEx:0distrEx-package]{distrEx-package}}

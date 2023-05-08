@@ -11,6 +11,9 @@
 version 1.3
 #######################################
 
+user-visible CHANGES:
++ CITATION file now uses bibentry.
+
 under the hood:
 + fixed some broken URLs and changed URLs from http to https where possible
 
