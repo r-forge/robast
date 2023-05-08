@@ -14,6 +14,7 @@ version 1.2
 user-visible CHANGES:
 + return object of roptest (with interpolRisks) now contains information on its bias,
   so can, e.g., be used in confint with accounting for possible bias
++ CITATION file now uses bibentry
 
 bugfixes:
 + Bernhard discovered a bug in ".checkEstClassForParamFamily" for GEV (was GPD instead of GEV)

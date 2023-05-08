@@ -55,9 +55,9 @@ We robust (high-breakdown) starting estimators for
 \itemize{
   \item GPD (PickandsEstimator, medkMAD, medSn, medQn)
   \item GEV (PickandsEstimator)
-  \item Pareto (Cramér-von-Mises-Minimum-Distance-Estimator)
+  \item Pareto (Cram?r-von-Mises-Minimum-Distance-Estimator)
   \item Weibull (the quantile based estimator of Boudt/Caliskan/Croux)
-  \item Gamma (Cramér-von-Mises-Minimum-Distance-Estimator)
+  \item Gamma (Cram?r-von-Mises-Minimum-Distance-Estimator)
 }
 For all these families, of course, MLEs and Minimum-Distance-Estimators
 are also available through package "distrMod". %\cr
@@ -91,8 +91,8 @@ but also (adopted from package "distrMod")
 \details{
 \tabular{ll}{
 Package: \tab RobExtremes \cr
-Version: \tab 1.2.0 \cr
-Date: \tab 2019-04-02 \cr
+Version: \tab 1.2.1 \cr
+Date: \tab 2023-05-08 \cr
 Title: \tab Optimally Robust Estimation for Extreme Value Distributions\cr
 Description: \tab Optimally robust estimation for extreme value distributions
 using S4 classes and methods \cr
@@ -116,8 +116,8 @@ Contact: \tab peter.ruckdeschel@uni-oldenburg.de\cr
 ByteCompile: \tab yes \cr
 LazyLoad: \tab yes \cr
 License: \tab LGPL-3 \cr
-URL: \tab http://robast.r-forge.r-project.org/\cr
-Encoding: \tab latin1 \cr
+URL: \tab https://r-forge.r-project.org/projects/robast/\cr
+Encoding: \tab UTF-8 \cr
 VCS/SVNRevision: \tab 1214 \cr
 }
 }
