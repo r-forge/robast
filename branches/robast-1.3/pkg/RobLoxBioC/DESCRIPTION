@@ -12,8 +12,8 @@ Authors@R: person("Matthias", "Kohl", role=c("aut", "cre", "cph"),
             email="Matthias.Kohl@stamats.de")
 ByteCompile: yes
 License: LGPL-3
-URL: https://robast.r-forge.r-project.org/
-Encoding: latin1
+URL: https://r-forge.r-project.org/projects/robast/
+Encoding: UTF-8
 LastChangedDate: {$LastChangedDate$}
 LastChangedRevision: {$LastChangedRevision$}
 VCS/SVNRevision: 1252

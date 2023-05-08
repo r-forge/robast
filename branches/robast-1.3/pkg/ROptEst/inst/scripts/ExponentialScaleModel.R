@@ -38,11 +38,11 @@ checkL2deriv(E1)
 ## classical optimal IC
 E1.IC0 <- optIC(model = E1, risk = asCov())
 E1.IC0       # show IC
-#An object of class “IC”
+#An object of class ''IC''
 #### name:        Classical optimal influence curve for Exponential scale family
 #### L2-differentiable parametric family:         Exponential scale family
 #
-#### 'Curve':    An object of class “EuclRandVarList”
+#### 'Curve':    An object of class ''EuclRandVarList''
 #Domain: Real Space with dimension 1
 #[[1]]
 #length of Map:   1
@@ -70,7 +70,7 @@ plot(E1.IC0) # plot IC
 ## L_2 family + infinitesimal neighborhood
 E1.Rob1 <- InfRobModel(center = E1, neighbor = ContNeighborhood(radius = 0.5))
 E1.Rob1     # show E1.Rob1
-#An object of class “InfRobModel”
+#An object of class ''InfRobModel''
 ####### center:  An object of class "ExpScaleFamily"
 #### name:       Exponential scale family
 #
@@ -91,11 +91,11 @@ E1.Rob1     # show E1.Rob1
 #[2] "the group of transformations 'g(y) = scale*y'"
 #[3] "with scale parameter 'scale'"
 #
-####### neighborhood:    An object of class “ContNeighborhood”
+####### neighborhood:    An object of class ''ContNeighborhood''
 #type:    (uncond.) convex contamination neighborhood
 #radius:  0.5
 (E1.Rob2 <- InfRobModel(center = E1, neighbor = TotalVarNeighborhood(radius = 0.5)))
-#An object of class “InfRobModel”
+#An object of class ''InfRobModel''
 ####### center:  An object of class "ExpScaleFamily"
 #### name:       Exponential scale family
 #
@@ -116,13 +116,13 @@ E1.Rob1     # show E1.Rob1
 #[2] "the group of transformations 'g(y) = scale*y'"
 #[3] "with scale parameter 'scale'"
 #
-####### neighborhood:    An object of class “TotalVarNeighborhood”
+####### neighborhood:    An object of class ''TotalVarNeighborhood''
 #type:    (uncond.) total variation neighborhood
 #radius:  0.5
 
 ## MSE solution
 (E1.IC1 <- optIC(model=E1.Rob1, risk=asMSE()))
-#An object of class “ContIC”
+#An object of class ''ContIC''
 #### name:        IC of contamination type
 #
 #### L2-differentiable parametric family:         Exponential scale family
@@ -145,7 +145,7 @@ E1.Rob1     # show E1.Rob1
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 checkIC(E1.IC1)
 #precision of centering:  -2.924022e-05
 #precision of Fisher consistency:
@@ -163,13 +163,13 @@ Risks(E1.IC1)
 #[1] 0.8449229
 #
 #$asBias$biastype
-#An object of class “symmetricBias”
+#An object of class ''symmetricBias''
 #Slot "name":
 #[1] "symmetric Bias"
 #
 #
 #$asBias$normtype
-#An object of class “NormType”
+#An object of class ''NormType''
 #Slot "name":
 #[1] "EuclideanNorm"
 #
@@ -195,7 +195,7 @@ Risks(E1.IC1)
 #scale 0.3465008
 #
 #$trAsCov$normtype
-#An object of class “NormType”
+#An object of class ''NormType''
 #Slot "name":
 #[1] "EuclideanNorm"
 #
@@ -219,7 +219,7 @@ Risks(E1.IC1)
 #[1] 0.5
 #
 #$asMSE$at
-#An object of class “ContNeighborhood”
+#An object of class ''ContNeighborhood''
 #type:    (uncond.) convex contamination neighborhood
 #radius:  0.5
 

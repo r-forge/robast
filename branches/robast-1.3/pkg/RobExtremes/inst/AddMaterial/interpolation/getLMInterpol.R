@@ -31,7 +31,7 @@ getLMs <- function(Gridnam,Famnam,xi=0.7, baseDir="C:/rtest/robast", withPrint=F
    fct <- get(GN,envir=nE)[[Famnam0]][[funN]]
 
    if(!isSn){
-   ## für Gridnam != Sn ist LM für jeden xi Wert ein Vektor der Länge 13, genauer
+   ## fuer Gridnam != Sn ist LM fuer jeden xi Wert ein Vektor der Laenge 13, genauer
    #           in 1:13 (clip=b, cent.a=a1.a,a2.a, cent.i=a1.i,a2.i,
    ##                  stand.a=A.a=matrix(c(A11.a,(A12.a+A21.a)/2,
    #                                       (A12.a+A21.a)/2,A.22.a), 2, 2),

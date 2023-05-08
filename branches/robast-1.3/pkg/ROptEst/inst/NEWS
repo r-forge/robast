@@ -17,6 +17,7 @@ under the hood:
 + fixed some broken URLs and changed URLs from http to https where possible
 + triggered by new NOTES uncovered by R CMD check, we deleted duplicate entries for items 
   in internal-interpolate.Rd
++ changed encoding to UTF-8 and updated URL for r-forge project homepage
   
 #######################################
 version 1.2.1

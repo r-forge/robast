@@ -1,5 +1,7 @@
-bibentry(bibtype="Article",
-         title = "{Preprocessing of gene expression data by optimally robust estimators}",
+bibentry(
+   bibtype = "Article",
+   mheader = "To cite package RobLoxBioC in publications use:",
+      title = "{Preprocessing of gene expression data by optimally robust estimators}",
          author = c(as.person("M. Kohl"), as.person("H.P. Deigner")),
          journal = "BMC Bioinformatics",
          language = "English",

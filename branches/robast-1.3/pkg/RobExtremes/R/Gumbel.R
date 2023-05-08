@@ -51,7 +51,7 @@ setMethod("*", c("Gumbel","numeric"),
 ### Euler Mascheroni constant:
 EULERMASCHERONICONSTANT <- -digamma(1) ### after https://mathworld.wolfram.com/Euler-MascheroniConstant.html (48)
 
-### Apéry constant
+### Apery constant
 ##local helper function:
 .fctApery <- function(n) (-1)^n*choose(2*n,n)*n^3
 ##

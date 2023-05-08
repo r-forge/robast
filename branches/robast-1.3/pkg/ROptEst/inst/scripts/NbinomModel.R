@@ -48,11 +48,11 @@ N       # show N
 IC0 <- optIC(model = N, risk = asCov())
 IC0       # show IC
 
-#An object of class “IC” 
+#An object of class ''IC'' 
 #### name:        Classical optimal influence curve for Negative Binomial family 
 #### L2-differentiable parametric family:         Negative Binomial family 
 #
-#### 'Curve':    An object of class “EuclRandVarList” 
+#### 'Curve':    An object of class ''EuclRandVarList'' 
 #Domain: Real Space with dimension 1 
 #[[1]]
 #length of Map:   1 
@@ -100,7 +100,7 @@ lowerCaseRadius(L2Fam = N, neighbor = TotalVarNeighborhood(), risk = asMSE())
 RobN1 <- InfRobModel(center = N, neighbor = ContNeighborhood(radius = 0.5))
 RobN1     # show RobN1
 
-#An object of class “InfRobModel” 
+#An object of class ''InfRobModel'' 
 ####### center:  An object of class "NbinomFamily"
 #### name:       Negative Binomial family
 #
@@ -120,13 +120,13 @@ RobN1     # show RobN1
 #### props:
 #[1] ""
 #
-####### neighborhood:    An object of class “ContNeighborhood” 
+####### neighborhood:    An object of class ''ContNeighborhood'' 
 #type:    (uncond.) convex contamination neighborhood 
 #radius:  0.5 
 
 (RobN2 <- InfRobModel(center = N, neighbor = TotalVarNeighborhood(radius = 0.5)))
 
-#An object of class “InfRobModel” 
+#An object of class ''InfRobModel'' 
 ####### center:  An object of class "NbinomFamily"
 #### name:       Negative Binomial family
 #
@@ -146,7 +146,7 @@ RobN1     # show RobN1
 #### props:
 #[1] ""
 #
-####### neighborhood:    An object of class “TotalVarNeighborhood” 
+####### neighborhood:    An object of class ''TotalVarNeighborhood'' 
 #type:    (uncond.) total variation neighborhood 
 #radius:  0.5 
 
@@ -168,7 +168,7 @@ system.time(IC1 <- optIC(model=RobN1, risk=asMSE()))
 
 IC1
 
-#An object of class “ContIC” 
+#An object of class ''ContIC'' 
 #### name:        IC of contamination type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -191,7 +191,7 @@ IC1
 #
 #### Infos:
 #     method  message                          
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 
 checkIC(IC1)
 
@@ -269,7 +269,7 @@ Risks(IC1)
 #[1] 0.5
 #
 #$asMSE$at
-#An object of class “ContNeighborhood” 
+#An object of class ''ContNeighborhood'' 
 #type:    (uncond.) convex contamination neighborhood 
 #radius:  0.5 
 
@@ -433,7 +433,7 @@ Risks(IC1)
 #[1] 0.5
 #
 #$asMSE$at
-#An object of class “ContNeighborhood” 
+#An object of class ''ContNeighborhood'' 
 #type:    (uncond.) convex contamination neighborhood 
 #radius:  0.5 
 #
@@ -460,7 +460,7 @@ system.time(IC2 <- optIC(model=RobN2, risk=asMSE()))
 
 IC2
 
-#An object of class “TotalVarIC” 
+#An object of class ''TotalVarIC'' 
 #### name:        IC of total variation type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -483,7 +483,7 @@ IC2
 #
 #### Infos:
 #     method  message                          
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 
 checkIC(IC2)
 
@@ -561,7 +561,7 @@ Risks(IC2)
 #[1] 0.5
 #
 #$asMSE$at
-#An object of class “TotalVarNeighborhood” 
+#An object of class ''TotalVarNeighborhood'' 
 #type:    (uncond.) total variation neighborhood 
 #radius:  0.5 
 #
@@ -684,7 +684,7 @@ Risks(IC2)
 #[1] 0.5
 #
 #$asMSE$at
-#An object of class “TotalVarNeighborhood” 
+#An object of class ''TotalVarNeighborhood'' 
 #type:    (uncond.) total variation neighborhood 
 #radius:  0.5 
 
@@ -697,7 +697,7 @@ plot(IC2)
 (IC3 <- optIC(model=RobN1, risk=asBias()))
 
 
-#An object of class “ContIC” 
+#An object of class ''ContIC'' 
 #### name:        IC of contamination type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -797,7 +797,7 @@ Risks(IC3)
 #[1] 0.25
 #
 #$asMSE$at
-#An object of class “ContNeighborhood” 
+#An object of class ''ContNeighborhood'' 
 #type:    (uncond.) convex contamination neighborhood 
 #radius:  0.5 
 
@@ -806,7 +806,7 @@ plot(IC3)
 
 (IC4 <- optIC(model=RobN2, risk=asBias()))
 
-#An object of class “TotalVarIC” 
+#An object of class ''TotalVarIC'' 
 #### name:        IC of total variation type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -904,7 +904,7 @@ Risks(IC4)
 #[1] 0.25
 #
 #$asMSE$at
-#An object of class “TotalVarNeighborhood” 
+#An object of class ''TotalVarNeighborhood'' 
 #type:    (uncond.) total variation neighborhood 
 #radius:  0.5 
 
@@ -918,7 +918,7 @@ plot(IC4)
 (IC5 <- optIC(model=RobN1, risk=asHampel(bound=clip(IC1))))
 
 #minimal bound:   0.05458835 
-#An object of class “ContIC” 
+#An object of class ''ContIC'' 
 #### name:        IC of contamination type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -1020,7 +1020,7 @@ Risks(IC5)
 #[1] 0.5
 #
 #$asMSE$at
-#An object of class “ContNeighborhood” 
+#An object of class ''ContNeighborhood'' 
 #type:    (uncond.) convex contamination neighborhood 
 #radius:  0.5 
 
@@ -1033,7 +1033,7 @@ plot(IC5)
 #minimal bound:   0.1089328 
 #maximum iterations reached!
 # achieved precision:     5.583403e-07 
-#An object of class “TotalVarIC” 
+#An object of class ''TotalVarIC'' 
 #### name:        IC of total variation type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -1136,7 +1136,7 @@ Risks(IC6)
 #[1] 0.5
 #
 #$asMSE$at
-#An object of class “TotalVarNeighborhood” 
+#An object of class ''TotalVarNeighborhood'' 
 #type:    (uncond.) total variation neighborhood 
 #radius:  0.5 
 
@@ -1155,7 +1155,7 @@ system.time(IC7 <- radiusMinimaxIC(L2Fam=N, neighbor=ContNeighborhood(),
 
 IC7
 
-#An object of class “ContIC” 
+#An object of class ''ContIC'' 
 #### name:        IC of contamination type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -1180,7 +1180,7 @@ IC7
 #     method            message                                            
 #[1,] "radiusMinimaxIC" "radius minimax IC for radius interval [0.01, 3.9]"
 #[2,] "radiusMinimaxIC" "least favorable radius: 0.581"                    
-#[3,] "radiusMinimaxIC" "maximum ‘asMSE’-inefficiency: 1.177"    
+#[3,] "radiusMinimaxIC" "maximum 'asMSE'-inefficiency: 1.177"    
 
 checkIC(IC7)
 
@@ -1258,7 +1258,7 @@ Risks(IC7)
 #[1] 0.5814856
 #
 #$asMSE$at
-#An object of class “ContNeighborhood” 
+#An object of class ''ContNeighborhood'' 
 #type:    (uncond.) convex contamination neighborhood 
 #radius:  0.5814856 
 
@@ -1272,7 +1272,7 @@ system.time(IC8 <- radiusMinimaxIC(L2Fam=N, neighbor=TotalVarNeighborhood(),
 
 IC8
 
-#An object of class “TotalVarIC” 
+#An object of class ''TotalVarIC'' 
 #### name:        IC of total variation type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -1297,7 +1297,7 @@ IC8
 #     method            message                                            
 #[1,] "radiusMinimaxIC" "radius minimax IC for radius interval [0.01, 1.8]"
 #[2,] "radiusMinimaxIC" "least favorable radius: 0.294"                    
-#[3,] "radiusMinimaxIC" "maximum ‘asMSE’-inefficiency: 1.168"   
+#[3,] "radiusMinimaxIC" "maximum 'asMSE'-inefficiency: 1.168"   
 
 
 checkIC(IC8)
@@ -1377,7 +1377,7 @@ Risks(IC8)
 #[1] 0.2944932
 #
 #$asMSE$at
-#An object of class “TotalVarNeighborhood” 
+#An object of class ''TotalVarNeighborhood'' 
 #type:    (uncond.) total variation neighborhood 
 #radius:  0.2944932 
 
@@ -1469,7 +1469,7 @@ x <- rnbinom(100, size=25, prob=(1-ind)*0.25 + ind*0.01)
 
 #Evaluations of Maximum likelihood estimate:
 #-------------------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  MLEstimator(x = x, ParamFamily = NbinomFamily(size = 25))
 #samplesize:   100
@@ -1492,7 +1492,7 @@ x <- rnbinom(100, size=25, prob=(1-ind)*0.25 + ind*0.01)
 
 #Evaluations of Minimum Kolmogorov distance estimate:
 #----------------------------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  MDEstimator(x = x, ParamFamily = NbinomFamily(size = 25))
 #samplesize:   100
@@ -1528,7 +1528,7 @@ checkIC(IC9)
 
 #Evaluations of 1-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  oneStepEstimator(x = x, IC = IC9, start = est0)
 #samplesize:   100
@@ -1551,7 +1551,7 @@ checkIC(IC9)
 #asymptotic bias:
 #[1] 0.03064529
 #(partial) influence curve:
-#An object of class “ContIC”
+#An object of class ''ContIC''
 #### name:        IC of contamination type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -1574,7 +1574,7 @@ checkIC(IC9)
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 #steps:
 #[1] 1
 
@@ -1689,7 +1689,7 @@ checkIC(IC10)
 (est1v <- oneStepEstimator(x, IC=IC10, start=est0))
 #Evaluations of 1-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  oneStepEstimator(x = x, IC = IC10, start = est0)
 #samplesize:   100
@@ -1712,7 +1712,7 @@ checkIC(IC10)
 #asymptotic bias:
 #[1] 0.03055969
 #(partial) influence curve:
-#An object of class “TotalVarIC”
+#An object of class ''TotalVarIC''
 #### name:        IC of total variation type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -1735,7 +1735,7 @@ checkIC(IC10)
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 #steps:
 #[1] 1
 
@@ -1848,7 +1848,7 @@ IC9 <- optIC(model=RobN3, risk=asMSE())
 (est2c <- kStepEstimator(x, IC=IC9, start=est0, steps = 3L))
 #Evaluations of 3-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  kStepEstimator(x = x, IC = IC9, start = est0, steps = 3L)
 #samplesize:   100
@@ -1871,7 +1871,7 @@ IC9 <- optIC(model=RobN3, risk=asMSE())
 #asymptotic bias:
 #[1] 0.03093139
 #(partial) influence curve:
-#An object of class “ContIC”
+#An object of class ''ContIC''
 #### name:        IC of contamination type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -1894,7 +1894,7 @@ IC9 <- optIC(model=RobN3, risk=asMSE())
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 #steps:
 #[1] 3
 
@@ -2002,7 +2002,7 @@ IC10 <- optIC(model=RobN4, risk=asMSE())
 (est2v <- kStepEstimator(x, IC=IC10, start=est0, steps = 3L))
 #Evaluations of 3-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  kStepEstimator(x = x, IC = IC10, start = est0, steps = 3L)
 #samplesize:   100
@@ -2025,7 +2025,7 @@ IC10 <- optIC(model=RobN4, risk=asMSE())
 #asymptotic bias:
 #[1] 0.03081803
 #(partial) influence curve:
-#An object of class “TotalVarIC”
+#An object of class ''TotalVarIC''
 #### name:        IC of total variation type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -2048,7 +2048,7 @@ IC10 <- optIC(model=RobN4, risk=asMSE())
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 #steps:
 #[1] 3
 
@@ -2170,7 +2170,7 @@ IC11 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 (est3c <- oneStepEstimator(x, IC=IC11, start=est0))
 #Evaluations of 1-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  oneStepEstimator(x = x, IC = IC11, start = est0)
 #samplesize:   100
@@ -2193,7 +2193,7 @@ IC11 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 #asymptotic bias:
 #[1] 0.03607630
 #(partial) influence curve:
-#An object of class “ContIC”
+#An object of class ''ContIC''
 #### name:        IC of contamination type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -2218,7 +2218,7 @@ IC11 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 #     method            message
 #[1,] "radiusMinimaxIC" "radius minimax IC for radius interval [0, Inf]"
 #[2,] "radiusMinimaxIC" "least favorable radius: 0.608"
-#[3,] "radiusMinimaxIC" "maximum ‘asMSE’-inefficiency: 1.189"
+#[3,] "radiusMinimaxIC" "maximum 'asMSE'-inefficiency: 1.189"
 #steps:
 #[1] 1
 
@@ -2237,7 +2237,7 @@ IC12 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 (est3v <- oneStepEstimator(x, IC=IC12, start=est0))
 #Evaluations of 1-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  oneStepEstimator(x = x, IC = IC12, start = est0)
 #samplesize:   100
@@ -2260,7 +2260,7 @@ IC12 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 #asymptotic bias:
 #[1] 0.03648773
 #(partial) influence curve:
-#An object of class “TotalVarIC”
+#An object of class ''TotalVarIC''
 #### name:        IC of total variation type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -2285,7 +2285,7 @@ IC12 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 #     method            message
 #[1,] "radiusMinimaxIC" "radius minimax IC for radius interval [0, Inf]"
 #[2,] "radiusMinimaxIC" "least favorable radius: 0.309"
-#[3,] "radiusMinimaxIC" "maximum ‘asMSE’-inefficiency: 1.183"
+#[3,] "radiusMinimaxIC" "maximum 'asMSE'-inefficiency: 1.183"
 #steps:
 #[1] 1
 checkIC(pIC(est3v))
@@ -2301,7 +2301,7 @@ checkIC(pIC(est3v))
 
 #Evaluations of 1-step estimate:
 #-------------------------------
-#An object of class “Estimate” 
+#An object of class ''Estimate'' 
 #generated by call
 #  roptest(x = x, L2Fam = NbinomFamily(size = 25), eps.lower = 0.001, 
 #    eps.upper = 0.5)
@@ -2322,7 +2322,7 @@ checkIC(pIC(est3v))
 #asymptotic bias:
 #[1] 0.03488933
 #(partial) influence curve:
-#An object of class “ContIC” 
+#An object of class ''ContIC'' 
 #### name:        IC of contamination type 
 #
 #### L2-differentiable parametric family:         Negative Binomial family 
@@ -2347,7 +2347,7 @@ checkIC(pIC(est3v))
 #     method            message                                          
 #[1,] "radiusMinimaxIC" "radius minimax IC for radius interval [0.01, 5]"
 #[2,] "radiusMinimaxIC" "least favorable radius: 0.593"                  
-#[3,] "radiusMinimaxIC" "maximum ‘asMSE’-inefficiency: 1.181"            
+#[3,] "radiusMinimaxIC" "maximum 'asMSE'-inefficiency: 1.181"            
 #steps:
 #[1] 1
 
@@ -2367,7 +2367,7 @@ checkIC(pIC(est3c1))
 # achieved precision:     0.02142607
 #Evaluations of 1-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  roptest(x = x, L2Fam = NbinomFamily(size = 25), eps.upper = 0.5,
 #    neighbor = TotalVarNeighborhood())
@@ -2388,7 +2388,7 @@ checkIC(pIC(est3c1))
 #asymptotic bias:
 #[1] 0.03641902
 #(partial) influence curve:
-#An object of class “TotalVarIC”
+#An object of class ''TotalVarIC''
 #### name:        IC of total variation type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -2413,7 +2413,7 @@ checkIC(pIC(est3c1))
 #     method            message
 #[1,] "radiusMinimaxIC" "radius minimax IC for radius interval [0, 5]"
 #[2,] "radiusMinimaxIC" "least favorable radius: 0.307"
-#[3,] "radiusMinimaxIC" "maximum ‘asMSE’-inefficiency: 1.181"
+#[3,] "radiusMinimaxIC" "maximum 'asMSE'-inefficiency: 1.181"
 #steps:
 #[1] 1
 
@@ -2503,7 +2503,7 @@ IC11 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 (est4c <- kStepEstimator(x, IC=IC11, start=est0, steps = 3L))
 #Evaluations of 3-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  kStepEstimator(x = x, IC = IC11, start = est0, steps = 3L)
 #samplesize:   100
@@ -2526,7 +2526,7 @@ IC11 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 #asymptotic bias:
 #[1] 0.03651059
 #(partial) influence curve:
-#An object of class “ContIC”
+#An object of class ''ContIC''
 #### name:        IC of contamination type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -2549,7 +2549,7 @@ IC11 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 #steps:
 #[1] 3
 
@@ -2568,7 +2568,7 @@ IC12 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 
 #Evaluations of 3-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  kStepEstimator(x = x, IC = IC12, start = est0, steps = 3L)
 #samplesize:   100
@@ -2591,7 +2591,7 @@ IC12 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 #asymptotic bias:
 #[1] 0.03691656
 #(partial) influence curve:
-#An object of class “TotalVarIC”
+#An object of class ''TotalVarIC''
 #### name:        IC of total variation type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -2614,7 +2614,7 @@ IC12 <- radiusMinimaxIC(L2Fam=NbinomFamily(size=25, prob=estimate(est0)),
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 #steps:
 #[1] 3
 
@@ -2631,7 +2631,7 @@ checkIC(pIC(est4v))
 
 #Evaluations of 3-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  roptest(x = x, L2Fam = NbinomFamily(size = 25), eps.lower = 0.001,
 #    eps.upper = 0.5, steps = 3L)
@@ -2652,7 +2652,7 @@ checkIC(pIC(est4v))
 #asymptotic bias:
 #[1] 0.03572574
 #(partial) influence curve:
-#An object of class “ContIC”
+#An object of class ''ContIC''
 #### name:        IC of contamination type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -2675,7 +2675,7 @@ checkIC(pIC(est4v))
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 #steps:
 #[1] 3
 
@@ -2694,7 +2694,7 @@ checkIC(pIC(est4c1))
 # achieved precision:     0.02142607
 #Evaluations of 3-step estimate:
 #-------------------------------
-#An object of class “Estimate”
+#An object of class ''Estimate''
 #generated by call
 #  roptest(x = x, L2Fam = NbinomFamily(size = 25), eps.upper = 0.5,
 #    neighbor = TotalVarNeighborhood(), steps = 3L)
@@ -2715,7 +2715,7 @@ checkIC(pIC(est4c1))
 #asymptotic bias:
 #[1] 0.03670764
 #(partial) influence curve:
-#An object of class “TotalVarIC”
+#An object of class ''TotalVarIC''
 #### name:        IC of total variation type
 #
 #### L2-differentiable parametric family:         Negative Binomial family
@@ -2738,7 +2738,7 @@ checkIC(pIC(est4c1))
 #
 #### Infos:
 #     method  message
-#[1,] "optIC" "optimally robust IC for ‘asMSE’"
+#[1,] "optIC" "optimally robust IC for 'asMSE'"
 #steps:
 #[1] 3
 
