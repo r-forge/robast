@@ -1,23 +1,26 @@
 Package: RobAStRDA
 Version: 1.2.1
-Date: 2023-05-08
+Date: 2024-01-28
 Title: Interpolation Grids for Packages of the 'RobASt' - Family of Packages
-Description: Includes 'sysdata.rda' file for packages of the 'RobASt' - family of packages; is currently used by package 'RobExtremes'
-           only.
-Depends: R(>= 3.4)
-Authors@R: c(person("Matthias", "Kohl", role=c("aut", "cph")), person("Bernhard", "Spangl",role="ctb", comment="contributed smoothed
-           grid values of the Lagrange multipliers"), person("Sascha", "Desmettre", role="ctb", comment="contributed smoothed grid
-           values of the Lagrange multipliers"), person("Eugen", "Massini", role="ctb", comment="contributed an interactive smoothing
-           routine for smoothing the Lagrange multipliers and smoothed grid values of the Lagrange multipliers"), person("Mykhailo",
-           "Pupashenko", role="ctb", comment="helped with manual smoothing of the interpolators"), person("Daria", "Pupashenko",
-           role="ctb", comment="helped with manual smoothing of the interpolators"), person("Gerald", "Kroisandt", role="ctb",
-           comment="helped with manual smoothing of the interpolators"), person("Peter", "Ruckdeschel", role=c("cre", "cph", "aut"),
-           email="peter.ruckdeschel@uni-oldenburg.de"))
-LazyData: yes
+Description: Includes 'sysdata.rda' file for packages of the 'RobASt' - family of packages; is
+            currently used by package 'RobExtremes' only.
+Depends: R(>= 3.5.0)
+Authors@R: c(person("Matthias", "Kohl", role=c("aut", "cph")), person("Bernhard",
+            "Spangl",role="ctb", comment="contributed smoothed grid values of the Lagrange
+            multipliers"), person("Sascha", "Desmettre", role="ctb", comment="contributed
+            smoothed grid values of the Lagrange multipliers"), person("Eugen", "Massini",
+            role="ctb", comment="contributed an interactive smoothing routine for smoothing
+            the Lagrange multipliers and smoothed grid values of the Lagrange multipliers"),
+            person("Mykhailo", "Pupashenko", role="ctb", comment="helped with manual smoothing
+            of the interpolators"), person("Daria", "Pupashenko", role="ctb", comment="helped
+            with manual smoothing of the interpolators"), person("Gerald", "Kroisandt",
+            role="ctb", comment="helped with manual smoothing of the interpolators"),
+            person("Peter", "Ruckdeschel", role=c("cre", "cph", "aut"),
+            email="peter.ruckdeschel@uni-oldenburg.de"))
+SysDataCompression: xz
 ByteCompile: yes
 License: LGPL-3
-Encoding: UTF-8
 URL: https://r-forge.r-project.org/projects/robast/
 LastChangedDate: {$LastChangedDate$}
 LastChangedRevision: {$LastChangedRevision$}
-VCS/SVNRevision: 1202
+VCS/SVNRevision: 1261

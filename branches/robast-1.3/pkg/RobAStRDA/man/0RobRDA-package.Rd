@@ -1,6 +1,6 @@
 \name{RobRDA-package}
 \alias{RobAStRDA-package}
-\alias{RobRDA-package}
+\alias{RobAStRDA}
 \alias{RobRDA}
 \docType{package}
 \title{

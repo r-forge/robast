@@ -1,5 +1,6 @@
 \name{RobRDA-package}
-\alias{RobRDA-package}
+\alias{RobAStRDA-package}
+\alias{RobAStRDA}
 \alias{RobRDA}
 \docType{package}
 \title{
@@ -32,13 +33,13 @@ See also mail exchange P.Ruckdeschel - U.Ligges on R-devel---
 \tabular{ll}{
 Package: \tab RobAStRDA \cr
 Version: \tab 1.2.1 \cr
-Date: \tab 2023-05-08 \cr
+Date: \tab 2024-01-28 \cr
 Depends: \tab R(>= 3.4) \cr
 LazyData: \tab yes \cr
 ByteCompile: \tab yes \cr
 License: \tab LGPL-3 \cr
-URL: \tab "https://r-forge.r-project.org/projects/robast/\cr
-VCS/SVNRevision: \tab 1202 \cr
+URL: \tab http://robast.r-forge.r-project.org/\cr
+VCS/SVNRevision: \tab 1261 \cr
 }
 }
 
