@@ -7,19 +7,13 @@
  RobAStXXX family as a whole in order to ease updating "depends" 
  information)
 
-#######################################
-version 1.3
-#######################################
-
-user-visible CHANGES:
-+ CITATION file now uses bibentry.
-
 
 #######################################
 version 1.2
 #######################################
 
 user-visible CHANGES:
++ CITATION file now uses bibentry.
 + require more recent distr/distrEx versions
 + E methods for RandVariables gain argument diagnostic
   (like E()-methods in distrEx v 2.8.0)

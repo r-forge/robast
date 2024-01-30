@@ -12,13 +12,12 @@ Implementation of random variables by means of S4 classes and methods.
 \tabular{ll}{
 Package: \tab RandVar \cr
 Version: \tab 1.2.2 \cr
-Date: \tab 2023-05-08 \cr
+Date: \tab 2024-01-30 \cr
 Depends: \tab R(>= 3.4), methods, distr(>= 2.8.0), distrEx(>= 2.8.0) \cr
 Imports: \tab startupmsg \cr
 ByteCompile: \tab yes \cr
 License: \tab LGPL-3 \cr
 URL: \tab https://r-forge.r-project.org/projects/robast/\cr
-VCS/SVNRevision: \tab 1228 \cr
 }
 }
 \author{
