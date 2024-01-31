@@ -41,14 +41,14 @@ setMethod("confint", signature(object="ALEstimate", method="missing"),
 ### code borrowed from confint.default from package stats
     a <- (1 - level)/2
     a <- c(a, 1 - a)
-    pct <- .format.perc(a, 3)
+    pct <- .format_perc(a, 3)
     fac <- qnorm(a)
     ci <- array(NA, dim = c(length(object@estimate), 2),
                 dimnames = list(names(object@estimate), pct))
     ci[] <- main(object) + sd0 %o% fac
 ### end of borrowed code
 
-    new("Confint", type = gettext("asymptotic (CLT-based)"),
+    new("Confint", type = gettext("asymptotic (LAN-based)"),
                    samplesize.estimate = object@samplesize,
                    call.estimate = object@estimate.call,
                    name.estimate = object@name,
@@ -77,7 +77,7 @@ setMethod("confint", signature(object="ALEstimate", method="symmetricBias"),
 ### code borrowed from confint.default from package stats
     a <- (1 - level)/2
     a <- c(a, 1 - a)
-    pct <- .format.perc(a, 3)
+    pct <- .format_perc(a, 3)
     fac <- qnorm(a, mean = c(-object@asbias, object@asbias))
     ci <- array(NA, dim = c(length(object@estimate), 2),
                 dimnames = list(names(object@estimate), pct))
@@ -116,7 +116,7 @@ setMethod("confint", signature(object="ALEstimate", method="onesidedBias"),
 ### code borrowed from confint.default from package stats
     a <- (1 - level)/2
     a <- c(a, 1 - a)
-    pct <- .format.perc(a, 3)
+    pct <- .format_perc(a, 3)
     if(method@sign == -1)
         M <- c(-object@asbias, 0)
     else
@@ -159,7 +159,7 @@ setMethod("confint", signature(object="ALEstimate", method="asymmetricBias"),
 ### code borrowed from confint.default from package stats
     a <- (1 - level)/2
     a <- c(a, 1 - a)
-    pct <- .format.perc(a, 3)
+    pct <- .format_perc(a, 3)
     fac <- qnorm(a, mean = c(-object@asbias, object@asbias)/method@nu)
     ci <- array(NA, dim = c(length(object@estimate), 2),
                 dimnames = list(names(object@estimate), pct))
