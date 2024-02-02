@@ -112,7 +112,6 @@ These functions are internally used helper functions for \code{\link{plot}},
         the trafo matrix \code{rownames(trafo(eval(x@CallL2Fam)@param))} or if 
         the last expression is \code{NULL} a vector \code{"dim<dimnr>"}, \code{dimnr} 
         running through the number of rows of the trafo matrix.}
-  \item{panelFirst}{the \code{panel.first} expression to be extended}
   \item{distr}{underlying distribution of the observations}
   \item{dims0}{number of panels to be plotted}
   \item{lty}{the \code{lty} argument used in the user interface}
@@ -190,7 +189,7 @@ returned as list items.
 argument, deleting certain items and selecting items which can be digested by
 \code{plot}, returning the manipulated list.
 
-\code{.cexscale}{rescales the point sizes of the points to be plotted;
+\code{.cexscale} rescales the point sizes of the points to be plotted;
      the unscaled sizes are given in argument \code{y}, \code{y1} in
      case of several lines of points to be plotted may contain the
      vector of the sizes of all points to be plotted in (e.g., including
@@ -200,23 +199,26 @@ argument, deleting certain items and selecting items which can be digested by
      are rescaled before being returned. \code{fun} is the function
      by which the rescaling is done; by default this argument is \code{NULL}
      and in this case the function \code{log(1+abs(x))} is used.
-}
-\code{.getDimsTD}{returns the number of different coordinates to be plotted.}
-\code{.producePanelFirstS}{for each graphical panel inserts
+     
+\code{.getDimsTD} returns the number of different coordinates to be plotted.
+
+\code{.producePanelFirstS} for each graphical panel inserts
                            (if needed) x and y tickmarks for user-specific axes
-                           into a \code{panel.first} expression.}
-\code{.getX.vec}{produces the x-grid (on original scale) for each of the panels
-                 and decides whether to plot lines or points.}
+                           into a \code{panel.first} expression.
+                           
+\code{.getX.vec} produces the x-grid (on original scale) for each of the panels
+                 and decides whether to plot lines or points.
 
-\code{.getXlimYlim}{produces panel-wise \code{xlim} and \code{ylim} arguments
-                    as well as left and right endpoints of the x-scalas.}
-\code{.prepareTitles}{produces the titles for the panels}
-\code{.getToDraw}{computes which panels are to be drawn}
-\code{.preparePanelFirstLast}{prepares the \code{panel.first} and \code{panel.last}
-      expressions for each of the panels.}
+\code{.getXlimYlim} produces panel-wise \code{xlim} and \code{ylim} arguments
+                    as well as left and right endpoints of the x-scalas.
+                    
+\code{.prepareTitles} produces the titles for the panels.
+
+\code{.getToDraw} computes which panels are to be drawn.
+\code{.preparePanelFirstLast} prepares the \code{panel.first} and \code{panel.last}
+      expressions for each of the panels.
 }
-
-
+\author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
 \keyword{internal}
 \concept{utilities}
 \keyword{hplot}

@@ -1,6 +1,6 @@
 Package: RobAStBase
-Version: 1.2.4
-Date: 2023-05-08
+Version: 1.2.5
+Date: 2024-02-02
 Title: Robust Asymptotic Statistics
 Description: Base S4-classes and functions for robust asymptotic statistics.
 Depends: R(>= 3.4), methods, rrcov, distr(>= 2.8.0), distrEx(>= 2.8.0), distrMod(>= 2.8.1),
