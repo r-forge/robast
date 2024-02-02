@@ -24,7 +24,7 @@ These functions are used internally by package RobAStBase.}
   \item{x}{a (numeric) vector}
   \item{y}{a (numeric) vector}
   \item{tol}{numeric --- tolerance}
-  \item{L2fam}{object of class \code{L2ParamFamily}}
+  \item{L2Fam}{object of class \code{L2ParamFamily}}
   \item{list0}{a list}
   \item{X}{like \code{sapply}: a vector (atomic or list) or an \code{expression} object. Other objects
   (including classed objects) will be coerced by \code{base::as.list}.}
