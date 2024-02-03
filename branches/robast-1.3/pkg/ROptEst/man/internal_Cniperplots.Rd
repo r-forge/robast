@@ -15,7 +15,6 @@ and \code{cniperPointPlot}.}
 \arguments{
   \item{data}{data to be plot in}
   \item{dots}{list; argument \code{\dots} from the calling function}
-  \item{origCl}{call: call from the calling function.}
   \item{fun}{function from data to reals; function according to which
   the data is ordered}
   \item{L2Fam}{ object of class \code{L2ParamFamily} }

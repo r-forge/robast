@@ -38,12 +38,12 @@ respective \file{sysdata.rda} file. }
            upper = 1e4, lower = 1e-4, OptOrIter = "iterate",
            maxiter = 50, tol = .Machine$double.eps^0.4,
            loRad = 0, upRad = Inf, loRad0 = 1e-3,
-           loRad.s = 0.2, up.Rad.s = 1, withStartLM = TRUE, len = 13)
+           loRad.s = 0.2, upRad.s = 1, withStartLM = TRUE, len = 13)
 
 
 .saveGridToCSV(Grid, toFileCSV, namPFam, nameInSysdata)
 
-.readGridFromCSV <- function(fromFileCSV)
+.readGridFromCSV(fromFileCSV)
 
 .generateInterpGrid(thGrid, PFam, toFileCSV = "temp.csv",
             getFun = .getLMGrid, ..., modifyfct, nameInSysdata,
@@ -94,7 +94,8 @@ respective \file{sysdata.rda} file. }
    internally set to \code{max(loRad,loRad0)}. }
   \item{withStartLM}{ logical of length 1: shall the LM's of the preceding grid
     value serve as starting value for the next grid value? }
-  \item{withSmooth}{logical of length 1: shall a smoothing spline be used? }
+% should be an arg for .saveGridToRda (in pkg RobAStRDA)
+%  \item{withSmooth}{logical of length 1: shall a smoothing spline be used? }
   \item{withPrint}{logical of length 1: shall current grid value be printed out? }
   \item{thGrid}{numeric; grid values. }
   \item{optFct}{function with arguments \code{theta}, \code{PFam},
@@ -157,13 +158,13 @@ respective \file{sysdata.rda} file. }
   \item{.getLMGrid}{A grid (in form  of a matrix of x and y-values) pasted
                     together by \code{cbind}. }
 
-  \code{.saveGridToCSV}{\code{invisible(NULL)}. }
+  \item{.saveGridToCSV}{\code{invisible(NULL)}. }
 
-  \code{.readGridFromCSV}{ a list with the read-in items, i.e.,
+  \item{.readGridFromCSV}{ a list with the read-in items, i.e.,
    an item \code{Grid} with the grid, an item \code{namPFam} with the name of
    the parametric family, and \code{namInSysdata}, the name of the read in grid. }
 
-  \code{.generateInterpGrid}{\code{invisible(NULL)}. }
+  \item{.generateInterpGrid}{\code{invisible(NULL)}. }
 }
 \keyword{internal}
 \concept{utilities}

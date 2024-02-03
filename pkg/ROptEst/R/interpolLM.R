@@ -60,7 +60,7 @@
                        upper = 1e4, lower = 1e-4, OptOrIter = "iterate",
                        maxiter = 50, tol = .Machine$double.eps^0.4,
                        loRad = 0, upRad = Inf, loRad0 = 1e-3,
-                       loRad.s=0.2, up.Rad.s=1,
+                       loRad.s=0.2, upRad.s=1,
                        withStartLM = TRUE, len = 13
                        ){
    wprint <- function(...){ if (withPrint) print(...)}

@@ -1,10 +1,12 @@
 \name{internals_for_ROptEst_robest}
 \alias{internals_for_ROptEst_robest}
-\alias{.rescalefct}
-\alias{.plotRescaledAxis}
-\alias{.legendCoord}
-\alias{.SelectOrderData}
 \alias{.dynScopeEval}
+\alias{.constructArg.list}
+\alias{.fix.in.defaults}
+\alias{.pretreat}
+\alias{.check.eps}
+\alias{.isOKsteps}
+\alias{.isOKfsCor}
 
 \title{Internal / Helper functions of package ROptEst for function robest}
 

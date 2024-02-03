@@ -8,6 +8,15 @@
  information)
 
 #######################################
+version 1.3.2
+#######################################
+
+under the hood
++ fixed some internal .Rd files
++ moved from latin1 to UTF-8 encoding
+
+
+#######################################
 version 1.3.1
 #######################################
 

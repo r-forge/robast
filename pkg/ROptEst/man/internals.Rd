@@ -7,6 +7,7 @@
 \alias{.checkPIC}
 \alias{.LowerCaseMultivariate}
 \alias{.LowerCaseMultivariateTV}
+\alias{.isVirginW}
 \alias{.getSB}
 
 \title{Internal / Helper functions of package ROptEst}
