@@ -44,11 +44,14 @@ getIneffDiff(radius, L2Fam, neighbor, risk, ...)
      the boundaries of a given radius interval.}
 }}
 \references{ 
+  Rieder, H., Kohl, M. and Ruckdeschel, P. (2008) The Costs of not Knowing
+  the Radius. Statistical Methods and Applications, \emph{17}(1) 13-40.
+
   Rieder, H., Kohl, M. and Ruckdeschel, P. (2001) The Costs of not Knowing
   the Radius. Submitted. Appeared as discussion paper Nr. 81. 
   SFB 373 (Quantification and Simulation of Economic Processes),
   Humboldt University, Berlin; also available under
-  \url{www.uni-bayreuth.de/departments/math/org/mathe7/RIEDER/pubs/RR.pdf}
+  \doi{10.18452/3638}
 
   Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
   Bayreuth: Dissertation.
