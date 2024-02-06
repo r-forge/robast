@@ -11,9 +11,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "L2ParamFamily",
         D1 <- L2Fam@distribution
         if(!is(D1, "DiscreteDistribution")) stop("not yet implemented")
 
-        w0 <- options("warn")
-        on.exit(options(w0))
-        options(warn = -1)
         L2deriv <- L2Fam@L2derivDistr[[1]]        
         m <- q.l(L2deriv)(0.5)
         wsm <- d(L2deriv)(m)
@@ -60,9 +57,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "L2ParamFamily",
         if(!is(D1, "DiscreteDistribution")) stop("not yet implemented")
 
         L2deriv <- L2Fam@L2derivDistr[[1]]        
-        w0 <- options("warn")
-        on.exit(options(w0))
-        options(warn = -1)
         supp <- support(L2deriv)
         gg <- min(abs(supp[supp != 0]))
         if(gg > 0){
@@ -75,13 +69,11 @@ setMethod("lowerCaseRadius", signature(L2Fam = "L2ParamFamily",
             rad <- sqrt(M*(-m1df(L2deriv, 0)) - ws1*ws2/ws0)
             names(rad) <- "lower case radius"
 
-            options(w0)
             return(rad)
         }else{
             rad <- Inf
             names(rad) <- "lower case radius"
 
-            options(w0)
             return(rad)
         }
     })
@@ -99,9 +91,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "L2ParamFamily",
         if(!is(D1, "DiscreteDistribution")) stop("not yet implemented")
 
         sign <- sign(biastype)
-        w0 <- options("warn")
-        on.exit(options(w0))
-        options(warn = -1)
         L2deriv <- L2Fam@L2derivDistr[[1]]        
         
         l <- length(support(L2deriv))
@@ -114,7 +103,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "L2ParamFamily",
         rad <- sqrt((abs(z0)/deltahat-(1-p0))/p0)
         names(rad) <- "lower case radius"
 
-       options(w0)
        return(rad)
     })
 
@@ -129,9 +117,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "UnivariateDistribution",
         if(!is(D1, "DiscreteDistribution")) stop("not yet implemented")
 
         sign <- sign(biastype)
-        w0 <- options("warn")
-        on.exit(options(w0))
-        options(warn = -1)
         
         l <- length(support(L2deriv))
         if (sign>0)
@@ -143,7 +128,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "UnivariateDistribution",
         rad <- sqrt((abs(z0)/deltahat-(1-p0))/p0)
         names(rad) <- "lower case radius"
 
-       options(w0)
        return(rad)
     })
 
@@ -161,8 +145,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "UnivariateDistribution",
         nu1 <- nu(biastype)[1]
         nu2 <- nu(biastype)[2]
 
-        w0 <- options("warn")
-        options(warn = -1)
         L2deriv <- L2Fam@L2derivDistr[[1]]        
 
         supp <- support(L2deriv)
@@ -209,7 +191,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "UnivariateDistribution",
             Int2 <- 1/nu1/nu2    
 
             }else{
-                options(w0)
                 rad <- Inf
                 names(rad) <- "lower case radius"
                 return(rad)
@@ -222,7 +203,6 @@ setMethod("lowerCaseRadius", signature(L2Fam = "UnivariateDistribution",
 
        rad <- sqrt(M/omega- Int2)
        names(rad) <- "lower case radius"
-       options(w0)
        return(rad)            
     })
 

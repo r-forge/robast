@@ -38,9 +38,6 @@ setMethod("leastFavorableRadius", signature(L2Fam = "L2ParamFamily",
                 upRad <- r/rho
                 lower <- ifelse(identical(all.equal(loRad, 0), TRUE), 1e-4, loRad)
                 upper <- ifelse(upRad == Inf, 10, upRad)
-                ow <- options("warn")
-                on.exit(options(ow))
-                options(warn = -1)
                 .getRisk <- function(rad, fac = 1){
                     neighbor@radius <- rad
                     res <- getInfRobIC(L2deriv = L2Fam@L2derivDistr[[1]],
@@ -101,10 +98,12 @@ setMethod("leastFavorableRadius", signature(L2Fam = "L2ParamFamily",
                      if(loRad>0){
                         args.Ie$loRad <- lower; args.Ie$loRisk <- .getRisk(lower)
                      }
-                     leastFavR <- try(
+                     suppressWarnings(
+					 leastFavR <- try(
                          uniroot(fct.Ie, lower = lower, upper = upper,
                          tol = .Machine$double.eps^0.25)$root, silent = TRUE)
-                     isE <- is(leastFavR, "try-error")
+                     )
+					 isE <- is(leastFavR, "try-error")
                      if(isE) print(conditionMessage(attr(leastFavR,"condition")))
                    }
                    if(isE)
@@ -113,7 +112,6 @@ setMethod("leastFavorableRadius", signature(L2Fam = "L2ParamFamily",
                         upper, "] after", warnRund, "iterations."))
                 }
 
-                options(ow)
                 cat("current radius:\t", r, "\tinefficiency:\t", ineff, "\n")
                 return(ineff)
             }
@@ -159,10 +157,7 @@ setMethod("leastFavorableRadius", signature(L2Fam = "L2ParamFamily",
                     upRad <- r/rho
                     lower <- ifelse(identical(all.equal(loRad, 0), TRUE), 1e-4, loRad)
                     upper <- ifelse(upRad == Inf, 10, upRad)
-                    ow <- options("warn")
-                    on.exit(options(ow))
-                    options(warn = -1)
-
+                    
                     .getRisk <- function(rad, fac = 1){
                         neighbor@radius <- rad
                         getInfRobICArgs <- c(list(L2deriv = L2deriv, neighbor = neighbor,
@@ -253,9 +248,10 @@ setMethod("leastFavorableRadius", signature(L2Fam = "L2ParamFamily",
                             args.Ie$upRad <- upper; rL <- .getRisk(upper)
                             args.Ie$upRisk <- rL$Risk; args.Ie$upNorm <- rL$Norm
                          }
-                         leastFavR <- try(
+                         suppressWarnings(
+						 leastFavR <- try(
                              uniroot(fct.Ie, lower = lower, upper = upper,
-                             tol = .Machine$double.eps^0.25)$root, silent = TRUE)
+                             tol = .Machine$double.eps^0.25)$root, silent = TRUE))
                          isE <- is(leastFavR, "try-error")
                          if(isE) print(conditionMessage(attr(leastFavR,"condition")))
                        }
@@ -264,8 +260,7 @@ setMethod("leastFavorableRadius", signature(L2Fam = "L2ParamFamily",
                        else warning(paste("Had to modify radius bounds to [", lower,
                             upper, "] after", warnRund, "iterations."))
                     }
-                    options(ow)
-
+                    
                     if(verbose)
                        cat(paste(rep("-",75), sep = "", collapse = ""),"\n")
                     cat("current radius:   ", round(r,4),

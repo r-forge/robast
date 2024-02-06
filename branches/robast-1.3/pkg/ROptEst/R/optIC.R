@@ -11,13 +11,10 @@ setMethod("optIC", signature(model = "InfRobModel", risk = "asRisk"),
         if(missing(verbose)|| is.null(verbose))
            verbose <- getRobAStBaseOption("all.verbose")
         L2derivDim <- numberOfMaps(model@center@L2deriv)
-        ow <- options("warn")
-        on.exit(options(ow))
         if(missing(warn)|| is.null(warn)) warn <- TRUE
         #L2Fam <- model@center
         #model@center <- moveL2Fam2RefParam(L2Fam)
         if(L2derivDim == 1){
-            options(warn = -1)
             res <- getInfRobIC(L2deriv = model@center@L2derivDistr[[1]],
                         neighbor = model@neighbor, risk = risk, 
                         symm = model@center@L2derivDistrSymm[[1]],
@@ -52,7 +49,6 @@ setMethod("optIC", signature(model = "InfRobModel", risk = "asRisk"),
                         L2derivDistrSymm <- new("DistrSymmList", L2)
                     }
                 }
-                options(warn = -1)
                 res <- getInfRobIC(L2deriv = L2deriv, neighbor = model@neighbor,
                             risk = risk,  Distr = model@center@distribution, 
                             DistrSymm = model@center@distrSymm, L2derivSymm = L2derivSymm,
@@ -61,7 +57,6 @@ setMethod("optIC", signature(model = "InfRobModel", risk = "asRisk"),
                             upper = upper, lower = lower, OptOrIter = OptOrIter,
                             maxiter = maxiter, tol = tol, warn = warn,
                             verbose = verbose, ...,.withEvalAsVar = .withEvalAsVar)
-                options(ow)
                 if(returnNAifProblem) if(!is.null(res$problem)) if(res$problem) return(NA)
                 linfo <- length(res$info)
                 res$info <- if(linfo>1) c(rep("optIC",linfo),res$info) else c("optIC", res$info)
@@ -87,20 +82,16 @@ setMethod("optIC", signature(model = "InfRobModel", risk = "asUnOvShoot"),
              tol = .Machine$double.eps^0.4, withMakeIC = FALSE,
              warn = TRUE, verbose = NULL, modifyICwarn = NULL, ...){
         L2derivDistr <- model@center@L2derivDistr[[1]]
-        ow <- options("warn")
-        on.exit(options(ow))
         if(missing(warn)|| is.null(warn)) warn <- TRUE
         if((length(model@center@L2derivDistr) == 1) & is(L2derivDistr, "UnivariateDistribution")){
             if(identical(all.equal(model@neighbor@radius, 0), TRUE)){
                return(optIC(model@center, risk = asCov(), withMakeIC = withMakeIC))
             }else{
-               options(warn = -1)
                res <- getInfRobIC(L2deriv = L2derivDistr, 
                         neighbor = model@neighbor, risk = risk, 
                         symm = model@center@L2derivDistrSymm[[1]],
                         Finfo = model@center@FisherInfo, trafo = trafo(model@center@param), 
                         upper = upper, maxiter = maxiter, tol = tol, warn = warn)
-               options(ow)
                linfo <- length(res$info)
                if(is(model@neighbor, "ContNeighborhood")){
                   res$info <- c(rep("optIC",linfo+1),res$info,
@@ -131,18 +122,14 @@ setMethod("optIC", signature(model = "FixRobModel", risk = "fiUnOvShoot"),
              cont = "left", verbose = NULL, modifyICwarn = NULL, ...){
         if(missing(verbose)|| is.null(verbose))
            verbose <- getRobAStBaseOption("all.verbose")
-        ow <- options("warn")
-        on.exit(options(ow))
         if(missing(warn)|| is.null(warn)) warn <- TRUE
         if(!identical(all.equal(sampleSize, trunc(sampleSize)), TRUE))
             stop("'sampleSize' has to be an integer > 0")
         if(is(model@center@distribution, "UnivariateDistribution")){
-            options(warn = -1)
             res <- getFixRobIC(Distr = model@center@distribution, 
                         neighbor = model@neighbor, risk = risk, 
                         sampleSize = sampleSize, upper = upper, maxiter = maxiter, 
                         tol = tol, warn = warn, Algo = Algo, cont = cont)
-            options(ow)
             linfo <- length(res$info)
             if(is(model@neighbor, "ContNeighborhood")){
                res$info <- c(rep("optIC",linfo+1),res$info,

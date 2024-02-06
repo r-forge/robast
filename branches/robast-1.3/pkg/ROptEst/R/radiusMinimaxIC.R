@@ -17,8 +17,6 @@ setMethod("radiusMinimaxIC", signature(L2Fam = "L2ParamFamily",
 
         if(missing(verbose)|| is.null(verbose))
            verbose <- getRobAStBaseOption("all.verbose")
-        ow <- options("warn")
-        on.exit(options(ow))
         if(missing(warn)|| is.null(warn)) warn <- FALSE
         if(length(loRad) != 1)
             stop("'loRad' is not of length == 1")
@@ -79,7 +77,6 @@ setMethod("radiusMinimaxIC", signature(L2Fam = "L2ParamFamily",
         }
 
         if(L2derivDim == 1){
-            options(warn = -1)
             args.R$L2deriv <- args.IC$L2deriv <- L2Fam@L2derivDistr[[1]]
             args.IC$symm <-  L2Fam@L2derivDistrSymm[[1]]
 
@@ -139,7 +136,6 @@ setMethod("radiusMinimaxIC", signature(L2Fam = "L2ParamFamily",
                std <- if(is(normtype,"QFNorm")) QuadForm(normtype) else diag(p)
                loRisk <- sum(diag(std%*%FI0))
 
-               options(warn = -1)
 
                if(identical(all.equal(loRad, 0), TRUE)){
                    loRad <- 0
@@ -208,7 +204,6 @@ setMethod("radiusMinimaxIC", signature(L2Fam = "L2ParamFamily",
         args.IC$returnNAifProblem <- returnNAifProblem
         res <- do.call(getInfRobIC, args.IC)
         if(returnNAifProblem) if(!is.null(res$problem)) if(res$problem) return(NA)
-        options(ow)
         res$info <- c("radiusMinimaxIC", paste("radius minimax IC for radius interval [",
                         round(loRad, 3), ", ", round(upRad, 3), "]", sep=""))
         res$info <- rbind(res$info, c("radiusMinimaxIC",

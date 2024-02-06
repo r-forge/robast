@@ -81,7 +81,11 @@ setMethod("getAsRisk", signature(risk = "asBias",
         comp <- .getComp(L2deriv, DistrSymm, L2derivSymm, L2derivDistrSymm)
         z.comp <- comp$"z.comp"
         A.comp <- comp$"A.comp"
-        DA.comp <- abs(trafo) %*% A.comp != 0
+        
+		DA.comp <- matrix(TRUE, nrow=nrow(trafo), ncol=ncol(trafo))
+        DA.symm <- (nrow(trafo)==ncol(trafo)) && isTRUE(all.equal(trafo,t(trafo)))
+        if(DA.symm) DA.comp <- A.comp
+		
         
         eerg <- .LowerCaseMultivariate(L2deriv = L2deriv, neighbor = neighbor, 
              biastype = biastype, normtype = normtype, Distr = Distr,  Finfo = Finfo,
@@ -92,6 +96,7 @@ setMethod("getAsRisk", signature(risk = "asBias",
         
         return(list(asBias = bias, normtype = eerg$normtype))
     })
+
 setMethod("getAsRisk", signature(risk = "asBias",
                                  L2deriv = "RealRandVariable",
                                  neighbor = "TotalVarNeighborhood",
@@ -294,17 +299,15 @@ setMethod("getAsRisk", signature(risk = "asBias",
             return(list(asBias = 0, warn = gettext("not attained by IC")))
 
         sign <- sign(biastype)
-        w0 <- options("warn")
-        on.exit(options(w0))
-        options(warn = -1)
         
-        l <- length(support(L2deriv))
-        if (sign>0)
-           {z0 <- support(L2deriv)[1]; deltahat <- support(L2deriv)[2]-z0}
-        else
-           {z0 <- support(L2deriv)[l]; deltahat <- z0-support(L2deriv)[l-1]}
-
-        bias <- abs(as.vector(trafo))/abs(z0)
+		if(missing(trafo)) trafo <- 1
+		if(length(trafo)>1) stop("Matrix/vector-valued 'trafo' is not (yet) supported.")
+        trafo <- c( trafo )
+		sign <- sign*sign(trafo)
+		
+        z0 <- if (sign>0) min(support(L2deriv))  else max(support(L2deriv))
+        
+        bias <- abs(trafo)/abs(z0)
         return(list(asBias = bias))
     })
 

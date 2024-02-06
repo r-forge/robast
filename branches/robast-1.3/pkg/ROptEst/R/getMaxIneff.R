@@ -6,9 +6,6 @@ getMaxIneff <- function(IC, neighbor, biastype = symmetricBias(),
             if(!is(IC,"IC")) 
                stop("Argument IC must be of class 'IC'.")
 
-            ow <- options("warn")
-            on.exit(options(ow))
-
             sb <- .getSB(IC,neighbor)
             si <- sb$s^2
             bi <- sb$b^2
@@ -55,9 +52,10 @@ getMaxIneff <- function(IC, neighbor, biastype = symmetricBias(),
                         L2derivDistrSymm <- new("DistrSymmList", L2)
                     }
                 }
-                if(!warn) options(warn = -1)
+                suppWarning <- if(!warn) suppressWarnings else function(x) return(x)
 
-                b0 <- getInfRobIC(L2deriv = L2deriv, neighbor = neighbor,
+                b0 <- suppWarning(
+				      getInfRobIC(L2deriv = L2deriv, neighbor = neighbor,
                             risk = risk,  Distr = L2Fam@distribution, 
                             DistrSymm = L2Fam@distrSymm, L2derivSymm = L2derivSymm,
                             L2derivDistrSymm = L2derivDistrSymm, 
@@ -65,6 +63,8 @@ getMaxIneff <- function(IC, neighbor, biastype = symmetricBias(),
                             maxiter = maxiter, tol = tol, warn = warn, 
                             Finfo = Finfo,
                             verbose = verbose,...)$risk$asBias$value^2
+					  )		
+							
               }else{
                 stop("not yet implemented")
               }

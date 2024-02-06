@@ -19,8 +19,14 @@
            z.comp <- rep(TRUE, nrow(trafo))
 
         force(normtype)
+        A.symm <- (nrow(trafo)==ncol(trafo)) && isTRUE(all.equal(trafo,t(trafo)))
+		
+		if(A.symm){
+		   A.comp.s <- t(A.comp)|A.comp
+		   A.comp <- A.comp.s[col(A.comp.s)>=row(A.comp.s)]
+		}
         lA.comp <- sum(A.comp)
-        
+			        
         abs.fct <- function(x, L2, stand, cent, normtype.0){
             X <- evalRandVar(L2, as.matrix(x))[,,1] - cent
             Y <- stand %*% X
@@ -28,13 +34,14 @@
         }
 
         itermin <- 0
-        bmin.fct <- function(param, L2deriv, Distr, trafo){
+        bmin.fct <- function(param, L2deriv, Distr, trafo, A.symm = TRUE){
             itermin <<- itermin + 1
             p <- nrow(trafo)
             k <- ncol(trafo)
             A <- matrix(0, ncol = k, nrow = p)
             
-            A[A.comp] <- param[1:lA.comp]
+  	        A[A.comp] <- param[1:lA.comp]
+            if(A.symm) A[col(A)>row(A)] <- t(A)[col(A)>row(A)]
             A.max <- max(abs(A.comp))
             A <- A/A.max
             z <- numeric(k)
