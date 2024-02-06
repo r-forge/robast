@@ -125,7 +125,7 @@ system.time(IC4 <- radiusMinimaxIC(L2Fam=G, neighbor=ContNeighborhood(),
 
 ## least favorable radius
 ## takes really long time - 33 min!
-#system.time(r.rho1 <- leastFavorableRadius(L2Fam=G, neighbor=ContNeighborhood(),
+# system.time(r.rho1 <- leastFavorableRadius(L2Fam=G, neighbor=ContNeighborhood(),
 #                    risk=asMSE(), rho=0.5))
 
 ## one-step estimation
