@@ -85,6 +85,8 @@ infoPlot(ICA)
 
 ## MSE solution
 system.time(IC1 <- optIC(model=RobG1, risk=asMSE()))
+#  user  system elapsed 
+#  18.78    0.92   19.79 
 IC1
 checkIC(IC1)
 Risks(IC1)
@@ -94,7 +96,8 @@ infoPlot(IC1)
 
 ## lower case solutions
 system.time(IC2 <- optIC(model=RobG1, risk=asBias(), tol = 1e-10))
-IC2
+#   user  system elapsed 
+#  21.29    1.19   22.47 IC2
 checkIC(IC2)
 Risks(IC2)
 plot(IC2)
@@ -103,6 +106,8 @@ infoPlot(IC2)
 
 ## Hampel solution
 system.time(IC3 <- optIC(model=RobG1, risk=asHampel(bound=clip(IC1))))
+#  user  system elapsed 
+#  31.73    2.24   38.50 
 IC3
 checkIC(IC3)
 Risks(IC3)
@@ -111,9 +116,12 @@ x11()
 infoPlot(IC3)
 
 ## radius minimax IC
-## takes quite some time - about 180 sec.
+## takes quite some time - about 430 sec.
 system.time(IC4 <- radiusMinimaxIC(L2Fam=G, neighbor=ContNeighborhood(), 
             risk=asMSE(), loRad=0, upRad=Inf))
+#  user  system elapsed 
+# 389.11   22.08  429.66 
+
 
 ## least favorable radius
 ## takes really long time - 33 min!
@@ -159,3 +167,6 @@ confint(est1, symmetricBias())
 confint(est3, symmetricBias())
 confint(est2, symmetricBias())
 confint(est4, symmetricBias())
+
+## set back defaults
+distrExOptions(ErelativeTolerance = .Machine$double.eps^0.25) # increase precision for E

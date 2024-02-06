@@ -73,7 +73,7 @@ plot(N0.IC3)
 infoPlot(N0.IC3)
 
 ## radius minimax IC
-## (may take quite some time!)
+## (may take quite some time! ~14sec)
 system.time(N0.IC4 <- radiusMinimaxIC(L2Fam=N0, neighbor=ContNeighborhood(), 
                 risk=asMSE(), loRad=0, upRad=Inf, verbose = TRUE))
 checkIC(N0.IC4)
@@ -81,6 +81,7 @@ Risks(N0.IC4)
 plot(N0.IC4) 
 infoPlot(N0.IC4)
 
+## (may take quite some time! ~20sec)
 system.time(N0.IC4.i <- radiusMinimaxIC(L2Fam=N0, neighbor=ContNeighborhood(),
                 risk=asMSE(normtype=InfoNorm()), loRad=0, upRad=Inf))
 print(N0.IC4.i)
@@ -89,7 +90,7 @@ Risks(N0.IC4.i)
 plot(N0.IC4.i) 
 infoPlot(N0.IC4.i)
 
-## takes extremely long time:
+## takes extremely long time: (~5000s)
 system.time(N0.IC4.s <- radiusMinimaxIC(L2Fam=N0, neighbor=ContNeighborhood(),
                 risk=asMSE(normtype=SelfNorm()), loRad=0, upRad=Inf))
 print(N0.IC4.s)

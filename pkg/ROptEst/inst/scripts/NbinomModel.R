@@ -1407,6 +1407,7 @@ system.time(r.rho1 <- leastFavorableRadius(L2Fam=N, neighbor=ContNeighborhood(),
 #current radius:  0.5625595      inefficiency:    1.044701 
 #   user  system elapsed 
 #  141.37   0.84  150.89
+### 630 sec
 
 ## same as for binomial????
  
@@ -1441,7 +1442,8 @@ system.time(r.rho2 <- leastFavorableRadius(L2Fam=N, neighbor=TotalVarNeighborhoo
 #current radius:  0.2866889      inefficiency:    1.044456 
 #    user  system elapsed 
 #  707.48    3.17  760.09
- 
+### 630 sec
+
 r.rho2
 
 #$rho

@@ -160,6 +160,9 @@ RobB1     # show RobB1
 system.time(ICA <-  optIC(model=RobB1, risk=asAnscombe(),
             verbose=TRUE,lower=NULL,upper=10))
 
+#   user  system elapsed 
+#   2.75    0.00    2.76 
+
 
 #-------------------------------------------------------------------------------
 ## MSE solution
@@ -167,7 +170,7 @@ system.time(ICA <-  optIC(model=RobB1, risk=asAnscombe(),
 system.time(IC1 <- optIC(model=RobB1, risk=asMSE()))
 
 #   user  system elapsed
-#   3.62    0.00    3.62
+#   0.41    0.01    0.42 
 
 IC1
 
@@ -501,7 +504,7 @@ plot(IC1)
 system.time(IC2 <- optIC(model=RobB2, risk=asMSE()))
 
 #   user  system elapsed
-#   9.46    0.02    9.47
+#   1.03    0.01    1.05 
 
 IC2
 
@@ -1181,7 +1184,7 @@ plot(IC6)
 system.time(IC7 <- radiusMinimaxIC(L2Fam=B, neighbor=ContNeighborhood(),
                         risk=asMSE(), loRad=0, upRad=1))
 #   user  system elapsed
-#  39.39    0.02   39.45
+#   4.55    0.07    4.83 
 
 IC7
 
@@ -1297,7 +1300,7 @@ plot(IC7)
 system.time(IC8 <- radiusMinimaxIC(L2Fam=B, neighbor=TotalVarNeighborhood(),
                         risk=asMSE(), loRad=0, upRad=1))
 #   user  system elapsed
-# 163.20    0.12  168.21
+#  18.39    0.22   18.67 
 
 IC8
 
@@ -1434,7 +1437,7 @@ system.time(r.rho1 <- leastFavorableRadius(L2Fam=B, neighbor=ContNeighborhood(),
 #current radius:  0.6388282      inefficiency:    1.044571
 #current radius:  0.6387762      inefficiency:    1.044584
 #   user  system elapsed
-# 125.41    1.20  143.03
+#  54.50    1.11   55.92 
 
 r.rho1
 
@@ -1464,7 +1467,7 @@ system.time(r.rho2 <- leastFavorableRadius(L2Fam=B, neighbor=TotalVarNeighborhoo
 #current radius:  0.3104966      inefficiency:    1.043323
 #current radius:  0.3105373      inefficiency:    1.043323
 #   user  system elapsed
-# 431.94    2.64  483.05
+# 280.18    4.97  286.97
 r.rho2
 
 #$rho
@@ -1694,8 +1697,7 @@ checkIC(pIC(est1v1))
 #              prob
 #prob -2.220446e-16
 #maximum deviation
-#
-     9.843168e-15
+#     9.843168e-15
 ## you can also omit step 2
 est1v2 <- roptest(x, BinomFamily(size = 25), eps = 0.025,
                   neighbor = TotalVarNeighborhood(), distance = KolmogorovDist)
