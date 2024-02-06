@@ -97,6 +97,12 @@ genstartICCtrl(withMakeIC = FALSE, withEvalAsVar = NULL, modifyICwarn = NULL,
   which can be used as arguments in function \code{\link{robest}}.
   For details, see this function.
 }
+\value{
+ A list of arguments to be (re-)used as (structured) input for function \code{robest};
+ more specifically, all arguments of the respective function are bundled into
+ a list, where arguments not explicitly specified in the call are filled with 
+ corresponding defaults as given in the usage section of this help file.
+ }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de},\cr
         Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
 %\note{}

@@ -237,16 +237,22 @@ getAsRisk(risk, L2deriv, neighbor, biastype, ...)
     function \code{getInfRobIC}. }
 }}
 \references{
-  Rieder, H. (1994) \emph{Robust Asymptotic Statistics}. New York: Springer.
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
 
-  Ruckdeschel, P. and Rieder, H. (2004) Optimal Influence Curves for
+  M. Kohl, P. Ruckdeschel, and H. Rieder (2010). Infinitesimally Robust Estimation in 
+  General Smoothly Parametrized Models. Statistical Methods and Applications \emph{19}(3): 333-354.
+  \doi{10.1007/s10260-010-0133-0}.
+
+  H. Rieder (1994): Robust Asymptotic Statistics. Springer. 
+  \doi{10.1007/978-1-4684-0624-5}
+
+  P. Ruckdeschel (2005). Optimally One-Sided Bounded Influence Curves.
+  Mathematical Methods of Statistics \emph{14}(1), 105-131.
+
+  P. Ruckdeschel and H. Rieder (2004). Optimal Influence Curves for
   General Loss Functions. Statistics & Decisions \emph{22}, 201-223.
-
-  Ruckdeschel, P. (2005) Optimally One-Sided Bounded Influence Curves.
-  Mathematical Methods in Statistics \emph{14}(1), 105-131.
-
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  \doi{10.1524/stnd.22.3.201.57067}
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}

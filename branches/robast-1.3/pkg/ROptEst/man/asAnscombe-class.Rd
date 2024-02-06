@@ -36,13 +36,19 @@ Class \code{"RiskType"}, by class \code{"asRisk"}.
     \item{show}{\code{signature(object = "asAnscombe")}}
   }
 }
-\references{Hampel et al. (1986) \emph{Robust Statistics}. 
-  The Approach Based on Influence Functions. New York: Wiley.
+\references{
+  F.J. Anscombe (1960). Rejection of Outliers. Technometrics \emph{2}(2): 123-146.
+  \doi{10.1080/00401706.1960.10489888}.
   
-  Rieder, H. (1994) \emph{Robust Asymptotic Statistics}. New York: Springer.
+  F. Hampel et al. (1986). \emph{Robust Statistics}. 
+  The Approach Based on Influence Functions. New York: Wiley.
+  \doi{10.1002/9781118186435}.
 
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  M. Kohl (2005). \emph{Numerical Contributions to the Asymptotic Theory of Robustness.}
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
+
+  H. Rieder (1994). \emph{Robust Asymptotic Statistics.} Springer. 
+  \doi{10.1007/978-1-4684-0624-5}.
 }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@fraunhofer.itwm.de}}
 %\note{}

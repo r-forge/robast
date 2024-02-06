@@ -154,10 +154,7 @@ class \code{"kStepstimate"}. All slots and methods marked with [*] are inherited
     \item{show}{\code{signature(object = "ORobEstimate")}: a show method; [*]}
   }
 }
-%\references{}
 \author{Peter Ruckdeschel \email{Peter.Ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link{ALEstimate-class}}, \code{\link{kStepEstimate-class}}}
-%\examples{}
 \concept{estimate}
 \keyword{classes}
