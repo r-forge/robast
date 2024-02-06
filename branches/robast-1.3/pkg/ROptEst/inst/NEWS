@@ -14,6 +14,33 @@ version 1.3.2
 under the hood
 + fixed some internal .Rd files
 + moved from latin1 to UTF-8 encoding
++  removed the standardtexts (in comments) in your .Rd-files
+  man/asAnscombe.Rd;  man/asL1.Rd; man/asL4.Rd
++ we have removed all catches to warnings in our code  
+  
+user-visible changes
++ added some more references
++ added dois to references where available
++ added ORCID references for the package authors
++ changed Description entry in DESCRIPTION -- now taking references as well
+   and stating that package ROptEst provides R infrastructure for 
+   optimally robust estimation
++ in files getInfGamma.Rd and inputGenerator.Rd we now have a 
+  value field; as it describes the return values of several methods/
+  functions, this is more a verbal description than 
+  a description of the actual return type (although this is also
+  specified).
++ in our examples we had valid code with long runtimes (>5 sec) 
+  which we had put into \dontrun; this code is now moved to 
+  file 'examples_taking_longer.R' shipped out in folder 
+  [inst/]scripts to this package and referred to in the
+  example section    
++ clarified that script GumbelLocationModel.R was moved to
+  package RobExtremes but remains as a copy in the scripts
+  folder to ROptEst as well as it follows the same route as
+  the other example files for other smoothly parametrized
+  models; to emphasize the dependence on package RobExtremes 
+  the script is wrapped into if(require(RobExtremes){...}
 
 
 #######################################
