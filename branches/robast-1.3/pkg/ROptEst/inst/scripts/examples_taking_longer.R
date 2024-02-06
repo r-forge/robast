@@ -106,4 +106,4 @@ is(robest.with.roptest, "kStepEstimate")
 
 ## only differences in calls  and functional slots, where bodies ...
 
-}
+
