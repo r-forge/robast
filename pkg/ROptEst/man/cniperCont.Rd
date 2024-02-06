@@ -199,14 +199,14 @@ an S3 object of class \code{c("plotInfo","DiagnInfo")}, i.e., a list
 
 }
 \references{
-  Kohl, M. and Ruckdeschel, H. and Rieder, H. (2008). Infinitesimally 
-  Robust Estimation in General Smoothly Parametrized Models. Unpublished
-  Manuscript.
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
 
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  M. Kohl, P. Ruckdeschel, and H. Rieder (2010). Infinitesimally Robust Estimation in 
+  General Smoothly Parametrized Models. Statistical Methods and Applications \emph{19}(3): 333-354.
+  \doi{10.1007/s10260-010-0133-0}.
 
-  Ruckdeschel, P. (2004). Higher Order Asymptotics for the MSE of M-Estimators
+  P. Ruckdeschel (2004). Higher Order Asymptotics for the MSE of M-Estimators
   on Shrinking Neighborhoods. Unpublished Manuscript.
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}

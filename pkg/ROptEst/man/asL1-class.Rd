@@ -29,8 +29,9 @@ Class \code{"RiskType"}, by class \code{"asGRisk"}.
 No methods defined with class "asL1" in the signature.
 }
 \references{
-  Ruckdeschel, P. and Rieder, H. (2004) Optimal Influence Curves for
+  P. Ruckdeschel and H. Rieder (2004). Optimal Influence Curves for
   General Loss Functions. Statistics & Decisions \emph{22}, 201-223.
+  \doi{10.1524/stnd.22.3.201.57067}
 }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
 %\note{}

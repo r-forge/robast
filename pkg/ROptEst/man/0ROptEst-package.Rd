@@ -30,9 +30,24 @@ Matthias Kohl \email{Matthias.Kohl@stamats.de}\cr
 Maintainer: Matthias Kohl  \email{matthias.kohl@stamats.de}}
 \references{
   M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
-  Dissertation. University of Bayreuth.
-  M. Kohl, P. Ruckdeschel, H. Rieder (2010). Infinitesimally Robust Estimation in 
-  General Smoothly Parametrized Models. Statistical Methods and Application 19(3):333-354. 
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
+
+  M. Kohl, P. Ruckdeschel, and H. Rieder (2010). Infinitesimally Robust Estimation in 
+  General Smoothly Parametrized Models. Statistical Methods and Applications \emph{19}(3): 333-354.
+  \doi{10.1007/s10260-010-0133-0}.
+
+  H. Rieder (1994): Robust Asymptotic Statistics. Springer. 
+  \doi{10.1007/978-1-4684-0624-5}
+
+  H. Rieder, M. Kohl, and P. Ruckdeschel (2008). The Costs of Not Knowing the Radius.
+  Statistical Methods and Applications  \emph{17}(1): 13-40. \doi{10.1007/s10260-007-0047-7}
+
+  P. Ruckdeschel (2005). Optimally One-Sided Bounded Influence Curves.
+  Mathematical Methods of Statistics \emph{14}(1), 105-131.
+
+  P. Ruckdeschel and H. Rieder (2004). Optimal Influence Curves for
+  General Loss Functions. Statistics & Decisions \emph{22}, 201-223.
+  \doi{10.1524/stnd.22.3.201.57067}
 }
 \seealso{
 \code{\link[distr:0distr-package]{distr-package}}, 

@@ -223,21 +223,24 @@ roptest.old(x, L2Fam, eps, eps.lower, eps.upper, fsCor = 1, initial.est,
        an attribute \code{"timings"} where computation time is stored.}
 \references{
   Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  Bayreuth: Dissertation. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
 
   Kohl, M. and Ruckdeschel, P. (2010): R package distrMod: 
   Object-Oriented Implementation of Probability Models. 
-  J. Statist. Softw.  \bold{35}(10), 1--27
+  J. Statist. Softw.  \bold{35}(10), 1--27. \doi{10.18637/jss.v035.i10}.
   
   Kohl, M. and Ruckdeschel, P., and Rieder, H. (2010):
   Infinitesimally Robust Estimation in General Smoothly Parametrized Models.
   \emph{Stat. Methods Appl.}, \bold{19}, 333--354. 
+  \doi{10.1007/s10260-010-0133-0}.
 
   Rieder, H. (1994) \emph{Robust Asymptotic Statistics}. New York: Springer.
+  \doi{10.1007/978-1-4684-0624-5}.
 
   Rieder, H., Kohl, M. and Ruckdeschel, P. (2008) The Costs of not Knowing
   the Radius. Statistical Methods and Applications \bold{17}(1) 13-40.
-
+  \doi{10.1007/s10260-007-0047-7}.
+  
   Rieder, H., Kohl, M. and Ruckdeschel, P. (2001) The Costs of not Knowing
   the Radius. Appeared as discussion paper Nr. 81. 
   SFB 373 (Quantification and Simulation of Economic Processes),
@@ -332,55 +335,14 @@ plot(pIC(robest1))
 #############################
 ## 3. Normal (Gaussian) location and scale
 #############################
-## 24 determinations of copper in wholemeal flour
-library(MASS)
-data(chem)
-plot(chem, main = "copper in wholemeal flour", pch = 20)
 
-## ML-estimate
-MLest <- MLEstimator(chem, NormLocationScaleFamily())
-estimate(MLest)
-confint(MLest)
+## this example of a two dimensional parameter
+## to be estimated will need more time than 
+## 5 seconds to run 
+## you can find it in 
+## system.file("scripts", "examples_taking_longer.R", 
+##              package="ROptEst")
 
-## Don't run to reduce check time on CRAN
-\donttest{
-## compute optimally robust estimator (known contamination)
-## takes some time -> you can use package RobLox for normal 
-## location and scale which is optimized for speed
-robest <- roptest(chem, NormLocationScaleFamily(), eps = 0.05, steps = 3)
-estimate(robest)
-confint(robest, symmetricBias())
-plot(pIC(robest))
-## plot of relative and absolute information; cf. Kohl (2005)
-infoPlot(pIC(robest))
-
-tmp <- qqplot(chem, robest, cex.pch=1.5, exp.cex2.pch = -.25,
-              exp.fadcol.pch = .55, withLab = TRUE, which.Order=1:4,
-              exp.cex2.lbl = .12,exp.fadcol.lbl = .45,
-              nosym.pCI = TRUE, adj.lbl=c(1.7,.2),
-              exact.pCI = FALSE, log ="xy")
-
-## finite-sample correction
-if(require(RobLox)){
-    n <- length(chem)
-    r <- 0.05*sqrt(n)
-    r.fi <- finiteSampleCorrection(n = n, r = r)
-    fsCor <- r.fi/r
-    robest <- roptest(chem, NormLocationScaleFamily(), eps = 0.05, 
-                      fsCor = fsCor, steps = 3)
-    estimate(robest)
-}
-
-## compute optimally robust estimator (unknown contamination)
-## takes some time -> use package RobLox!
-robest1 <- roptest(chem, NormLocationScaleFamily(), eps.lower = 0.05, 
-                   eps.upper = 0.1, steps = 3)
-estimate(robest1)
-confint(robest1, symmetricBias())
-plot(pIC(robest1))
-## plot of relative and absolute information; cf. Kohl (2005)
-infoPlot(pIC(robest1))
-}
 }
 \concept{k-step construction}
 \concept{optimally robust estimation}

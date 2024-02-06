@@ -76,17 +76,25 @@ getIneffDiff(radius, L2Fam, neighbor, risk, ...)
      the boundaries of a given radius interval.}
 }}
 \references{ 
-  Rieder, H., Kohl, M. and Ruckdeschel, P. (2008) The Costs of not Knowing
-  the Radius. Statistical Methods and Applications, \emph{17}(1) 13-40.
+  M. Kohl (2005). \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
+  Bayreuth: Dissertation. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
 
-  Rieder, H., Kohl, M. and Ruckdeschel, P. (2001) The Costs of not Knowing
-  the Radius. Submitted. Appeared as discussion paper Nr. 81. 
+  H. Rieder, M. Kohl, and P. Ruckdeschel (2008). The Costs of not Knowing
+  the Radius. Statistical Methods and Applications, \emph{17}(1) 13-40.
+  \doi{10.1007/s10260-007-0047-7}.
+
+  H. Rieder, M. Kohl, and P. Ruckdeschel (2001). The Costs of not Knowing
+  the Radius. Appeared as discussion paper Nr. 81. 
   SFB 373 (Quantification and Simulation of Economic Processes),
   Humboldt University, Berlin; also available under
-  \doi{10.18452/3638}
+  \doi{10.18452/3638}.
 
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  P. Ruckdeschel (2005). Optimally One-Sided Bounded Influence Curves.
+  Mathematical Methods of Statistics \emph{14}(1), 105-131.
+
+  P. Ruckdeschel and H. Rieder (2004). Optimal Influence Curves for
+  General Loss Functions. Statistics & Decisions \emph{22}, 201-223.
+  \doi{10.1524/stnd.22.3.201.57067}
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}

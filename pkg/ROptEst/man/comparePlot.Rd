@@ -17,16 +17,10 @@ is an additional argument \code{n.MBR} defaulting to 10000
 to determine the number of evaluation points.
 }
 \examples{
-N0 <- NormLocationScaleFamily(mean=0, sd=1)
-N0.Rob1 <- InfRobModel(center = N0,
-           neighbor = ContNeighborhood(radius = 0.5))
-
-## Don't run to reduce check time on CRAN
-\dontrun{
-IC1 <- optIC(model = N0, risk = asCov())
-IC2 <- optIC(model = N0.Rob1, risk = asMSE())
-
-comparePlot(IC1,IC2, withMBR=TRUE)
-}
+## all (interesting) examples to this function need
+## more time than 5 seconds;
+## you can find them in 
+## system.file("scripts", "examples_taking_longer.R", 
+##              package="ROptEst")
 }
 \keyword{robust}

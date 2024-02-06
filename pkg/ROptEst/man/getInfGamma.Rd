@@ -57,7 +57,13 @@ getInfGamma(L2deriv, risk, neighbor, biastype, ...)
   The function is used in case of asymptotic G-risks; confer
   Ruckdeschel and Rieder (2004).
 }
-%\value{}
+\value{The optimal clipping height is computed. More spefically, the optimal
+ clipping height \eqn{b} is determined in a zero search of a certain function
+ \eqn{\gamma}{gamma}, where the respective  \code{getInf}-method will return 
+ the value of  \eqn{\gamma(b)}{gamma(b)}. The actual function \eqn{\gamma}{gamma}
+ varies according to whether the parameter is one dimensional or higher dimensional,
+ according to the risk, according to the neighborhood, and according to the
+ bias type, which leads to the different methods.}
 \section{Methods}{
 \describe{
   \item{L2deriv = "UnivariateDistribution", risk = "asGRisk", 
