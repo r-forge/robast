@@ -202,8 +202,16 @@ setMethod("minmaxBias", signature(L2deriv = "RealRandVariable",
 
         if(missing(verbose)|| is.null(verbose))
            verbose <- getRobAStBaseOption("all.verbose")
-        DA.comp <- abs(trafo) %*% A.comp != 0
-        eerg <- .LowerCaseMultivariate(L2deriv = L2deriv, neighbor = neighbor,
+        
+        A.test <- trafo * A.comp
+		A.symm <- (nrow(A.test)==ncol(A.test)) && isTRUE(all.equal(A.test,t(A.test)))
+
+		DA.comp <- (abs(A.test) >= 1e-8 * max(abs(A.test)))
+
+        if(A.symm) DA.comp[col(DA.comp)>row(DA.comp)] <- FALSE
+
+		
+		eerg <- .LowerCaseMultivariate(L2deriv = L2deriv, neighbor = neighbor,
              biastype = biastype, normtype = normtype, Distr = Distr,
              Finfo = Finfo, trafo, z.start, A.start = A.start, z.comp = z.comp,
              A.comp = DA.comp, maxiter = maxiter, tol = tol, verbose = verbose, ...)
@@ -216,8 +224,9 @@ setMethod("minmaxBias", signature(L2deriv = "RealRandVariable",
         p <- nrow(trafo)
         k <- ncol(trafo)
         A <- matrix(0, ncol=k, nrow=p)
-        A[DA.comp] <- matrix(param[1:lA.comp], ncol=k, nrow=p)
-        A.max <- max(abs(A))
+        A[DA.comp] <- param[1:lA.comp]
+        if(A.symm) A[col(A)>row(A)] <- t(A)[col(A)>row(A)]
+		A.max <- max(abs(A))
         A <- A/A.max
         z <- numeric(k)
         z[z.comp] <- param[(lA.comp+1):length(param)]
@@ -394,28 +403,24 @@ setMethod("minmaxBias", signature(L2deriv = "UnivariateDistribution",
            { if(is.finite(lowerCaseRadius(L2deriv, neighbor, risk = asMSE(), biastype)))
                 {
                  sign <- sign(biastype)
-                 w0 <- options("warn")
-                 on.exit(options(w0))
-                 options(warn = -1)
         
-                 l <- length(support(L2deriv))
-                 if (sign>0)
-                      {z0 <- support(L2deriv)[1] 
-                       deltahat <- support(L2deriv)[2]-z0
-                 }else{
-                       z0 <- support(L2deriv)[l]
-                       deltahat <- z0-support(L2deriv)[l-1]
-                 }
+                 supp.s <- sort(support(L2deriv))
+				 if(sign < 0) supp.s <- rev(supp.s)
+				 l <- length(supp.s)
+                 
+				 z0 <- supp.s[1]
+                 z1 <- supp.s[2]
+					   
                  p0 <- d(L2deriv)(z0)   
-                 v1 <- (1-p0)/p0/z0
-                 v2 <- -1/z0
-                 c0 <- deltahat*p0/2
-                 A0 <- abs(1/z0/c0)
-                 zc <- z0+sign(biastype)*deltahat*(1-p0)/2
+                 v0 <- (1-p0)/p0/z0
+                 v1 <- -1/z0
+                 
+				 zc <- p0*z0+(1-p0)*z1 
+				 A0 <- (v1-v0)/(z1-z0)
                  a0 <- A0*zc
                  b0 <- abs(1/z0)
                  d0  <- 0 
-                 asCov <- v1^2*(1-p0)+v2^2*p0
+                 asCov <- v0^2*p0+v1^2*(1-p0)
                  Risk0 <- list(asBias = list(value = b0, biastype = biastype, 
                                normtype = NormType(), 
                                neighbortype = class(neighbor)), 
@@ -423,7 +428,7 @@ setMethod("minmaxBias", signature(L2deriv = "UnivariateDistribution",
                  A0 <- matrix(A0,1,1)
 
                  w <- new("HampelWeight")
-                 cent(w) <- z0
+                 cent(w) <- zc
                  stand(w) <- A0
                  clip(w) <- b0
                  weight(w) <- minbiasweight(w, neighbor = neighbor, 
