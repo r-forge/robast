@@ -76,6 +76,11 @@ checkIC(IC3.p) # numerical problem???
 Risks(IC3.p)
 plot(IC3.p)
 
+(IC3.n <- optIC(model=RobP1, risk=asBias(biastype=negativeBias())))
+checkIC(IC3.n) 
+Risks(IC3.n)
+plot(IC3.n)
+
 (IC3.a <- optIC(model=RobP1, risk=asBias(biastype=asymmetricBias(nu = c(1,0.2)))))
 checkIC(IC3.a)
 Risks(IC3.a)
@@ -86,6 +91,26 @@ plot(IC3.a)
 checkIC(IC4)
 Risks(IC4)
 plot(IC4)
+
+### now with minmaxBias()
+
+PL2deriv <- P@L2derivDistr[[1]]
+
+### todo: make output nicer 
+
+minmaxBias(PL2deriv, neighbor=ContNeighborhood(), biastype=symmetricBias(), 
+           trafo=trafo(P), maxiter=50, tol=.Machine$double.eps^0.4, 
+		   warn=TRUE, Finfo = FisherInfo(P))
+
+minmaxBias(PL2deriv, neighbor=ContNeighborhood(), biastype=positiveBias(), 
+           trafo=trafo(P), maxiter=50, tol=.Machine$double.eps^0.4, 
+		   warn=TRUE, Finfo = FisherInfo(P))
+
+minmaxBias(PL2deriv, neighbor=ContNeighborhood(), biastype=negativeBias(), 
+           trafo=trafo(P), maxiter=50, tol=.Machine$double.eps^0.4, 
+		   warn=TRUE, Finfo = FisherInfo(P))
+
+
 
 ## Hampel solution
 (IC5 <- optIC(model=RobP1, risk=asHampel(bound=clip(IC1))))
@@ -130,6 +155,7 @@ plot(IC8)
                     risk=asMSE(), rho=0.5))
 (r.rho2 <- leastFavorableRadius(L2Fam=P, neighbor=TotalVarNeighborhood(),
                     risk=asMSE(), rho=1/3))
+
 
 ## one-step estimation
 ## Example: Rutherford-Geiger (1910)
