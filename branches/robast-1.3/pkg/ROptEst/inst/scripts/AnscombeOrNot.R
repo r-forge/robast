@@ -42,7 +42,7 @@ checkOut <- function(L2M, nbd, extraICs = NULL, biastype = symmetricBias(),
 contnb <- ContNeighborhood(radius = 0.5)
 totvnb <- TotalVarNeighborhood(radius = 0.5)
 medianmad <- list(function(x)sign(x),function(x)sign(abs(x)-qnorm(.75)))
-### Normal location and scale --- takes ~2min:
+### Normal location and scale --- takes ~20 sec:
 system.time({print(round(mineff.ls <- checkOut(L2M = NormLocationScaleFamily(), nbd = contnb,
          extraICs = list(medmad=medianmad)),3))})
 ### Normal location
@@ -51,9 +51,9 @@ system.time(print(round(mineff.l <- checkOut(L2M = NormLocationFamily(), nbd = c
 system.time(print(round(mineff.sc <- checkOut(L2M = NormScaleFamily(), nbd = contnb),3)))
 ### Normal scale total variation
 system.time(print(round(mineff.sv <- checkOut(L2M = NormScaleFamily(), nbd = totvnb),3)))
-### Poisson(lambda=1) convex contamination:
+### Poisson(lambda=1) convex contamination: ### ~ 13 sec
 system.time(print(round(mineff.pc <- checkOut(L2M = PoisFamily(lambda = 1), nbd = contnb),3)))
-### Poisson(lambda=1) scale convex contamination:
+### Poisson(lambda=1) scale convex contamination: ~20 sec
 system.time(print(round(mineff.pv <- checkOut(L2M = PoisFamily(lambda = 1), nbd = totvnb),3)))
 
 

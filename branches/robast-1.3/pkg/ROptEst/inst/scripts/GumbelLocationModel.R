@@ -3,7 +3,16 @@
 ## computations numerically less stable than in case of the 
 ## Exponential Scale Family
 ###############################################################################
-require(ROptEst)
+
+###############################################################################
+# NOTE: the infrastructure for the Gumbel Location Family was moved
+#       to package RobExtremes (also on CRAN) in version 0.9 (~2013)
+# it remains as a copy in this folder, as it follows the same 
+# choreography as the other ones for smoothly parametrized models 
+# in this folder
+###############################################################################
+
+if(require(RobExtremes)){
 options("newDevice"=TRUE)
 
 ## generates Gumbel Location Family with loc = 0
@@ -173,3 +182,4 @@ confint(G0.est6, symmetricBias())
 confint(G0.est21, symmetricBias())
 
 distrExOptions(ElowerTruncQuantile=0) # default
+}

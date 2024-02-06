@@ -21,18 +21,12 @@ plot(N0.IC0) # plot IC
 N0.Rob1 <- InfRobModel(center = N0, neighbor = ContNeighborhood(radius = 0.5))
 N0.Rob1     # show N0.Rob1
 
-## OBRE solution (ARE = .95 acc. to Anscombe criterion)
+## OBRE solution (ARE = .95)
 system.time(N0.ICA <- optIC(model = N0.Rob1, risk = asAnscombe(), upper=NULL,lower=NULL, verbose=TRUE))
 checkIC(N0.ICA)
 Risks(N0.ICA)
 plot(N0.ICA)
 infoPlot(N0.ICA)
-
-## in two dimensions, other norms are possible
-## acc. to Rieder[94], we consider norms of type |x|^2 = x' C^{-1} x for some positive definite C 
-## in particular, for C = FisherInfo^{-1}, we obtain information-standardization
-## in particular, for C = Cov(IC), we obtain self-standardization
-## notationally, we abbreviate this with index .i or index .s 
 
 system.time(N0.ICA.i <- optIC(model = N0.Rob1, risk = asAnscombe(eff=0.95, normtype=InfoNorm()), upper=NULL,lower=NULL, verbose=TRUE))
 
@@ -42,10 +36,6 @@ checkIC(N0.IC1)
 Risks(N0.IC1)
 plot(N0.IC1)
 infoPlot(N0.IC1)
-
-## the infoPlot plots 
-## + for IC psi the map x -> |psi(x)|^2 (where |y| denotes Euclidean norm of the two coordinates for location and scale)
-## + for each coordinate i of the IC psi the map x -> psi^{(i)}(x)^2/|psi(x)|^2  
 
 system.time(N0.IC1.i <- optIC(model = N0.Rob1, risk = asMSE(normtype=InfoNorm())))
 checkIC(N0.IC1.i)
@@ -59,7 +49,6 @@ Risks(N0.IC1.s)
 plot(N0.IC1.s)
 infoPlot(N0.IC1.s)
 
-## the comparePlot compares the coordinates of the IFs   
 comparePlot(N0.IC1,N0.IC1.i,N0.IC1.s)
 
 
@@ -84,7 +73,7 @@ plot(N0.IC3)
 infoPlot(N0.IC3)
 
 ## radius minimax IC
-## (may take quite some time!)
+## (may take quite some time! ~14sec)
 system.time(N0.IC4 <- radiusMinimaxIC(L2Fam=N0, neighbor=ContNeighborhood(), 
                 risk=asMSE(), loRad=0, upRad=Inf, verbose = TRUE))
 checkIC(N0.IC4)
@@ -92,6 +81,7 @@ Risks(N0.IC4)
 plot(N0.IC4) 
 infoPlot(N0.IC4)
 
+## (may take quite some time! ~20sec)
 system.time(N0.IC4.i <- radiusMinimaxIC(L2Fam=N0, neighbor=ContNeighborhood(),
                 risk=asMSE(normtype=InfoNorm()), loRad=0, upRad=Inf))
 print(N0.IC4.i)
@@ -100,7 +90,7 @@ Risks(N0.IC4.i)
 plot(N0.IC4.i) 
 infoPlot(N0.IC4.i)
 
-## takes extremely long time:
+## takes extremely long time: (~5000s)
 system.time(N0.IC4.s <- radiusMinimaxIC(L2Fam=N0, neighbor=ContNeighborhood(),
                 risk=asMSE(normtype=SelfNorm()), loRad=0, upRad=Inf))
 print(N0.IC4.s)
@@ -118,13 +108,10 @@ N0.r.rho1 <- leastFavorableRadius(L2Fam=N0, neighbor=ContNeighborhood(),
 # a non-trivial trafo:
 ###############################################################################
 
-## here we use x[1]+qnorm(.95)*x[2] which, for x = (mu, sigma)
-## gives a parametric quantile in the normal distribution 
-
 tfct <- function(x){
     nms0 <- c("mean","sd")
-    nms  <- "q95"
-    fval0 <- x[1]+qnorm(.95)*x[2]
+    nms  <- "comb"
+    fval0 <- x[1]+2*x[2]
     names(fval0) <- nms
     mat0 <- matrix(c(1,2), nrow = 1, dimnames = list(nms,nms0))
     return(list(fval = fval0, mat = mat0))
@@ -230,46 +217,6 @@ system.time(ROest2 <- roblox(chem, eps.upper = 0.1, k = 3, returnIC = TRUE))
 ## comparison
 estimate(ROest1)
 estimate(ROest2)
-
-### plotting
-qKI <- qnorm(.975)
-n.chem <- length(chem)
-
-m.chem <- mean(chem)
-s.chem <- sd(chem)
-m.chem.rob <- estimate(ROest2)[1]
-s.chem.rob <- estimate(ROest2)[2]
-
-plot(chem, ylim=c(-10,35))
-
-## classical, non-robust estimate:
-abline(h=m.chem, col = "red")
-## confidence bands (for mu)
-abline(h=m.chem + qKI*s.chem/sqrt(n.chem), col = "red", lty = 2)
-abline(h=m.chem - qKI*s.chem/sqrt(n.chem), col = "red", lty = 2)
-## prediction bands (for all observations)
-abline(h=m.chem + qKI*s.chem, col = "red", lty = 3)
-abline(h=m.chem - qKI*s.chem, col = "red", lty = 3)
-
-## RMX-based estimate:
-abline(h=m.chem.rob, col = "darkblue")
-## confidence bands (for mu)
-abline(h=m.chem.rob + qKI*s.chem.rob/sqrt(n.chem), col = "darkblue", lty = 2)
-abline(h=m.chem.rob - qKI*s.chem.rob/sqrt(n.chem), col = "darkblue", lty = 2)
-## prediction bands (for all observations)
-abline(h=m.chem.rob + qKI*s.chem.rob, col = "darkblue", lty = 3)
-abline(h=m.chem.rob - qKI*s.chem.rob, col = "darkblue", lty = 3)
-
-legend("topright", legend = c("mu.MLE", "mu.rob", "95%-confidence band for mu - classic",
-                     "95%-confidence band for mu - robust",
-                     "95%-prediction bands for obs - classic",
-					 "95%-prediction bands for obs - robust"), cex=0.7,
-					 col=c("red", "darkblue"), lty=c(1,1,2,2,3,3))
-
-text(17,chem[17],"out", col="red",adj=1.05)
-text(13,chem[13],"out", col="blue",adj=1.05)
-### observation 17 sticks out as outlier in both classic and robust fit
-### observation 13 is only identified as outlier in robust fit
 
 ## confidence intervals
 confint(ROest1, symmetricBias())
