@@ -68,7 +68,6 @@ of the parameter in the class \code{GEVFamilyMuUnknown}.\cr
 }
 
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \concept{parametric family}
 \keyword{classes}
 \keyword{models}

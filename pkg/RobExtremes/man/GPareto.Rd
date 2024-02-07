@@ -17,9 +17,7 @@
     support argument names of package \pkg{VGAM}. }
  
 }
-%\details{}
 \value{Object of class \code{"GPareto"}}
-%\references{}
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com}}
 \note{The class \code{"GPareto"} is based on the code provided 
   by the package \pkg{evd} by  Alec Stephenson.}

@@ -30,7 +30,6 @@ In this file we describe classes \code{GParetoFamily}, \code{GEVFamily},
 }
 
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \concept{parametric family}
 \keyword{classes}
 \keyword{models}

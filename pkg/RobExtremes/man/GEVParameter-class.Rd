@@ -52,9 +52,7 @@ Class \code{"OptionalParameter"}, by class \code{"Parameter"}.
       slot \code{shape}. }
   }
 }
-%\references{}
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com}}
-%\note{}
 \seealso{\code{\link{GEV-class}}, \code{\link[distr]{Parameter-class}}}
 \examples{
 P <- new("GEVParameter")

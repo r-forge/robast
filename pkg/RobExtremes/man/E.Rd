@@ -7,10 +7,8 @@
 \alias{E,GPareto,missing,missing-method}
 \alias{E,GPareto,function,missing-method}
 \alias{E,GEV,function,missing-method}
-%\alias{E,Weibull,function,missing-method} % moved to distrEx
 \alias{E,GEV,missing,missing-method}
 \alias{E,Pareto,missing,missing-method}
-%\alias{E,Gammad,function,missing-method} % moved to distrEx
 \alias{E,Pareto,function,missing-method}
 
 \title{Generic Function for the Computation of (Conditional) Expectations}

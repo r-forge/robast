@@ -21,9 +21,7 @@ All terms are analytic.
   A 2x2 matrix; the covariance. }
 
 
-%\references{  }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link{QuantileBCCEstimator}} }
 \examples{
 GP <- WeibullFamily(scale=1,shape=0.7)

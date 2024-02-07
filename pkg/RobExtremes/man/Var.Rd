@@ -203,9 +203,8 @@ Qn(x, ...)
   \item{\code{Qn}, \code{signature(x = "Norm")}:}{
     exact evaluation using explicit expressions.}
 }}
-%\references{ ~put references to the literature/web site here ~ }
+
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{ ~~further notes~~ }
 
 \section{Caveat}{
 If any of the packages \pkg{e1071}, \pkg{moments}, \pkg{fBasics} is to be used together with \pkg{distrEx} 

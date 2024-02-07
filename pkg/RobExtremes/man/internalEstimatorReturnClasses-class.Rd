@@ -74,9 +74,7 @@ Class \code{GPDCvMMD.ALEstimate} extends classes \code{GPDEstimate},
 Class \code{GEVCvMMD.ALEstimate} extends classes \code{GEVEstimate},
 \code{CvMMD.ALEstimate}, directly.\cr
 }
-%\references{}
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link[distrMod]{Estimate-class}},
 \code{\link[distrMod]{MCEstimate-class}},
 \code{\link[RobAStBase]{kStepEstimate-class}},

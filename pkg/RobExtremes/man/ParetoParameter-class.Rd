@@ -42,9 +42,7 @@ Class \code{"OptionalParameter"}, by class \code{"Parameter"}.
       slot \code{Min}. }
   }
 }
-%\references{}
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com}}
-%\note{}
 \seealso{\code{\link{Pareto-class}}, \code{\link[distr]{Parameter-class}}}
 \examples{
 (P1 <- new("ParetoParameter"))

@@ -16,15 +16,16 @@
 
 \title{Generalized EV distribution}
 \description{[borrowed from \pkg{evd}]:
-The GEV distribution function with parameters \code{loc}\eqn{= a},
+The GEV distribution function with parameters \code{loc} \eqn{= a},
   \code{scale} \eqn{= b}, \code{shape} \eqn{= s} is
 
 \deqn{G(x) = exp[-{1+s(z-a)/b}^(-1/s)]}
 
 for \eqn{1+s(z-a)/b > 0}, where \eqn{b > 0}. If \eqn{s = 0} the distribution is 
-defined by continuity. If \eqn{1+s(z-a)/b <= 0}, the value \eqn{z} is either 
+defined by continuity and gives the Gumbel distribution. 
+If \eqn{1+s(z-a)/b \leq 0}{1+s(z-a)/b <= 0}, the value \eqn{z} is either 
 greater than the upper end point (if \eqn{s < 0}), or less than the lower end 
-point (if eqn{s > 0}).
+point (if \eqn{s > 0}).
   }
 \section{Objects from the Class}{
   Objects can be created by calls of the form \code{new("GEV", loc, scale,shape)}.
@@ -103,6 +104,7 @@ Class \code{"Distribution"}, by class \code{"AbscontDistribution"}.
 \references{Pickands, J. (1975) \emph{Statistical inference using extreme order
      statistics. _Annals of Statistics_, *3*, 119-131.}}
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com}}
+
 \note{This class is based on the code provided by the package \pkg{evd}
 by  A. G. Stephenson.}
 \seealso{\code{\link[evd:gpd]{dgpd}}, \code{\link[distr]{AbscontDistribution-class}}}

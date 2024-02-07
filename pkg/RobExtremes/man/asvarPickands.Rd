@@ -4,7 +4,8 @@
 \title{ Function to compute asymptotic variance of Pickands estimator}
 \description{
   Function \code{asvarPickands} computes the asymptotic (co)variance of
-  a Pickands estimator at a GPD or GEVD model.
+  a Pickands estimator at a GPD or GEVD model -- the latter with location
+  mu known or unknown.
 }
 \usage{
 asvarPickands( model, alpha=2)
@@ -21,22 +22,24 @@ asvarPickands( model, alpha=2)
 All terms are analytic.
 }
 \value{
-  A 2x2 matrix; the covariance. }
+  A 2x2 matrix (resp., for mu unknown in the GEV model a 3x3 matrix); the covariance. }
 
 \references{
-Ruckdeschel, P. and Horbenko, N. (2011): Optimally-Robust Estimators in Generalized
-Pareto Models. ArXiv 1005.1476. To appear at \emph{Statistics}.
+Ruckdeschel, P. and Horbenko, N. (2013): Optimally-Robust Estimators in Generalized
+Pareto Models. \emph{Statistics} 47(4), 762--791.
 DOI: 10.1080/02331888.2011.628022. \cr
-
 }
 
-%\references{  }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link{PickandsEstimator}} }
 \examples{
 GP <- GParetoFamily(scale=1,shape=0.7)
 asvarPickands(GP)
 asvarPickands(GP,alpha=2.3)
+GE <- GEVFamily(loc=0,scale=1,shape=0.7)
+asvarPickands(GE)
+GE0 <- GEVFamilyMuUnknown(loc=0,scale=1,shape=0.7)
+asvarPickands(GE0)
+
 }
 \keyword{asymptotic variance}

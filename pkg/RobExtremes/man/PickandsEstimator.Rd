@@ -79,18 +79,16 @@ in the original setting, at \eqn{\xi=0.7}{xi=0.7}, gives bdp's
   \item{PickandsEstimator}{An object of S4-class \code{"Estimate"}. }
 }
 \references{
-P. Ruckdeschel, N. Horbenko (2012): Yet another breakdown point notion:
-EFSBP --illustrated at scale-shape models. \emph{Metrika}, \bold{75}(8),
-1025--1047.\cr
+Ruckdeschel, P. and Horbenko, N. (2012): Yet another breakdown point notion:
+  EFSBP --illustrated at scale-shape models. \emph{Metrika}, \bold{75}(8),
+  1025--1047. \doi{10.1007/s00184-011-0366-4}.\cr
 
-J. Pickands (1975): Statistical inference using extreme order statistics.
-\emph{Ann. Stat.} \bold{3}(1), 119--131.
+ Pickands, J. (1975): Statistical inference using extreme order statistics.
+\emph{Ann. Stat.} \bold{3}(1), 119--131.\cr
 }
 
-%\references{  }
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com},\cr
         Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link{ParamFamily-class}}, \code{\link{ParamFamily}}, 
          \code{\link{Estimate-class}} }
 \examples{

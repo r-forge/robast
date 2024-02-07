@@ -40,13 +40,11 @@ QuantileBCCEstimator(x, p1 = 1/3, p2 = 2/3,
 }
 \references{
 Boudt, K., Caliskan, D., Croux, C. (2011): Robust explicit estimators of Weibull parameters.
-\emph{Metrika}, \bold{73} (2), 187-209.
+\emph{Metrika}, \bold{73} (2), 187--209.
 }
 
-%\references{  }
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com},\cr
         Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link{ParamFamily-class}}, \code{\link{ParamFamily}}, 
          \code{\link{Estimate-class}} }
 \examples{
