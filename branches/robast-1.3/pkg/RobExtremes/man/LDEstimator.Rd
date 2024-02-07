@@ -114,18 +114,21 @@ medQn(x, ParamFamily, q.lo =1e-3, q.up=15, nuis.idx = NULL,
   An object of S4-class \code{"Estimate"}.
 }
 \references{
-P. Ruckdeschel, N. Horbenko (2011): Yet another breakdown point notion:
-EFSBP --illustrated at scale-shape models. ArXiv 1005.1480. To appear at Metrika.
-DOI: 10.1007/s00184-011-0366-4.
+Marazzi, A. and Ruffieux, C. (1999): The truncated mean of asymmetric distribution.
+\emph{Computational Statistics and Data Analysis} \bold{32}, 79-100.
 
-A. Marazzi and C. Ruffieux (1999): The truncated mean of asymmetric distribution.
-Computational Statistics and Data Analysis 32: 79-100 .
+Ruckdeschel, P. and Horbenko, N. (2013): Optimally-Robust Estimators in Generalized
+  Pareto Models. \emph{Statistics}. \bold{47}(4), 762-791.
+  \doi{10.1080/02331888.2011.628022}.\cr
+
+Ruckdeschel, P. and Horbenko, N. (2012): Yet another breakdown point notion:
+  EFSBP --illustrated at scale-shape models. \emph{Metrika}, \bold{75}(8),
+  1025-1047. \doi{10.1007/s00184-011-0366-4}.\cr
+
 }
 
-%\references{  }
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com},\cr
         Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link{ParamFamily-class}}, \code{\link{ParamFamily}}, 
          \code{\link{Estimate-class}} }
 \examples{

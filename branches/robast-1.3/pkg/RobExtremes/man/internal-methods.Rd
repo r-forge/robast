@@ -27,21 +27,8 @@
 \alias{.checkEstClassForParamFamily,GEVFamilyMuUnknown,CvMMDEstimate-method}
 \alias{.checkEstClassForParamFamily,GEVFamilyMuUnknown,MDEstimate-method}
 \title{ Methods for Function .checkEstClassForParamFamily in Package `RobExtremes' }
+
 \description{.checkEstClassForParamFamily-methods}
-%\usage{.checkEstClassForParamFamily(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GParetoFamily,Estimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GParetoFamily,MCEstimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GParetoFamily,LDEstimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GParetoFamily,kStepEstimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GEVFamily,Estimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GEVFamily,LDEstimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GEVFamily,MCEstimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GEVFamily,kStepEstimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GEVFamilyMuUnknown,Estimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GEVFamilyMuUnknown,LDEstimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GEVFamilyMuUnknown,MCEstimate}(PFam, estimator)
-%\S4method{.checkEstClassForParamFamily}{GEVFamilyMuUnknown,kStepEstimate}(PFam, estimator)
-%}
 \arguments{
   \item{PFam}{a parametric family.}
   \item{estimator}{an estimator. }

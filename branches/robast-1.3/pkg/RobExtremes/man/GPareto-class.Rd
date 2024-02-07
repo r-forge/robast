@@ -53,6 +53,7 @@ Class \code{"AbscontDistribution"}, directly.\cr
 Class \code{"UnivariateDistribution"}, by class \code{"AbscontDistribution"}.\cr
 Class \code{"Distribution"}, by class \code{"AbscontDistribution"}.
 }
+
 \section{Methods}{
   \describe{
     \item{initialize}{\code{signature(.Object = "GPareto")}: initialize method. }
@@ -100,7 +101,9 @@ Class \code{"Distribution"}, by class \code{"AbscontDistribution"}.
 }
 \references{Pickands, J. (1975) \emph{Statistical inference using extreme order
      statistics. _Annals of Statistics_, *3*, 119-131.}}
+
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com}}
+
 \note{This class is based on the code provided by the package \pkg{evd}
 by  A. G. Stephenson.}
 \seealso{\code{\link[evd:gpd]{dgpd}}, \code{\link[distr]{AbscontDistribution-class}}}

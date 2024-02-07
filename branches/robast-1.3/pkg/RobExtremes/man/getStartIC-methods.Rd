@@ -54,7 +54,6 @@ and \code{roptest} to compute the optimally robust influence function
 according to the arguments given to them.}
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
 \seealso{\code{\link{robest}},\code{\link{optIC}}, \code{\link{radiusMinimaxIC}}}
-%\examples{}
 \concept{asymptotic risk}
 \concept{risk}
 \keyword{classes}

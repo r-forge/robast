@@ -47,26 +47,29 @@ GParetoFamily(loc = 0, scale = 1, shape = 0.5, of.interest = c("scale", "shape")
 }
 \value{Object of class \code{"GParetoFamily"}}
 \references{
-  Kohl, M. (2005) \emph{Numerical Contributions to 
-  the Asymptotic Theory of Robustness}. Bayreuth: Dissertation.\cr
-
-M.~Kohl, P. Ruckdeschel, H.~Rieder (2010):
+Kohl, M. (2005) \emph{Numerical Contributions to 
+the Asymptotic Theory of Robustness}. Bayreuth: Dissertation.
+  \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.\cr
+  
+Kohl, M., Ruckdeschel, P., and Rieder, H. (2010):
 Infinitesimally Robust Estimation in General Smoothly Parametrized Models.
-\emph{Stat. Methods Appl.}, \bold{19}, 333--354.\cr
+\emph{Stat. Methods Appl.}, \bold{19}, 333-354.
+\doi{10.1007/s10260-010-0133-0}.
+\cr
 
-Ruckdeschel, P. and Horbenko, N. (2011): Optimally-Robust Estimators in Generalized
-Pareto Models. ArXiv 1005.1476. To appear at \emph{Statistics}.
-DOI: 10.1080/02331888.2011.628022. \cr
+Ruckdeschel, P. and Horbenko, N. (2013): Optimally-Robust Estimators in Generalized
+  Pareto Models. \emph{Statistics}. \bold{47}(4), 
+  762-791.
+  \doi{10.1080/02331888.2011.628022}.\cr
 
 Ruckdeschel, P. and Horbenko, N. (2012): Yet another breakdown point notion:
-EFSBP --illustrated at scale-shape models. \emph{Metrika}, \bold{75}(8),
-1025--1047.
-  }
+  EFSBP --illustrated at scale-shape models. \emph{Metrika}, \bold{75}(8),
+  1025--1047. \doi{10.1007/s00184-011-0366-4}.\cr
+}
 
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}\cr
         Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}\cr
         Nataliya Horbenko \email{nhorbenko@gmail.com}}
-%\note{}
 \seealso{\code{\link[distrMod]{L2ParamFamily-class}}, \code{\linkS4class{GPareto}}}
 \examples{
 (G1 <- GParetoFamily())

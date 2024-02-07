@@ -27,9 +27,7 @@ DOI: 10.1080/02331888.2011.628022. \cr
 
 }
 
-%\references{  }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link{LDEstimator}} }
 \examples{
 GP <- GParetoFamily(scale=1,shape=0.7)

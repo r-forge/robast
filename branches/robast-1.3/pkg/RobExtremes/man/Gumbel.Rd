@@ -12,9 +12,7 @@
   \item{scale}{ positive real number: scale parameter
     of the Gumbel distribution }
 }
-%\details{}
 \value{Object of class \code{"Gumbel"}}
-%\references{}
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 \note{The class \code{"Gumbel"} is based on the code provided 
   by the package \pkg{evd}.}

@@ -21,8 +21,23 @@ user-visible CHANGES:
    and (b) it now also can be applied to GEVFamilyMuUnknown models.
 
 under the hood
+
+#######################################
+version 1.2.2
+#######################################
+
+under the hood
++ fixed some internal .Rd files
++ moved from latin1 to UTF-8 encoding
++ removed the standardtexts (in comments) in our .Rd-files
 + fixed some broken URLs and changed URLs from http to https where possible
 + changed encoding to UTF-8 and updated URL for r-forge project homepage
+  
+user-visible changes
++ added some more references
++ added dois to references where available
++ added ORCID references for the package authors
++ changed Description entry in DESCRIPTION -- now taking up references as well
 
 #######################################
 version 1.2

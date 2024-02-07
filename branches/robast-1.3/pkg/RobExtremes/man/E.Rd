@@ -7,10 +7,8 @@
 \alias{E,GPareto,missing,missing-method}
 \alias{E,GPareto,function,missing-method}
 \alias{E,GEV,function,missing-method}
-%\alias{E,Weibull,function,missing-method} % moved to distrEx
 \alias{E,GEV,missing,missing-method}
 \alias{E,Pareto,missing,missing-method}
-%\alias{E,Gammad,function,missing-method} % moved to distrEx
 \alias{E,Pareto,function,missing-method}
 
 \title{Generic Function for the Computation of (Conditional) Expectations}
@@ -20,29 +18,21 @@
 \usage{
 E(object, fun, cond, ...)
 
-\S4method{E}{GEV,missing,missing}(object, low = NULL, upp = NULL,
-             propagate.names=getdistrExOption("propagate.names.functionals"), ...,
-             diagnostic = FALSE)
+\S4method{E}{GEV,missing,missing}(object, low = NULL, upp = NULL, ..., diagnostic = FALSE)
 \S4method{E}{DistributionsIntegratingByQuantiles,function,missing}(object,
          fun, low = NULL, upp = NULL,
          rel.tol= getdistrExOption("ErelativeTolerance"),
          lowerTruncQuantile = getdistrExOption("ElowerTruncQuantile"),
          upperTruncQuantile = getdistrExOption("EupperTruncQuantile"),
          IQR.fac = max(1e4,getdistrExOption("IQR.fac")), ..., diagnostic = FALSE)
-\S4method{E}{Gumbel,missing,missing}(object, low = NULL, upp = NULL,
-             propagate.names=getdistrExOption("propagate.names.functionals"), ...,
-             diagnostic = FALSE)
-\S4method{E}{GPareto,missing,missing}(object, low = NULL, upp = NULL,
-             propagate.names=getdistrExOption("propagate.names.functionals"), ...,
-             diagnostic = FALSE)
+\S4method{E}{Gumbel,missing,missing}(object, low = NULL, upp = NULL, ..., diagnostic = FALSE)
+\S4method{E}{GPareto,missing,missing}(object, low = NULL, upp = NULL, ..., diagnostic = FALSE)
 \S4method{E}{GPareto,function,missing}(object, fun, low = NULL, upp = NULL,
              rel.tol= getdistrExOption("ErelativeTolerance"),
              lowerTruncQuantile = getdistrExOption("ElowerTruncQuantile"),
              upperTruncQuantile = getdistrExOption("EupperTruncQuantile"),
              IQR.fac = max(1e4,getdistrExOption("IQR.fac")), ..., diagnostic = FALSE)
-\S4method{E}{Pareto,missing,missing}(object, low = NULL, upp = NULL,
-             propagate.names=getdistrExOption("propagate.names.functionals"), ...,
-             diagnostic = FALSE)
+\S4method{E}{Pareto,missing,missing}(object, low = NULL, upp = NULL, ..., diagnostic = FALSE)
 }
 \arguments{
   \item{object}{ object of class \code{"Distribution"}}
@@ -64,10 +54,6 @@ E(object, fun, cond, ...)
     or \code{"GLIntegrate"}), \code{call}, \code{result} (the complete return
     value of the method),  \code{args} (the args with which the
     method was called), and \code{time} (the time to compute the integral). }
-  \item{propagate.names}{ logical: should names obtained from parameter
-     coordinates be propagated to return values of specific S4 methods
-     for functionals; defaults to the value of the respective
-     \code{distrExoption} \code{propagate.names.functionals}. }
 }
 \details{The precision of the computations can be controlled via 
   certain global options; cf. \code{\link{distrExOptions}}. 

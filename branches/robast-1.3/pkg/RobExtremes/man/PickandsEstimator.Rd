@@ -27,7 +27,7 @@ PickandsEstimator(x, ParamFamily=GParetoFamily(), alpha=2,
    and for \code{alpha = 1/log(2)} for the GEVD.
    If \code{alpha} is missing we set it to the optimal value (see note below).}
   \item{ParamFamily}{an object of class \code{"GParetoFamily"} or
-                     \code{"GEVFamily"} or \code{"GEVFamilyMuUnknown"}. }
+                     \code{"GEVFamily"}. }
   \item{name}{ optional name for estimator. }
   \item{Infos}{ character: optional informations about estimator }
   \item{nuis.idx}{ optionally the indices of the estimate belonging
@@ -71,10 +71,7 @@ gives the median (\eqn{\alpha=2}{alpha=2} in the GPD and
 \eqn{\alpha=1/\log(2)}{alpha=1/log(2)} in the GEVD) in our setting gives
 bdp's of \eqn{1/4} and \eqn{0.119} for GPD and GEVD, respectively, and
 in the original setting, at \eqn{\xi=0.7}{xi=0.7}, gives bdp's
-\eqn{0.064} and \eqn{0.023}. In case the estimator is applied to 
-a \code{ParamFamily} of class \code{GEVFamilyMuUnknown}, for the
-location parameter, we return the empirical \eqn{\exp(-1)}{exp(-1)} quantile,
-while scale and shape are computed as above; in this case, we return a 3x3 covariance matrix.
+\eqn{0.064} and \eqn{0.023}.
 }
 \value{
   \item{.PickandsEstimator}{A numeric vector of length \code{2} with components
@@ -82,18 +79,16 @@ while scale and shape are computed as above; in this case, we return a 3x3 covar
   \item{PickandsEstimator}{An object of S4-class \code{"Estimate"}. }
 }
 \references{
-P. Ruckdeschel, N. Horbenko (2012): Yet another breakdown point notion:
-EFSBP --illustrated at scale-shape models. \emph{Metrika}, \bold{75}(8),
-1025--1047.\cr
+Ruckdeschel, P. and Horbenko, N. (2012): Yet another breakdown point notion:
+  EFSBP --illustrated at scale-shape models. \emph{Metrika}, \bold{75}(8),
+  1025--1047. \doi{10.1007/s00184-011-0366-4}.\cr
 
-J. Pickands (1975): Statistical inference using extreme order statistics.
-\emph{Ann. Stat.} \bold{3}(1), 119--131.
+ Pickands, J. (1975): Statistical inference using extreme order statistics.
+\emph{Ann. Stat.} \bold{3}(1), 119--131.\cr
 }
 
-%\references{  }
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com},\cr
         Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{}
 \seealso{\code{\link{ParamFamily-class}}, \code{\link{ParamFamily}}, 
          \code{\link{Estimate-class}} }
 \examples{

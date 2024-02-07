@@ -39,6 +39,7 @@ CLT-based confidence interval for the risk meausre is produced.}
 \references{
 P. Ruckdeschel, N. Horbenko (2013): Optimally-Robust Estimators in Generalized
 Pareto Models. Statistics 47(4), 762--791.
+\doi{10.1080/02331888.2011.628022}.\cr
 N. Horbenko, P. Ruckdeschel, T. Bae (2011): Robust Estimation of Operational Risk.
 Journal of Operational Risk 6(2), 3--30.
 }

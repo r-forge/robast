@@ -6,6 +6,8 @@
 \alias{.MBRE.xi}
 \alias{.getLMGrid}
 \alias{.getPsi}
+\alias{.getPsi.wL}
+\alias{.getPsi.P}
 \alias{.is.na.Psi}
 \alias{.svInt}
 \alias{.generateInterpGridSn}
@@ -40,7 +42,7 @@ to be stored in the respective \file{sysdata.rda} file. }
        PFam = GParetoFamily(shape=1,scale=2), radius = 0.5, upper = 1e4,
        lower = 1e-4, OptOrIter = "iterate",  maxiter = 150,
        tol = .Machine$double.eps^0.5, loRad = 0, upRad = Inf, loRad0 = 1e-3,
-       loRad.s = 0.2, up.Rad.s = 1, withStartLM = TRUE, len = 13, namFzus = "")
+       loRad.s = 0.2, upRad.s = 1, withStartLM = TRUE, len = 13, namFzus = "")
 
 .generateInterpGridSn(xiGrid = getShapeGrid(500, cutoff.at.0=0.005),
                       PFam = GParetoFamily(), withPrint = TRUE)

@@ -3,6 +3,7 @@
 \alias{rescaleFunction,GEVFamily-method}
 \alias{rescaleFunction,GParetoFamily-method}
 \alias{rescaleFunction,GEVFamilyMuUnknown-method}
+\alias{rescaleFunction}
 
 \title{Methods for Function rescaleFunction in Package `RobExtremes' }
 
@@ -36,6 +37,5 @@ able to provide default rescalings for (new) particular L2 Families ex post
 to be used in the wrapper functions }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de},\cr
 Mykhailo Pupashenko \email{myhailo.pupashenko@gmail.com}}
-%\examples{}
 \keyword{internal}
 

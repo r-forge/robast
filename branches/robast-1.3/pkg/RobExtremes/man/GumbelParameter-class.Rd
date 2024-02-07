@@ -39,9 +39,7 @@ Class \code{"OptionalParameter"}, by class \code{"Parameter"}.
       slot \code{scale}. }
   }
 }
-%\references{}
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
-%\note{}
 \seealso{\code{\link{Gumbel-class}}, \code{\link[distr]{Parameter-class}}}
 \examples{
 new("GumbelParameter")

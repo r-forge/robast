@@ -29,7 +29,7 @@
                    upper = 1e4, lower = 1e-4, OptOrIter = "iterate",
                    maxiter = 150, tol = .Machine$double.eps^0.5,
                    loRad = 0, upRad = Inf, loRad0 = 1e-3,
-                   loRad.s=0.2, up.Rad.s=1,
+                   loRad.s=0.2, upRad.s=1,
                    withStartLM = TRUE, len = 13,namFzus =""){
              namF <- gsub("\\.th$","",paste(deparse(substitute(optF))))
              namF <- paste(gsub(" ", "",namF),namFzus,sep="")
@@ -44,7 +44,7 @@
                   nameInSysdata = namF, withPrint = TRUE, radius = radius,
                   upper = upper, lower = lower, OptOrIter = OptOrIter,
                   maxiter = maxiter, tol = tol, loRad = loRad, upRad = upRad,
-                  loRad0 = loRad0, loRad.s = loRad.s, up.Rad.s = up.Rad.s,
+                  loRad0 = loRad0, loRad.s = loRad.s, upRad.s = upRad.s,
                   withStartLM = withStartLM, len = len0)
 }
 

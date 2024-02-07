@@ -56,37 +56,36 @@
 \usage{
 IQR(x, ...)
 
-\S4method{IQR}{Gumbel}(x, propagate.names=getdistrExOption("propagate.names.functionals"))
-\S4method{IQR}{GEV}(x, propagate.names=getdistrExOption("propagate.names.functionals"))
-\S4method{IQR}{GPareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"))
-\S4method{IQR}{Pareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"))
+\S4method{IQR}{Gumbel}(x)
+\S4method{IQR}{GEV}(x)
+\S4method{IQR}{GPareto}(x)
+\S4method{IQR}{Pareto}(x)
 
 median(x, ...)
 
-\S4method{median}{Gumbel}(x, propagate.names=getdistrExOption("propagate.names.functionals"))
-\S4method{median}{GEV}(x, propagate.names=getdistrExOption("propagate.names.functionals"))
-\S4method{median}{GPareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"))
-\S4method{median}{Pareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"))
-
+\S4method{median}{Gumbel}(x)
+\S4method{median}{GEV}(x)
+\S4method{median}{GPareto}(x)
+\S4method{median}{Pareto}(x)
 
 var(x, ...)
 
-\S4method{var}{Gumbel}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
-\S4method{var}{GEV}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
-\S4method{var}{GPareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
-\S4method{var}{Pareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
+\S4method{var}{Gumbel}(x, ...)
+\S4method{var}{GEV}(x, ...)
+\S4method{var}{GPareto}(x, ...)
+\S4method{var}{Pareto}(x, ...)
 
 skewness(x, ...)
 \S4method{skewness}{Gumbel}(x, ...)
-\S4method{skewness}{GEV}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
-\S4method{skewness}{GPareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
-\S4method{skewness}{Pareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
+\S4method{skewness}{GEV}(x, ...)
+\S4method{skewness}{GPareto}(x, ...)
+\S4method{skewness}{Pareto}(x, ...)
 
 kurtosis(x, ...)
 \S4method{kurtosis}{Gumbel}(x, ...)
-\S4method{kurtosis}{GEV}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
-\S4method{kurtosis}{GPareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
-\S4method{kurtosis}{Pareto}(x, propagate.names=getdistrExOption("propagate.names.functionals"), ...)
+\S4method{kurtosis}{GEV}(x, ...)
+\S4method{kurtosis}{GPareto}(x, ...)
+\S4method{kurtosis}{Pareto}(x, ...)
 
 Sn(x, ...)
 \S4method{Sn}{ANY}(x,  ...)
@@ -120,10 +119,6 @@ Qn(x, ...)
              Y (a real constant) runs over the range of x; defaults to \code{1.01}.
             Is used internally as \code{upp*(mad(x)+abs(median(x)-Y))}. }
   \item{accuracy}{numeric; number of grid points for \code{Sn}; defaults to \code{1000}. }
-  \item{propagate.names}{ logical: should names obtained from parameter
-     coordinates be propagated to return values of specific S4 methods
-     for functionals; defaults to the value of the respective
-     \code{distrExoption} \code{propagate.names.functionals}. }
   }
 \value{
   The value of the corresponding functional at the distribution in the argument is computed.
@@ -208,9 +203,8 @@ Qn(x, ...)
   \item{\code{Qn}, \code{signature(x = "Norm")}:}{
     exact evaluation using explicit expressions.}
 }}
-%\references{ ~put references to the literature/web site here ~ }
+
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-%\note{ ~~further notes~~ }
 
 \section{Caveat}{
 If any of the packages \pkg{e1071}, \pkg{moments}, \pkg{fBasics} is to be used together with \pkg{distrEx} 

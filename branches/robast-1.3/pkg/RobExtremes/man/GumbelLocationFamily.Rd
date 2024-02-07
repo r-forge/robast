@@ -24,7 +24,6 @@ GumbelLocationFamily(loc = 0, scale = 1, trafo)
   the Asymptotic Theory of Robustness}. Bayreuth: Dissertation.
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
-%\note{}
 \seealso{\code{\link{L2ParamFamily-class}}, \code{\link{Gumbel-class}}}
 \examples{
 ##current implementation is:
