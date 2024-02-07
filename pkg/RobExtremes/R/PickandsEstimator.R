@@ -42,13 +42,15 @@ PickandsEstimator <- function(x, ParamFamily=GParetoFamily(), alpha = 2,
                         ...){
     force(ParamFamily)
     isGP <- is(ParamFamily,"GParetoFamily")
-    if(!(isGP|is(ParamFamily,"GEVFamily")))
+	isGEV.mu <- is(ParamFamily,"GEVFamilyMuUnknown")
+    if(!(isGP|isGEV.mu|is(ParamFamily,"GEVFamily")))
          stop("Pickands estimator only available for GPD and GEVD.")
     es.call <- match.call()
     if(missing(alpha)) alpha <- if(isGP) 2 else 2.248
     if(length(alpha)>1 || any(!is.finite(alpha)) || any(alpha<=1))
        stop("'alpha' has to be a numeric > 1 of length 1.")
-
+    
+	if(isGEV.mu){mu.est <- quantile(x,exp(-1))}
     if(missing(name))
         name <- "PickandsEstimator"
 
@@ -59,9 +61,20 @@ PickandsEstimator <- function(x, ParamFamily=GParetoFamily(), alpha = 2,
     if(is.null(fixed)) fixed <- fixed(ParamFamily)
     fixed.0 <- fixed
     na.rm.0 <- na.rm
-
-    .mPick <- function(x) .PickandsEstimator(x,alpha=alpha, GPD.l=isGP)
-    estimate <- Estimator(x, .mPick, name, Infos,
+    cent <- if(!isGEV.mu) fixed else mu.est
+    .mPick <- if(!isGEV.mu){ function(x) .PickandsEstimator(x-cent,alpha=alpha, GPD.l=isGP)
+	          }else{ function(x){
+			     .mPick0 <- numeric(3)
+	             .mPick0[2:3] <- .PickandsEstimator(x-cent,alpha=alpha, GPD.l=isGP)
+				 .mPick0[1] <- mu.est
+				 names(.mPick0) <- c("loc","scale","shape")
+				 return(.mPick0)}}
+    if(isGEV.mu){para0 <- param(ParamFamily)
+                 main(para0)["loc"] <- mu.est
+                 ParamFamily@param <- para0				 
+	}
+	             
+	estimate <- Estimator(x, .mPick, name, Infos,
                           asvar.fct = asvar.fct.0, asvar = NULL,
                           nuis.idx = nuis.idx.0, trafo = trafo.0,
                           fixed = fixed.0, na.rm = na.rm.0, ...,

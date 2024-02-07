@@ -1,7 +1,8 @@
 asvarPickands <- function(model, alpha=2){
 
     isGP <- is(model,"GParetoFamily")
-    if(!(isGP|is(model,"GEVFamily")))
+    isGEV.mu <- is(model,"GEVFamilyMuUnknown")
+	if(!(isGP|isGEV.mu|is(model,"GEVFamily")))
          stop("Pickands estimator only available for GPD and GEVD.")
 
   scshn <- scaleshapename(model)
@@ -16,8 +17,10 @@ asvarPickands <- function(model, alpha=2){
     al2 <- exp(-1/alpha^2)
   }
 
-  M2 <- q.l(model)(al1)
-  M4 <- q.l(model)(al2)
+
+  c0 <- if(isGEV.mu) main(param(model))["loc"] else fixed(param(model))
+  M2 <- q.l(model)(al1)-c0
+  M4 <- q.l(model)(al2)-c0
 
   xi <- log((M4-M2)/M2)/log(alpha)
   qu <- 1/(alpha^xi-1)
@@ -66,12 +69,28 @@ asvarPickands <- function(model, alpha=2){
   s22 <- al2^(-1)*(1-al2)*(-log(al2))^(-2-2*xi)
   }
   S <- beta^2*matrix(c(s11,s12,s21,s22),2,2)
-
+  if(isGEV.mu){
+  ## var = a1(1-a2)/a1 /a2 * (log(a1)log(a2))^(-(1+xi)) * sig^2
+  ##    =  (1/a2-1) (log(a1)log(a2))^(-(1+xi)) * sig^2
+  ## [a1=a2=exp(-1)] =  exp(1)-1     
+ s31 <- exp(1)-1  
+ s32 <- al1^(-1)*(1-al1)*(-log(al1))^(-1-1*xi)
+ s33 <- al2^(-1)*(1-al2)*(-log(al2))^(-1-1*xi)
+ S0 <- C0 <- matrix(NA,3,3)
+ S0[,1] <- S0[1,] <- c(s31,s32,s33)*beta^2  
+ S0[2:3,2:3] <- S 
+ S <- S0
+ C0[1,] <- C0[,1] <- c(1,0,0)
+ C0[2:3,2:3] <- C 
+ C <- C0
+  }
   ASV_Pick <- t(C) %*% S %*% (C)
   ASV_Pick <- PosSemDefSymmMatrix(ASV_Pick)
-  dimnames(ASV_Pick) <- list(scshn,scshn)
+  dimnames(ASV_Pick) <- if(isGEV.mu)
+     list(c("loc",scshn),c("loc",scshn)) else list(scshn,scshn)
   return(ASV_Pick)
 }
+
 
 asvarQBCC <- function(model, p1 = 1/3, p2= 2/3){
 
@@ -112,7 +131,6 @@ asvarQBCC <- function(model, p1 = 1/3, p2= 2/3){
   dimnames(ASV) <- list(scshn,scshn)
   return(ASV)
 }
-
 
 
 
