@@ -55,9 +55,9 @@ We robust (high-breakdown) starting estimators for
 \itemize{
   \item GPD (PickandsEstimator, medkMAD, medSn, medQn)
   \item GEV (PickandsEstimator)
-  \item Pareto (Cram?r-von-Mises-Minimum-Distance-Estimator)
+  \item Pareto (Cramér-von-Mises-Minimum-Distance-Estimator)
   \item Weibull (the quantile based estimator of Boudt/Caliskan/Croux)
-  \item Gamma (Cram?r-von-Mises-Minimum-Distance-Estimator)
+  \item Gamma (Cramér-von-Mises-Minimum-Distance-Estimator)
 }
 For all these families, of course, MLEs and Minimum-Distance-Estimators
 are also available through package "distrMod". %\cr
