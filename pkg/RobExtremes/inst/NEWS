@@ -8,6 +8,36 @@
  information) 
 
 #######################################
+version 1.3
+#######################################
+
+user-visible CHANGES:
++  taking up a suggestion by Andreas.Scheidegger@eawag.ch, we introduced new 
+   argument propagate.names in our functionals controlling whether names 
+   obtained from parameter coordinates should be propagated to return values 
+   of specific S4 methods for functionals for Gumbel, GEV, GPD, Pareto
++  triggered by a mail by mekontsodimitri@gmail.com, we enhanced PickandsEstimator();
+   (a) it no longer requires the location parameter to be 0
+   and (b) it now also can be applied to GEVFamilyMuUnknown models.
+
+under the hood
+
+#######################################
+version 1.2.2
+#######################################
+
+under the hood
++ fixed some internal .Rd files
++ moved from latin1 to UTF-8 encoding
++ removed the standardtexts (in comments) in our .Rd-files
+  
+user-visible changes
++ added some more references
++ added dois to references where available
++ added ORCID references for the package authors
++ changed Description entry in DESCRIPTION -- now taking up references as well
+
+#######################################
 version 1.2
 #######################################
 

@@ -8,7 +8,7 @@
 
 #define C_DEF(name, n)  {#name, (DL_FUNC) &name, n}
 
-int attribute_hidden compare_doubles(const void *a,const void *b)
+int attribute_hidden compare_doubles(const void *a, const void *b)
 {
   double *da = (double*)a;
   double *db = (double*)b;
