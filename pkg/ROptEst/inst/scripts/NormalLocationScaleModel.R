@@ -90,7 +90,7 @@ Risks(N0.IC4.i)
 plot(N0.IC4.i) 
 infoPlot(N0.IC4.i)
 
-## takes extremely long time: (~5000s)
+## takes extremely long time: (~ 390s)
 system.time(N0.IC4.s <- radiusMinimaxIC(L2Fam=N0, neighbor=ContNeighborhood(),
                 risk=asMSE(normtype=SelfNorm()), loRad=0, upRad=Inf))
 print(N0.IC4.s)

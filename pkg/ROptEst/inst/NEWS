@@ -14,15 +14,18 @@ version 1.3.2
 under the hood
 + fixed some internal .Rd files
 + moved from latin1 to UTF-8 encoding
-+  removed the standardtexts (in comments) in your .Rd-files
-  man/asAnscombe.Rd;  man/asL1.Rd; man/asL4.Rd
++  removed the standardtexts (in comments) in our .Rd-files
 + we have removed all catches to warnings in our code  
++ revised code for lower case solutions
+    (a) in univariate case for asymmetric bias -> in particular minmaxBias()
+    (b) in multivariate case to make use of symmetry 
+
   
 user-visible changes
 + added some more references
 + added dois to references where available
 + added ORCID references for the package authors
-+ changed Description entry in DESCRIPTION -- now taking references as well
++ changed Description entry in DESCRIPTION -- now taking up references as well
    and stating that package ROptEst provides R infrastructure for 
    optimally robust estimation
 + in files getInfGamma.Rd and inputGenerator.Rd we now have a 
