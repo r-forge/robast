@@ -7,8 +7,9 @@ Description: Functions for the determination of optimally robust influence curve
             the regressor is random.
 Depends: R(>= 3.4), ROptRegTS(>= 1.2.0)
 Imports: distr(>= 2.8.0), RandVar(>= 1.2.0), RobAStBase(>= 1.2.0), methods
-Authors@R: person("Matthias", "Kohl", role=c("aut", "cre", "cph"),
-            email="Matthias.Kohl@stamats.de")
+Authors@R: person("Matthias", "Kohl", role=c("aut","cre", "cph"),
+            email="Matthias.Kohl@stamats.de", comment = c(ORCID =
+            "0000-0001-9514-8910"))
 ByteCompile: yes
 License: LGPL-3
 Encoding: UTF-8

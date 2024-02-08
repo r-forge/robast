@@ -8,8 +8,9 @@ Depends: R(>= 3.4), methods, distr(>= 2.8.0), affy
 Imports: Biobase, BiocGenerics, beadarray, RobLox(>= 1.1.0), distrMod(>= 2.8.0), lattice,
             RColorBrewer, AnnotationDbi
 Suggests: affydata, hgu95av2cdf, beadarrayExampleData, illuminaHumanv3.db
-Authors@R: person("Matthias", "Kohl", role=c("aut", "cre", "cph"),
-            email="Matthias.Kohl@stamats.de")
+Authors@R: person("Matthias", "Kohl", role=c("aut","cre", "cph"),
+            email="Matthias.Kohl@stamats.de", comment = c(ORCID =
+            "0000-0001-9514-8910"))
 ByteCompile: yes
 License: LGPL-3
 URL: https://r-forge.r-project.org/projects/robast/

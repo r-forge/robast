@@ -6,9 +6,10 @@ Description: Optimally robust estimation for regression-type models using S4 cla
             methods.
 Depends: R(>= 3.4), methods, ROptEstOld(>= 1.2.0)
 Imports: distr(>= 2.8.0), distrEx(>= 2.8.0), RandVar(>= 1.2.0)
-Authors@R: c(person("Matthias", "Kohl", role=c("cre", "aut", "cph"),
-            email="Matthias.Kohl@stamats.de"), person("Peter", "Ruckdeschel", role=c("aut",
-            "cph")))
+Authors@R: c(person("Matthias", "Kohl", role=c("cre", "cph", "aut"),
+            email="Matthias.Kohl@stamats.de", comment = c(ORCID =
+            "0000-0001-9514-8910")), person("Peter", "Ruckdeschel", 
+			role=c("aut", "cph"), comment = c(ORCID = "0000-0001-7815-4809")))
 ByteCompile: yes
 License: LGPL-3
 Encoding: UTF-8
