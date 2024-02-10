@@ -33,8 +33,8 @@ rlsOptIC.Ha4(r, a.start = 0.25, b.start = 2.5, c.start = 5,
   Marazzi, A. (1993) \emph{Algorithms, routines, and S functions 
   for robust statistics}. Wadsworth and Brooks / Cole.
   
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}

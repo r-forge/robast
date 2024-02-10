@@ -30,10 +30,10 @@ rlsOptIC.MM2(r, c.start = 1.5, d.start = 2, delta = 1e-06, MAX = 100)
 \value{Object of class \code{"IC"}}
 \references{ 
   Fraiman, R., Yohai, V.J. and Zamar, R.H. (2001) Optimal robust
-  M-estimates of location. Ann. Stat. \bold{29}(1): 194--223.
+  M-estimates of location. Ann. Stat. \bold{29}(1): 194-223.
 
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}

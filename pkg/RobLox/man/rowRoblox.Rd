@@ -80,18 +80,21 @@ colRoblox(x, mean, sd, eps, eps.lower, eps.upper, initial.est, k = 1L,
 }
 \value{Object of class \code{"kStepEstimate"}. }
 \references{
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
-
-  Rieder, H. (1994) \emph{Robust Asymptotic Statistics}. New York: Springer.
-
-  Rieder, H., Kohl, M. and Ruckdeschel, P. (2008) The Costs of not Knowing
-  the Radius. Statistical Methods and Applications \emph{17}(1) 13-40.
-  Extended version: \url{http://r-kurs.de/RRlong.pdf}
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
   
-  M. Kohl, P. Ruckdeschel, and H. Rieder (2010). Infinitesimally Robust Estimation 
-  in General Smoothly Parametrized Models. \emph{Statistical Methods and Application}, 
-  \bold{19}(3):333-354. 
+  H. Rieder (1994): Robust Asymptotic Statistics. Springer. \doi{10.1007/978-1-4684-0624-5}
+  
+  H. Rieder, M. Kohl, and P. Ruckdeschel (2008). The Costs of Not Knowing the Radius.
+  Statistical Methods and Applications  \emph{17}(1): 13-40. \doi{10.1007/s10260-007-0047-7}
+
+  M. Kohl, P. Ruckdeschel, and H. Rieder (2010). Infinitesimally Robust Estimation in 
+  General Smoothly Parametrized Models. Statistical Methods and Applications \emph{19}(3): 333-354.
+  \doi{10.1007/s10260-010-0133-0}.
+  
+  M. Kohl and H.P. Deigner (2010). Preprocessing of gene expression data by 
+  optimally robust estimators. BMC Bioinformatics \emph{11}, 583.
+  \doi{10.1186/1471-2105-11-583}.
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}

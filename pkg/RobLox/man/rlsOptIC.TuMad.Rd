@@ -24,8 +24,8 @@ rlsOptIC.TuMad(r, aUp = 10, delta = 1e-06)
   meaning polynomials, illustrated on band-spectroscopic data.
   Discussions. Technometrics \bold{16}: 147--185.
 
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}

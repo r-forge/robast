@@ -1,9 +1,10 @@
 Package: RobLox
 Version: 1.2.1
-Date: 2024-02-04
+Date: 2024-02-10
 Title: Optimally Robust Influence Curves and Estimators for Location and Scale
 Description: Functions for the determination of optimally robust influence curves and
-            estimators in case of normal location and/or scale.
+             estimators in case of normal location and/or scale 
+             (see Chapter 8 in Kohl (2005) <https://epub.uni-bayreuth.de/839/2/DissMKohl.pdf>).
 Depends: R(>= 3.4), stats, distrMod(>= 2.8.0), RobAStBase(>= 1.2.0)
 Imports: methods, lattice, RColorBrewer, Biobase, RandVar(>= 1.2.0), distr(>= 2.8.0)
 Suggests: MASS
