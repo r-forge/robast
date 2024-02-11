@@ -5,8 +5,8 @@ Title: Optimally Robust Estimation for Extreme Value Distributions
 Description: Optimally robust estimation for extreme value distributions using S4 classes and
             methods (based on packages 'distr', 'distrEx', 'distrMod', 'RobAStBase', and
             'ROptEst'); the underlying theoretic results can be found in Ruckdeschel and
-            Horbenko, (2013 and 2012), \doi{10.1080/02331888.2011.628022} and
-            \doi{10.1007/s00184-011-0366-4}.
+            Horbenko, (2013 and 2012), <doi:10.1080/02331888.2011.628022> and
+            <doi:10.1007/s00184-011-0366-4>.
 Depends: R(>= 3.4), methods, distrMod(>= 2.8.0), ROptEst(>= 1.2.0), robustbase, evd
 Suggests: RUnit(>= 0.4.26), ismev(>= 1.39)
 Enhances: fitdistrplus(>= 1.0-9)

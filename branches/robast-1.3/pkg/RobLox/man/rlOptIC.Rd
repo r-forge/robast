@@ -30,10 +30,14 @@ rlOptIC(r, mean = 0, sd = 1, bUp = 1000, computeIC = TRUE)
   \item{b}{ optimal clipping bound }
 }
 \references{ 
-  Rieder, H. (1994) \emph{Robust Asymptotic Statistics}. New York: Springer.
-
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
+  
+  H. Rieder (1994): Robust Asymptotic Statistics. Springer. \doi{10.1007/978-1-4684-0624-5}
+  
+  M. Kohl, P. Ruckdeschel, and H. Rieder (2010). Infinitesimally Robust Estimation in 
+  General Smoothly Parametrized Models. Statistical Methods and Applications \emph{19}(3): 333-354.
+  \doi{10.1007/s10260-010-0133-0}.
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}

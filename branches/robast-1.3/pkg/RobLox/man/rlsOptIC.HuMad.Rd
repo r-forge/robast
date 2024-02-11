@@ -25,8 +25,8 @@ rlsOptIC.HuMad(r, kUp = 2.5, delta = 1e-06)
   Rogers, W.H. and Tukey, J.W. (1972) \emph{Robust estimates of location}. 
   Princeton University Press.
 
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}

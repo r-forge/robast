@@ -32,10 +32,13 @@ rlsOptIC.BM(r, bL.start = 2, bS.start = 1.5, delta = 1e-06, MAX = 100)
 \references{ 
   Bednarski, T and Mueller, C.H. (2001) Optimal bounded influence
   regression and scale M-estimators in the context of experimental
-  design. Statistics, \bold{35}(4): 349--369.
+  design. Statistics, \bold{35}(4): 349-369.
 
-  Kohl, M. (2005) \emph{Numerical Contributions to the Asymptotic Theory of Robustness}. 
-  Bayreuth: Dissertation.
+  M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
+  Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
+  
+  M. Kohl (2012). Bounded influence estimation for regression and scale.
+  Statistics, \bold{46}(4): 437-488. \doi{10.1080/02331888.2010.540668}
 }
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de}}
 %\note{}
