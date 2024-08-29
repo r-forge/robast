@@ -94,7 +94,7 @@ exponent for the weights of this [p]IC used to find out-fading colors.}
   comparisons of distributions, and
  \code{\link[distrMod]{qqplot}} from package \pkg{distrMod} (which
   is called intermediately by this method), as well as
-  \code{\link{qqbounds}}, used by \code{qqplot} to produce confidence
+  \code{\link[distr]{qqbounds}}, used by \code{qqplot} to produce confidence
    intervals.
 }
 \details{

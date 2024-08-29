@@ -102,7 +102,7 @@ The confidence bands given in our version of the return level plot differ
   \code{\link[stats:qqnorm]{qqplot}} from package \pkg{stats} -- the standard QQ plot
   function,  \code{\link[distrMod]{returnlevelplot}} from package \pkg{distrMod} (which
   is called intermediately by this method), as well as
-  \code{\link{qqbounds}}, used by \code{returnlevelplot} to produce confidence
+  \code{\link[distr]{qqbounds}}, used by \code{returnlevelplot} to produce confidence
    intervals.
 }
 \details{
