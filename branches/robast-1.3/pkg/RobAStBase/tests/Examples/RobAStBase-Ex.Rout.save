@@ -1,7 +1,7 @@
 
-R Under development (unstable) (2019-03-28 r76288) -- "Unsuffered Consequences"
-Copyright (C) 2019 The R Foundation for Statistical Computing
-Platform: x86_64-w64-mingw32/x64 (64-bit)
+R Under development (unstable) (2024-08-17 r87027 ucrt) -- "Unsuffered Consequences"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -24,18 +24,18 @@ Type 'q()' to quit R.
 > library('RobAStBase')
 Loading required package: rrcov
 Loading required package: robustbase
-Scalable Robust Estimators with High Breakdown Point (version 1.4-7)
+Scalable Robust Estimators with High Breakdown Point (version 1.7-6)
 
 Loading required package: distr
 Loading required package: startupmsg
-:startupmsg>  Utilities for Start-Up Messages (version 0.9.6)
+:startupmsg>  Utilities for Start-Up Messages (version 0.9.7)
 :startupmsg> 
 :startupmsg>  For more information see ?"startupmsg",
 :startupmsg>  NEWS("startupmsg")
 
 Loading required package: sfsmisc
 :distr>  Object Oriented Implementation of Distributions (version
-:distr>  2.8.0)
+:distr>  2.9.4)
 :distr> 
 :distr>  Attention: Arithmetics on distribution objects are
 :distr>  understood as operations on corresponding random variables
@@ -61,7 +61,7 @@ The following objects are masked from 'package:stats':
     df, qqplot, sd
 
 Loading required package: distrEx
-:distrEx>  Extensions of Package 'distr' (version 2.8.0)
+:distrEx>  Extensions of Package 'distr' (version 2.9.2)
 :distrEx> 
 :distrEx>  Note: Packages "e1071", "moments", "fBasics" should be
 :distrEx>  attached /before/ package "distrEx". See
@@ -86,18 +86,18 @@ The following objects are masked from 'package:stats':
 
 Loading required package: distrMod
 Loading required package: RandVar
-:RandVar>  Implementation of Random Variables (version 1.2.0)
+:RandVar>  Implementation of Random Variables (version 1.2.3)
 :RandVar> 
 :RandVar>  For more information see ?"RandVar", NEWS("RandVar"), as
 :RandVar>  well as
-:RandVar>    http://robast.r-forge.r-project.org/
+:RandVar>    https://r-forge.r-project.org/projects/robast/
 :RandVar>  This package also includes a vignette; try
 :RandVar>  vignette("RandVar").
 
 Loading required package: MASS
 Loading required package: stats4
 :distrMod>  Object Oriented Implementation of Probability Models
-:distrMod>  (version 2.8.1)
+:distrMod>  (version 2.9.1)
 :distrMod> 
 :distrMod>  Some functions from pkg's 'base' and 'stats' are
 :distrMod>  intentionally masked ---see distrModMASK().
@@ -130,7 +130,7 @@ The following object is masked from 'package:base':
 
     norm
 
-:RobAStBase>  Robust Asymptotic Statistics (version 1.2.1)
+:RobAStBase>  Robust Asymptotic Statistics (version 1.2.5)
 :RobAStBase> 
 :RobAStBase>  Some functions from pkg's 'stats' and 'graphics'
 :RobAStBase>  are intentionally masked ---see RobAStBaseMASK().
@@ -140,7 +140,7 @@ The following object is masked from 'package:base':
 :RobAStBase> 
 :RobAStBase>  For more information see ?"RobAStBase",
 :RobAStBase>  NEWS("RobAStBase"), as well as
-:RobAStBase>    http://robast.r-forge.r-project.org/
+:RobAStBase>    https://r-forge.r-project.org/projects/robast/
 
 
 Attaching package: 'RobAStBase'
@@ -286,7 +286,7 @@ Slot "name":
 
 Slot "weight":
 function(x) 1
-<bytecode: 0x000000000c6afad8>
+<bytecode: 0x000001f203e1d4a0>
 <environment: namespace:RobAStBase>
 
 > 
@@ -317,7 +317,7 @@ Slot "name":
 
 Slot "weight":
 function(x) 1
-<bytecode: 0x000000000c467898>
+<bytecode: 0x000001f203bad840>
 <environment: namespace:RobAStBase>
 
 > 
@@ -703,7 +703,7 @@ Slot "name":
 
 Slot "weight":
 function(x) 1
-<bytecode: 0x000000000b6d4b40>
+<bytecode: 0x000001f203aafaa8>
 <environment: namespace:RobAStBase>
 
 > 
@@ -985,6 +985,7 @@ numeric(0)
 > 
 > ### ** Examples
 > 
+> ## IGNORE_RDIFF_BEGIN
 > RobAStBaseMASK()
 ######################################################################
 #  On masking of and by other functions in package "RobAStBase"       
@@ -1004,6 +1005,7 @@ masking:
 +clip()    (package "graphics")
  
  
+> ## IGNORE_RDIFF_END
 > 
 > 
 > 
@@ -1080,7 +1082,7 @@ Slot "name":
 
 Slot "weight":
 function(x) 1
-<bytecode: 0x000000000d630348>
+<bytecode: 0x000001f203d32ce0>
 <environment: namespace:RobAStBase>
 
 > 
@@ -1303,7 +1305,7 @@ function (data)
     }
     quantile(slot(norm, "fct")(data), cutoff.quantile)
 }
-<environment: 0x0000000015b186f0>
+<environment: 0x000001f20e24dc18>
 
 Slot "cutoff.quantile":
 [1] 0.95
@@ -1339,7 +1341,7 @@ function (data)
     }
     quantile(slot(norm, "fct")(data), cutoff.quantile)
 }
-<environment: 0x0000000016694768>
+<environment: 0x000001f20e1b7e08>
 
 Slot "cutoff.quantile":
 [1] 0.95
@@ -1364,7 +1366,7 @@ function (data)
         quantile((rowSums(N0^2))^0.5, 0.95)
     }
 }
-<environment: 0x0000000016b1fc90>
+<environment: 0x000001f20e17d080>
 
 Slot "cutoff.quantile":
 [1] 0.95
@@ -1387,7 +1389,7 @@ function (data)
         qchisq(df = dim, 0.95)^0.5
     }
 }
-<environment: 0x0000000016c06398>
+<environment: 0x000001f20e139c80>
 
 Slot "cutoff.quantile":
 [1] 0.95
@@ -1435,7 +1437,7 @@ Slot "cutoff.quantile":
 > myrisk <- asMSE()
 > getRiskFctBV(myrisk)
 function(bias, var)  return(bias^2+var)
-<environment: 0x0000000018bb2550>
+<environment: 0x000001f20da47518>
 > 
 > 
 > 
@@ -1584,7 +1586,7 @@ precision of Fisher information - relativ error [%]:
      [,1] 
 [1,] 0.000
 maximum deviation 
-     1.110223e-16 
+     6.752308e-17 
 > 
 > ## slot modifyIC is filled in case of IC2
 > IC3 <- modifyIC(IC2)(BinomFamily(13, 0.2), IC2)
@@ -1597,7 +1599,7 @@ precision of Fisher information - relativ error [%]:
      [,1] 
 [1,] 0.000
 maximum deviation 
-     3.091672e-18 
+     2.220446e-16 
 > ## identical to
 > checkIC(IC3, BinomFamily(13, 0.2))
 precision of centering:	 0 
@@ -1608,7 +1610,7 @@ precision of Fisher information - relativ error [%]:
      [,1] 
 [1,] 0.000
 maximum deviation 
-     3.091672e-18 
+     2.220446e-16 
 > 
 > IC4 <- makeIC(sin, B)
 > checkIC(IC4)
@@ -1646,7 +1648,7 @@ precision of Fisher information - relativ error [%]:
      [,1] 
 [1,] 0.000
 maximum deviation 
-     2.565774e-17 
+     2.370713e-17 
 > 
 > ## don't run to reduce check time on CRAN
 > 
@@ -1673,13 +1675,13 @@ Slot "name":
 [1] "EuclideanNorm"
 
 Slot "fct":
-function(x){ 
-    if(is.vector(x)) 
+function (x) 
+{
+    if (is.vector(x)) 
         return(abs(x))
-    else 
-        return(sqrt(colSums(x^2)))
+    else return(sqrt(colSums(x^2)))
 }
-<bytecode: 0x0000000016d3de48>
+<bytecode: 0x000001f20a677df8>
 <environment: namespace:distrMod>
 
 > 
@@ -1870,7 +1872,7 @@ $obj
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  16.27 0.55 16.98 NA NA 
+Time elapsed:  28.5 1.04 30.8 NA NA 
 > grDevices::dev.off()
 null device 
           1 

@@ -14,6 +14,23 @@ under the hood:
 + changed encoding to UTF-8 and updated URL for r-forge project homepage
 
 #######################################
+version 1.2.6
+#######################################
+
+under the hood:
+with the help of K. Hornik identified spurious, platform dependent LF/CR issue
+and capsulated calls to infoShow() in Rd files by 
+## IGNORE_RDIFF_BEGIN
+## IGNORE_RDIFF_END
+
+#######################################
+version 1.2.4
+#######################################
+
+user-visible CHANGES:
++ CITATION file now use bibentry
+
+#######################################
 version 1.2.3
 #######################################
 
