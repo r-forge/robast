@@ -1,0 +1,65 @@
+The Description field is intended to be a (one paragraph) description of
+what the package does and why it may be useful. Please add more details
+about the package functionality and implemented methods in your
+Description text.
+
+If there are references describing the methods in your package, please
+add these in the description field of your DESCRIPTION file in the form
+authors (year) <doi:...>
+authors (year) <arXiv:...>
+authors (year, ISBN:...)
+or if those are not available: <https:...>
+with no space after 'doi:', 'arXiv:', 'https:' and angle brackets for
+auto-linking. (If you want to add a title as well please put it in
+quotes: "Title")
+
+Please add \value to .Rd files regarding exported methods and explain
+the functions results in the documentation. Please write about the
+structure of the output (class) and also what the output means. (If a
+function does not return a value, please document that too, e.g.
+\value{No return value, called for side effects} or similar)
+  Missing Rd-tags:
+      getInfGamma.Rd: \value
+      inputGenerator.Rd: \value
+
+\dontrun{} should only be used if the example really cannot be executed
+(e.g. because of missing additional software, missing API keys, ...) by
+the user. That's why wrapping examples in \dontrun{} adds the comment
+("# Not run:") as a warning for the user. Does not seem necessary.
+Please replace \dontrun with \donttest.
+
+Please unwrap the examples if they are executable in < 5 sec, or replace
+dontrun{} with \donttest{}.
+
+You still have the standardtexts in your .Rd-files. Please omit them
+since they are not necessary.
+e.g.: ~~ If necessary, more details than the __description__ above ~~
+-> man/asAnscombe.Rd;  man/asL1.Rd; man/asL4.Rd
+
+You are setting options(warn=-1) in your function. This is not allowed.
+Please rather use suppressWarnings() if really needed.
+
+Please fix and resubmit.
+
+
+
+%-----------------------------------------------------------------
+%  rebuttal to resubmission of pkg ROptEst
+%-----------------------------------------------------------------
+
++ we revised the 'Description' field in the DESCRIPTION file and now
+include references. 
++ in files getInfGamma.Rd and inputGenerator.Rd we now have a 
+  value field; as it describes the return values of several methods/
+  functions, this is more a verbal description than 
+  a description of the actual return type (although this is also
+  specified).
++ in our examples we had valid code with long runtimes (>5 sec) 
+  which we had put into \dontrun; this code is now moved to 
+  file 'examples_taking_longer.R' shipped out in folder 
+  [inst/]scripts to this package and referred to in the
+  example section 
++ we removed the standardtexts (in comments) in your .Rd-files
+  man/asAnscombe.Rd;  man/asL1.Rd; man/asL4.Rd
++ we have removed all catches to warnings in our code 
+

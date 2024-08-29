@@ -57,7 +57,7 @@ getInfGamma(L2deriv, risk, neighbor, biastype, ...)
   The function is used in case of asymptotic G-risks; confer
   Ruckdeschel and Rieder (2004).
 }
-\value{The optimal clipping height is computed. More spefically, the optimal
+\value{The optimal clipping height is computed. More specifically, the optimal
  clipping height \eqn{b} is determined in a zero search of a certain function
  \eqn{\gamma}{gamma}, where the respective  \code{getInf}-method will return 
  the value of  \eqn{\gamma(b)}{gamma(b)}. The actual function \eqn{\gamma}{gamma}

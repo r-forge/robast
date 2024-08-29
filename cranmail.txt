@@ -1,0 +1,63 @@
+Hi,
+
+sorry for coming late in this thread, I was pondering quite a bit
+whether I should do this, because I am certainly not an authority
+to propose anything here, and I found the follow ups of Dirk's 
+mail quite emotional and did not want to shed any more oil to 
+this fire. Certainly I do not want to put any of CRAN's maintainers
+off from doing their tremendous job in enhancing our code by
+providing R CMD check.
+
+Still, has anyone had a closer look at PEP (as Dirk has proposed)? 
+i.e., http://en.wikipedia.org/wiki/Python_Enhancement_Proposal#Development
+I think it should at least be worth a look. 
+
+A more formal enhancement process with announcement as concepts 
+(with some description and motivation), subsequent discussion and 
+refinement and thereafter implementation (with subsequent "done"-entry 
+in NEWS) would have benefits for both CRAN maintainers and pkg authors 
+--- see some illustrations / examples below.
+Not to be misunderstood: Requiring discussion, I do not mean to 
+set up a voting system about changes in R CMD check --as-cran. 
+IMO CRAN must stay autonomous about it. 
+
+Hence a more constructive approach would be to set up a future 
+Google Summer of Code project devoted to translating the essential
+concepts of PEP to something called REP (R Enhancement Proposal)
+and would in particular provide automating tools like some template
+generating function promptChangeRCMDcheckascran() . Maybe this could
+ease work of CRAN maintainers. 
+
+[Unfortunately I could not offer to be an adviser, however].
+
+Best regards, Peter Ruckdeschel
+
+illustration of benefits of REP
+1. With some more explanations about the changes done in R CMD check,
+pkg authors could possibly even anticipate not-yet-detected flaws
+in their code and hence produce less code revision cycles for both
+CRAN maintainers and authors. Example: Once the reason for WARNING
+about ":::" is explained, authors could try and spot further possible
+clashes induced by code dependencies not yet warned about.
+
+2. Restrictions to use ":::" makes package maintenance easier as just
+seen; to get rid of this, one would typically copy code, with
+again obvious downsides, too: The copy would not notice improvements
+(bug fixes, enhancements) in the original. So I would probably have
+pledged for some voluntary mechanism to make reference in the code 
+copy to the original (say by some source attribute) together with 
+some tools to spot changes in the original pointed to from the 
+reference. Sure, this can also be done without REP, but this way
+it is more closely linked to the triggering change in R CMD check.
+
+3. Automated feed back can be helpful. More than once I had difficulties
+in getting my pkgs through R CMD check, where I needed help from
+CRAN. Certainly not bugs in R, maybe not even relevant RFEs, so I
+posted them to an individual CRAN member but did not receive any feedback 
+---neither a "got the point; at it right now", nor a "no time right now", 
+nor a "done now". The CRAN member does deserve to be thanked, though,
+as in the end he did the required changes, and in some cases even filled 
+in some NEWS entry, but still: this costs my time, as I must continuously check
+http://developer.r-project.org/blosxom.cgi/R-devel and, if he misses
+to put in NEWS, scan the svn-logs, giving mostly FALSE positives
+at the risk of overlooking the essential. 

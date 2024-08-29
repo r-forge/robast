@@ -1,0 +1,62 @@
+This is some RFE, or better a wish, as to dealing with usage of
+non-exported code. Any comments appreciated.
+
+Notation: pkg A (maintained by A.A) has some internal code Afct() 
+that pkg B (maintained by B.B) wants to use.
+
+With recent changes in R CMD check usage of A:::Afct() in pkg B
+is no longer allowed on CRAN packages. As a way out B.B has to
+copy the code of Afct from A to B (and should give credits to A.A).
+
+First of all, let me say that these changes in R CMD check do 
+enhance maintainability, allowing A.A to change Afct without 
+interfering with B.B.
+
+Still, this also has drawbacks: Suppose A.A makes changes in Afct
+which are compatible with pkg B; then, using A:::Afct(), pkg B
+gets improved without any changes in pkg B, just because A was 
+improved. 
+
+Of course this is not always the case, and the changes in Afct 
+could break B, and deciding this automatically is out of range.
+Still we do have this situation anyway, if A is R itself, so all 
+our contributed pkgs improve just because R improves (and most of 
+the time contributing authors have little to no changes to make 
+in their pkgs for this).
+
+I would like to propose something in the middle:
+
+On a _voluntary_base_, B.B could add a particular comment to
+his copy of Afct ( which gets parsed as a sort of external 
+sourceref) indicating that he/B.B has copied code from A.A
+(and, maybe, more specifically from which file). 
+
+Sure, with C-code or other foreign code, this is more difficult,
+but maybe some more experienced R programmer also sees how to deal 
+with this.
+
+Also sure, this may fail if A.A moves/alters his code so that
+the sourceref pointer gets invalid. But this should not be
+the most frequent case.
+
+Now with some tool function CheckIfExtRefUpdated()  (using 
+Duncan Murdoch's code for changedFiles) one might check if, in 
+B.B's library, the original code of Afct has changed, and if 
+so, CheckIfExtRefUpdated() might return the new source, so that 
+B.B could use this new code of Afct for manual checking whether 
+this new code still is compatible with his pkg B so that he might
+decide to update his copy of Afct.
+Fct CheckIfExtRefUpdated() could also be called at R CMD check
+helping identify these cheap improvements.
+
+The advantage of this is that B.B does not have to keep track
+of changes in A but automatically gets informed, which comes
+close to the behaviour of writing A:::Afct() without the downside
+of risking pkg B to break inadvertedly with changes in Afct.
+
+An easier proposal implying more manual work, yet still quite efficient
+could be to have a non-parsed text file COPIEDCODE in inst indicating
+more specifically, which parts of the code have been copied from
+a foreign package, 
+
+Best, Peter

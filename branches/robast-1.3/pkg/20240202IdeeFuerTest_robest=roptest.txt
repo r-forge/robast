@@ -1,0 +1,14 @@
+identical(as(robest.with.roptest,"kStepEstimate"),robEst)
+slotsToCompare <- names(getSlots(getClass("kStepEstimate")))
+for(slotName in slotsToCompare){
+   cat("slot: ",slotName,":" )
+   sl1 <- slot(robEst,slotName)
+   sl2 <- slot(robest.with.roptest,slotName)    
+   if(identical(sl1,sl2)) cat("identical\n")
+       else{if(is.function(sl1)){
+	       if(identical(formals(sl1),formals(sl2)) &&
+		      identical(body(sl1),body(sl2))) cat("identical\n")
+	   }else 
+	   {print(sl1); print(sl2)}
+   }
+}

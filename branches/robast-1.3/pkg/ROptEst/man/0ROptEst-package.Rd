@@ -12,8 +12,8 @@ using S4 classes and methods.
 \details{
 \tabular{ll}{
 Package: \tab ROptEst \cr
-Version: \tab 1.3.2 \cr
-Date: \tab 2024-02-03 \cr
+Version: \tab 1.3.4 \cr
+Date: \tab 2024-02-07 \cr
 Depends: \tab R(>= 3.4), methods, distr(>= 2.8.0), distrEx(>= 2.8.0), distrMod(>= 2.8.1),RandVar(>= 1.2.0), RobAStBase(>= 1.2.0) \cr
 Suggests: \tab RobLox \cr
 Imports: \tab startupmsg, MASS, stats, graphics, utils, grDevices \cr
@@ -21,7 +21,7 @@ ByteCompile: \tab yes \cr
 Encoding: \tab latin1 \cr
 License: \tab LGPL-3 \cr
 URL: \tab https://robast.r-forge.r-project.org/\cr
-VCS/SVNRevision: \tab 1268 \cr
+VCS/SVNRevision: \tab 1286 \cr
 }
 }
 \author{
@@ -31,20 +31,15 @@ Maintainer: Matthias Kohl  \email{matthias.kohl@stamats.de}}
 \references{
   M. Kohl (2005). Numerical Contributions to the Asymptotic Theory of Robustness.
   Dissertation. University of Bayreuth. \url{https://epub.uni-bayreuth.de/id/eprint/839/2/DissMKohl.pdf}.
-
   M. Kohl, P. Ruckdeschel, and H. Rieder (2010). Infinitesimally Robust Estimation in 
   General Smoothly Parametrized Models. Statistical Methods and Applications \emph{19}(3): 333-354.
   \doi{10.1007/s10260-010-0133-0}.
-
   H. Rieder (1994): Robust Asymptotic Statistics. Springer. 
   \doi{10.1007/978-1-4684-0624-5}
-
   H. Rieder, M. Kohl, and P. Ruckdeschel (2008). The Costs of Not Knowing the Radius.
   Statistical Methods and Applications  \emph{17}(1): 13-40. \doi{10.1007/s10260-007-0047-7}
-
   P. Ruckdeschel (2005). Optimally One-Sided Bounded Influence Curves.
   Mathematical Methods of Statistics \emph{14}(1), 105-131.
-
   P. Ruckdeschel and H. Rieder (2004). Optimal Influence Curves for
   General Loss Functions. Statistics & Decisions \emph{22}, 201-223.
   \doi{10.1524/stnd.22.3.201.57067}

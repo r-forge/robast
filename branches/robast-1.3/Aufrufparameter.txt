@@ -1,0 +1,1 @@
+"check --no-multiarch --as-cran --install-args=\"--byte-compile --with-keep.source --compact-docs --resave-data --install-tests --example --html --latex --clean --preclean\" --output=AsCRAN  RobExtremes_1.2.2.tar.gz"
