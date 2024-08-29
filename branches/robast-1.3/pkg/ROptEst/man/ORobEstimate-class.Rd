@@ -155,6 +155,6 @@ class \code{"kStepstimate"}. All slots and methods marked with [*] are inherited
   }
 }
 \author{Peter Ruckdeschel \email{Peter.Ruckdeschel@uni-oldenburg.de}}
-\seealso{\code{\link{ALEstimate-class}}, \code{\link{kStepEstimate-class}}}
+\seealso{\code{\link[RobAStBase]{ALEstimate-class}}, \code{\link[RobAStBase]{kStepEstimate-class}}}
 \concept{estimate}
 \keyword{classes}
