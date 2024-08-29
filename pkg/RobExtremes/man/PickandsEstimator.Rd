@@ -89,8 +89,8 @@ Ruckdeschel, P. and Horbenko, N. (2012): Yet another breakdown point notion:
 
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com},\cr
         Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-\seealso{\code{\link{ParamFamily-class}}, \code{\link{ParamFamily}}, 
-         \code{\link{Estimate-class}} }
+\seealso{\code{\link[distrMod]{ParamFamily-class}}, \code{\link[distrMod]{ParamFamily}}, 
+         \code{\link[distrMod]{Estimate-class}} }
 \examples{
 ## (empirical) Data
 set.seed(123)

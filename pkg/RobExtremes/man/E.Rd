@@ -56,7 +56,7 @@ E(object, fun, cond, ...)
     method was called), and \code{time} (the time to compute the integral). }
 }
 \details{The precision of the computations can be controlled via 
-  certain global options; cf. \code{\link{distrExOptions}}. 
+  certain global options; cf. \code{\link[distrEx]{distrExOptions}}. 
   Also note that arguments \code{low} and \code{upp} should be given as
   named arguments in order to prevent them to be matched by arguments
   \code{fun} or \code{cond}. Also the result, when arguments 
@@ -96,7 +96,7 @@ E(object, fun, cond, ...)
     exact evaluation using explicit expressions.}
 }}
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de} and Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-\seealso{\code{\link{distrExIntegrate}}, \code{\link{m1df}}, \code{\link{m2df}},
+\seealso{\code{\link[distrEx]{distrExIntegrate}}, \code{\link[distrEx]{m1df}}, \code{\link[distrEx]{m2df}},
     \code{\link[distr]{Distribution-class}}}
 \examples{
 GP <- GPareto(shape=0.3)

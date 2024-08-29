@@ -45,8 +45,8 @@ Boudt, K., Caliskan, D., Croux, C. (2011): Robust explicit estimators of Weibull
 
 \author{Nataliya Horbenko \email{nhorbenko@gmail.com},\cr
         Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-\seealso{\code{\link{ParamFamily-class}}, \code{\link{ParamFamily}}, 
-         \code{\link{Estimate-class}} }
+\seealso{\code{\link[distrMod]{ParamFamily-class}}, \code{\link[distrMod]{ParamFamily}}, 
+         \code{\link[distrMod]{Estimate-class}} }
 \examples{
 ## (empirical) Data
 set.seed(123)

@@ -44,7 +44,7 @@ N. Horbenko, P. Ruckdeschel, T. Bae (2011): Robust Estimation of Operational Ris
 Journal of Operational Risk 6(2), 3--30.
 }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-\seealso{\code{\link{GParetoFamily}}, \code{\link{GEVFamily}}, \code{\link{WeibullFamily}}, \code{\link{GammaFamily}}}
+\seealso{\code{\link{GParetoFamily}}, \code{\link{GEVFamily}}, \code{\link{WeibullFamily}}, \code{\link[distrMod]{GammaFamily}}}
 \examples{
   \donttest{ # to reduce checking time
   set.seed(123)
