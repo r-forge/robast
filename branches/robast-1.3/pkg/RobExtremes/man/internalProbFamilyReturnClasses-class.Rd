@@ -25,8 +25,8 @@ In this file we describe classes \code{GParetoFamily}, \code{GEVFamily},
 }
 
 \seealso{\code{\link[methods:BasicClasses]{numeric-class}},
-\code{\link{L2ParamFamily-class}},
-\code{\link{L2ScaleShapeUnion-class}},
+\code{\link[distrMod]{L2ParamFamily-class}},
+\code{\link[distrMod]{L2ScaleShapeUnion-class}},
 }
 
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}

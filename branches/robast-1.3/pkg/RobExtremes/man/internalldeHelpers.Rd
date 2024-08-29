@@ -75,7 +75,7 @@ in package ``distrMod''.}
 }
 
 \seealso{
-\code{\link{Estimate-class}}
+\code{\link[distrMod]{Estimate-class}}
 }
 \keyword{internal}
 \concept{utilities}

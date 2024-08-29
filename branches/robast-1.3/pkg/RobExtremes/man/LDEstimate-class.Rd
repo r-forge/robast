@@ -65,8 +65,8 @@ Class \code{"Estimate"}, directly.
 
 \author{Matthias Kohl \email{Matthias.Kohl@stamats.de},\cr
 Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
-\seealso{\code{\link{Estimate-class}}, \code{\link{LDEstimator}},
-         \code{\link{MCEstimator}}}
+\seealso{\code{\link[distrMod]{Estimate-class}}, \code{\link{LDEstimator}},
+         \code{\link[distrMod]{MCEstimator}}}
 \examples{
 ## (empirical) Data
 x <- rgamma(50, scale = 0.5, shape = 3)
