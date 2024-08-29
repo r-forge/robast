@@ -1,5 +1,5 @@
 Package: RobAStBase
-Version: 1.2.5
+Version: 1.2.6
 Date: 2024-08-29
 Title: Robust Asymptotic Statistics
 Description: Base S4-classes and functions for robust asymptotic statistics.
@@ -19,4 +19,4 @@ Encoding: UTF-8
 URL: https://r-forge.r-project.org/projects/robast/
 LastChangedDate: {$LastChangedDate$}
 LastChangedRevision: {$LastChangedRevision$}
-VCS/SVNRevision: 1304
+VCS/SVNRevision: 1305
