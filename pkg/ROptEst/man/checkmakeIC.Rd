@@ -66,7 +66,7 @@
 }
 \author{Peter Ruckdeschel \email{Peter.Ruckdeschel@uni-oldenburg.de}}
 %\note{}
-\seealso{\code{\link[distrMod]{L2ParamFamily-class}}, \code{\link{IC-class}}}
+\seealso{\code{\link[distrMod]{L2ParamFamily-class}}, \code{\link[RobAStBase]{IC-class}}}
 \examples{
 IC1 <- new("IC")
 checkIC(IC1)

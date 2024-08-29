@@ -52,7 +52,7 @@ Class \code{"RiskType"}, by class \code{"asRisk"}.
 }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@fraunhofer.itwm.de}}
 %\note{}
-\seealso{\code{\link{asRisk-class}}, \code{\link{asAnscombe}}}
+\seealso{\code{\link[RobAStBase]{asRisk-class}}, \code{\link{asAnscombe}}}
 \examples{
 new("asAnscombe")
 }

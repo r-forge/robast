@@ -1,6 +1,6 @@
 Package: ROptEst
 Version: 1.3.3
-Date: 2024-02-07
+Date: 2024-08-29
 Title: Optimally Robust Estimation
 Description: R infrastructure for optimally robust estimation in general smoothly
             parameterized models using S4 classes and methods as described Kohl, M.,
@@ -22,4 +22,4 @@ URL: http://robast.r-forge.r-project.org/
 Encoding: UTF-8
 LastChangedDate: {$LastChangedDate$}
 LastChangedRevision: {$LastChangedRevision$}
-VCS/SVNRevision: 1286
+VCS/SVNRevision: 1309
