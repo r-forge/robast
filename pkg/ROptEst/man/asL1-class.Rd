@@ -35,7 +35,7 @@ No methods defined with class "asL1" in the signature.
 }
 \author{Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}}
 %\note{}
-\seealso{\code{\link[RobAStBase]{asGRisk-class}}, \code{\link[RobAStBase]{asMSE}}, \code{\link[RobAStBase]{asMSE-class}}, \code{\link{asL4-class}}, \code{\link{asL1}}}
+\seealso{\code{\link[distrMod]{asGRisk-class}}, \code{\link[distrMod]{asMSE}}, \code{\link[distrMod]{asMSE-class}}, \code{\link{asL4-class}}, \code{\link{asL1}}}
 \examples{
 new("asMSE")
 }
