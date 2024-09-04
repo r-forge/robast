@@ -8,6 +8,14 @@
  information)
 
 #######################################
+version 1.2.2
+#######################################
+
++ taken up pkg "ROptEst" into "Enhances" in DESCRIPTION to ensure all 
+  inter-pkg xrefs in Rd-files work
+
+
+#######################################
 version 1.2
 #######################################
 
