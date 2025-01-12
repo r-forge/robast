@@ -1,5 +1,5 @@
 ###############################################################################
-##  News: to package RobLox
+##  News: to package RobLoxBioC
 ###############################################################################
 
 (first two numbers of package versions do not necessarily reflect 
@@ -7,7 +7,17 @@
  RobAStXXX family as a whole in order to ease updating "depends" 
  information)
 
+######################################################################
+version 1.2.2
 #######################################
+
+under the hood
++ fixed some broken URLs and changed URLs from http to https where possible
++ changed encoding to UTF-8 and updated URL for r-forge project homepage
++ transformed CITATION file to new format, i.e., bibentry() instead of citEntry(),
+    person( .... ) (with ORCID where available) instead of as.person( .... )
+		
+########
 version 1.2.1
 #######################################
 
