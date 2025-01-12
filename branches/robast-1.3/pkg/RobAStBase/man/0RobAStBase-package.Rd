@@ -11,17 +11,16 @@ Base S4-classes and functions for robust asymptotic statistics.
 \details{
 \tabular{ll}{
 Package: \tab RobAStBase \cr
-Version: \tab 1.3.0 \cr
-Date: \tab 2024-08-29 \cr
-Depends: \tab R(>= 3.4), methods, rrcov, distr(>= 2.8.0), distrEx(>= 2.8.0),
-    distrMod(>= 2.8.1),RandVar(>= 1.2.0) \cr
+Version: \tab 1.2.7 \cr
+Date: \tab 2025-01-12 \cr
+Depends: \tab R(>= 3.4), methods, rrcov, distr(>= 2.8.0), distrEx(>= 2.8.0), distrMod(>= 2.8.1),RandVar(>= 1.2.0) \cr
 Suggests: \tab ROptEst(>= 1.2.0), RUnit(>= 0.4.26) \cr
-Imports: \tab startupmsg, graphics, grDevices, stats \cr
+Imports: \tab startupmsg(>= 1.0.0), graphics, grDevices, stats \cr
 ByteCompile: \tab yes \cr
 Encoding: \tab  latin1 \cr
 License: \tab LGPL-3 \cr
-URL: \tab https://robast.r-forge.r-project.org/\cr
-VCS/SVNRevision: \tab 1305 \cr
+URL: \tab https://r-forge.r-project.org/projects/robast/\cr
+VCS/SVNRevision: \tab 1321 \cr
 }
 }
 \author{
@@ -46,10 +45,8 @@ Note: The first two numbers of package versions do not necessarily reflect
 }
 \examples{
 library(RobAStBase)
-
 ## some L2 differentiable parametric family from package distrMod, e.g.
 B <- BinomFamily(size = 25, prob = 0.25) 
-
 ## classical optimal IC
 IC0 <- optIC(model = B, risk = asCov())
 plot(IC0) # plot IC

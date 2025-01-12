@@ -6,7 +6,7 @@ Description: Base S4-classes and functions for robust asymptotic statistics.
 Depends: R(>= 3.4), methods, rrcov, distr(>= 2.8.0), distrEx(>= 2.8.0), distrMod(>= 2.8.1),
             RandVar(>= 1.2.0)
 Suggests: ROptEst(>= 1.2.0), RUnit(>= 0.4.26)
-Imports: startupmsg, graphics, grDevices, stats
+Imports: startupmsg(>= 1.0.0), graphics, grDevices, stats
 Authors@R: c(person("Matthias", "Kohl", role=c("cre", "cph", "aut"),
             email="Matthias.Kohl@stamats.de", comment = c(ORCID =
             "0000-0001-9514-8910")), person("Peter", "Ruckdeschel",role=c("aut",
