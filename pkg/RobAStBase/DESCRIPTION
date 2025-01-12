@@ -1,12 +1,12 @@
 Package: RobAStBase
-Version: 1.2.6
-Date: 2024-08-29
+Version: 1.2.7
+Date: 2025-01-12
 Title: Robust Asymptotic Statistics
 Description: Base S4-classes and functions for robust asymptotic statistics.
 Depends: R(>= 3.4), methods, rrcov, distr(>= 2.8.0), distrEx(>= 2.8.0), distrMod(>= 2.8.1),
             RandVar(>= 1.2.0)
 Suggests: ROptEst(>= 1.2.0), RUnit(>= 0.4.26)
-Imports: startupmsg, graphics, grDevices, stats
+Imports: startupmsg(>= 1.0.0), graphics, grDevices, stats
 Authors@R: c(person("Matthias", "Kohl", role=c("cre", "cph", "aut"),
             email="Matthias.Kohl@stamats.de"), person("Peter", "Ruckdeschel",role=c("aut",
             "cph")), person("Mykhailo", "Pupashenko", role="ctb", comment="contributed wrapper
@@ -19,4 +19,4 @@ Encoding: UTF-8
 URL: https://r-forge.r-project.org/projects/robast/
 LastChangedDate: {$LastChangedDate$}
 LastChangedRevision: {$LastChangedRevision$}
-VCS/SVNRevision: 1305
+VCS/SVNRevision: 1321

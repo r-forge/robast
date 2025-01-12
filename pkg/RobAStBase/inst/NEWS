@@ -8,6 +8,16 @@
  information)
 
 #######################################
+version 1.2.7
+#######################################
+
+under the hood:
++ adapted reference output for new startupmsg
++ transformed CITATION file to new format, i.e., bibentry() instead of citEntry(),
+        c(as.person( .... ), as.person( .... ), ...), instead of 
+		as.personList(....) 
+
+#######################################
 version 1.2.6
 #######################################
 
