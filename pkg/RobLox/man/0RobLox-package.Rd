@@ -19,7 +19,6 @@ estimators in case of normal location and/or scale
   
   H. Rieder, M. Kohl, and P. Ruckdeschel (2008). The Costs of Not Knowing the Radius.
   Statistical Methods and Applications  \emph{17}(1): 13-40. \doi{10.1007/s10260-007-0047-7}
-
   M. Kohl, P. Ruckdeschel, and H. Rieder (2010). Infinitesimally Robust Estimation in 
   General Smoothly Parametrized Models. Statistical Methods and Applications \emph{19}(3): 333-354.
   \doi{10.1007/s10260-010-0133-0}.

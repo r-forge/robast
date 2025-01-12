@@ -8,6 +8,15 @@
  information)
 
 #######################################
+version 1.2.3
+#######################################
+
+under the hood:
++ adapted reference output for new startupmsg
++ fixed some broken URLs and changed URLs from http to https where possible
++ changed encoding to UTF-8 and updated URL for r-forge project homepage
+
+#######################################
 version 1.2.2
 #######################################
 
