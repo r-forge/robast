@@ -9,6 +9,22 @@
 
 
 #######################################
+version 1.2.5
+#######################################
+
+under the hood:
++ adapted reference output for new startupmsg
++ converted encoding to UTF-8
++ transformed CITATION file to new format, i.e., bibentry() instead of citEntry(),
+        c(as.person( .... ), as.person( .... ), ...), instead of 
+		as.personList(....) 
++ fixed some broken URLs and changed URLs from http to https where possible
++ changed encoding to UTF-8 and updated URL for r-forge project homepage
+
+user-visible CHANGES:
++ CITATION file now uses bibentry.
+
+#######################################
 version 1.2
 #######################################
 
