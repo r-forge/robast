@@ -91,15 +91,15 @@ but also (adopted from package "distrMod")
 \details{
 \tabular{ll}{
 Package: \tab RobExtremes \cr
-Version: \tab 1.3.1 \cr
-Date: \tab 2024-09-04 \cr
+Version: \tab 1.3.2 \cr
+Date: \tab 2025-01-12 \cr
 Title: \tab Optimally Robust Estimation for Extreme Value Distributions\cr
 Description: \tab Optimally robust estimation for extreme value distributions
 using S4 classes and methods \cr
 \tab (based on packages distr, distrEx, distrMod, RobAStBase, and ROptEst). \cr
 Depends: \tab R(>= 3.4), methods, distrMod(>= 2.8.0), ROptEst(>= 1.2.0), robustbase, evd \cr
 Suggests: \tab RUnit(>= 0.4.26), ismev(>= 1.39) \cr
-Imports: \tab RobAStRDA, distr, distrEx(>= 2.8.0), RandVar, RobAStBase(>= 1.2.0), startupmsg,actuar \cr
+Imports: \tab RobAStRDA, distr, distrEx(>= 2.8.0), RandVar, RobAStBase(>= 1.2.0), startupmsg(>=1.0.0), actuar \cr
 Authors:
 \tab Bernhard Spangl [contributed smoothed grid values of the Lagrange multipliers]\cr
 \tab Sascha Desmettre [contributed smoothed grid values of the Lagrange multipliers]\cr
@@ -118,7 +118,7 @@ LazyLoad: \tab yes \cr
 License: \tab LGPL-3 \cr
 URL: \tab https://r-forge.r-project.org/projects/robast/\cr
 Encoding: \tab UTF-8 \cr
-VCS/SVNRevision: \tab 1318 \cr
+VCS/SVNRevision: \tab 1325 \cr
 }
 }
 \section{Classes}{
