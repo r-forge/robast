@@ -4,8 +4,9 @@ note <- sprintf("R package version %s", meta$Version)
 
 bibentry(
   bibtype = "Manual",
-  title = "RandVar: Implementation of random variables",
-  author = c(person("Matthias", "Kohl"), person("Peter", "Ruckdeschel")),
+  title   = "RandVar: Implementation of random variables",
+  author  = c(person("Matthias", "Kohl", comment = c(ORCID = "0000-0001-9514-8910")),
+              person("Peter", "Ruckdeschel", comment = c(ORCID = "0000-0001-7815-4809"))),
   language = "English",
   year = year,
   note = note,
