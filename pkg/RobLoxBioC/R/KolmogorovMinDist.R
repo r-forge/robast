@@ -7,7 +7,7 @@ setMethod("KolmogorovMinDist", signature(x = "matrix",
         stopifnot(is.numeric(x))
         ksdist <- function(pars, x){
             if(any(ina <- is.na(x))) x <- x[!ina]
-            y <- .Internal(sort(x, FALSE))
+            y <- sort(x, FALSE)
             p.y <- pnorm(y, mean = pars[1], sd = pars[2])
             n <- length(y)
             max(p.y - (seq_len(n)-1)/n, seq_len(n)/n - p.y)
